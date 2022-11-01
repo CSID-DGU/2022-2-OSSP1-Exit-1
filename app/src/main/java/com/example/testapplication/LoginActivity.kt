@@ -9,6 +9,7 @@ class LoginActivity : AppCompatActivity(){
     private lateinit var btn_login:Button
     private lateinit var btn_signup:Button
     private lateinit var btn_findpwd:Button
+    private lateinit var btn_main:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +18,16 @@ class LoginActivity : AppCompatActivity(){
         btn_login=findViewById(R.id.login_btn)
         btn_signup=findViewById(R.id.sign_btn)
         btn_findpwd=findViewById(R.id.find_pwd_btn)
+        btn_main =findViewById(R.id.main)
 
         btn_signup.setOnClickListener{
             val intent=Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btn_main.setOnClickListener{
+            val intent=Intent(this, MainActivity2::class.java)
             startActivity(intent)
             finish()
         }
