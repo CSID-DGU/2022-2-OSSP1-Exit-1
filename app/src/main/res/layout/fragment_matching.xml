@@ -9,7 +9,7 @@
         android:id="@+id/btn_mat1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이거는 버튼!"
+        android:text="버튼 누르면 기준 설정으로!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

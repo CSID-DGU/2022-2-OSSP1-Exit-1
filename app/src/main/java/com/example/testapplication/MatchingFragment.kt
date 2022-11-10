@@ -45,7 +45,7 @@ class MatchingFragment: Fragment(), View.OnClickListener  {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_mat1 -> {
-                val intent = Intent(getActivity(), CalendarActivity::class.java)
+                val intent = Intent(getActivity(), Matching_intro::class.java)
                 startActivity(intent)
             }
         }
