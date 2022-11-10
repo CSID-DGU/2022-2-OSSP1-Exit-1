@@ -5,26 +5,45 @@
     android:id="@+id/items"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="15dp">
+    android:paddingBottom="80dp">
 
     <TextView
-        android:id="@+id/item_name"
+        android:id="@+id/room_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="name"
-        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:paddingTop="15dp"
+        android:text="타이틀"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/item_num"
+        android:id="@+id/room_description"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="num"
-        android:textSize="20sp"
+        android:paddingTop="15dp"
+        android:text="설명"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_name" />
+        app:layout_constraintTop_toBottomOf="@+id/room_name" />
+
+    <TextView
+        android:id="@+id/room_hashtag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="해시태그"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_description" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

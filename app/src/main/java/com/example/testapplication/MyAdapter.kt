@@ -28,12 +28,14 @@ class MyAdapter(
 
     inner class RecyclerViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val name: TextView = itemView.findViewById(R.id.item_name)
-        private val num: TextView = itemView.findViewById(R.id.item_num)
+        private val title: TextView = itemView.findViewById(R.id.room_name)
+        private val description: TextView = itemView.findViewById(R.id.room_description)
+        private val hashtag: TextView = itemView.findViewById(R.id.room_hashtag)
 
         fun bind(recyclerViewItem: RoomData) {
-            name.text = recyclerViewItem.name
-            num.text = recyclerViewItem.number
+            title.text = recyclerViewItem.room_title
+            description.text = recyclerViewItem.room_des
+            hashtag.text = recyclerViewItem.room_tag
         }
 
     }

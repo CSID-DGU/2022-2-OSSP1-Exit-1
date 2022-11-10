@@ -15,11 +15,11 @@ class Recommend_list : AppCompatActivity() {
 
         //리스트에 사용될 ArrayList를 생성한다.
         val recyclerViewItems: ArrayList<RoomData> = ArrayList()
-        recyclerViewItems.add(RoomData("daeun","1"))
-        recyclerViewItems.add(RoomData("daeun","1"))
-        recyclerViewItems.add(RoomData("daeun","1"))
-        recyclerViewItems.add(RoomData("daeun","1"))
-        recyclerViewItems.add(RoomData("daeun","1"))
+        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
+        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
+        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
+        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
+        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
 
         //recyclerView 연결
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
