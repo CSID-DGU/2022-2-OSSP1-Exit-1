@@ -1,12 +1,15 @@
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testapplication.MatchingEnd
 import com.example.testapplication.R
 import com.example.testapplication.RoomData
-import com.example.testapplication.databinding.ActivityItemrecyclerciewBinding
-import com.example.testapplication.databinding.ActivityRecommendListBinding
+
 
 class MyAdapter(
     private var recyclerViewItems: ArrayList<RoomData>
@@ -20,6 +23,12 @@ class MyAdapter(
 
     override fun onBindViewHolder(holder: RecyclerViewViewHolder, position: Int) {
         holder.bind(recyclerViewItems[position])
+
+        holder.itemView.setOnClickListener {
+            Log.d("클릭","클릭")
+            val intent = Intent(holder.itemView?.context, MatchingEnd::class.java)
+            ContextCompat.startActivity(holder.itemView.context, intent,null)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -37,7 +46,6 @@ class MyAdapter(
             description.text = recyclerViewItem.room_des
             hashtag.text = recyclerViewItem.room_tag
         }
-
     }
 }
 
