@@ -18,4 +18,6 @@
     <color name="error_dark">#4a0505</color>
     <color name="gray_light">#b5b8ba</color>
     <color name="gray_dark">#494a4b</color>
+    <color name="text_main">#131314</color>
+    <color name="text_gray">#b5b8ba</color>
 </resources>

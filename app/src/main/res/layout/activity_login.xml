@@ -90,7 +90,7 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="#FFFED567"
         android:text="Login"
-        android:textColor="@color/black"
+        android:textColor="@color/realblack"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

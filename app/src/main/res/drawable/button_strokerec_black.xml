@@ -5,7 +5,7 @@
 <!--배경색. 기본 real white로 하려나?-->
     <solid android:color="@color/realwhite" />
     <stroke
-        android:width="2dp"
+        android:width="1dp"
         android:color="@color/realblack" />
     <corners
         android:bottomLeftRadius="12dp"
