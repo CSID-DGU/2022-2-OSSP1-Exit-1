@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    //네비게이션 바 색상 추가해야함.
-
+    //네비게이션 바 색상 추가해야함
     <color name="realblack">#FF000000</color>
     <color name="realwhite">#FFFFFFFF</color>
     <color name="blue_main">#3041CF</color>
