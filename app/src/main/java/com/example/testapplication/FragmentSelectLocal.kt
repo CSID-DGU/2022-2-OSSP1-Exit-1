@@ -15,6 +15,7 @@ class FragmentSelectLocal : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_select_local, container,false)
         val localdata = resources.getStringArray(R.array.arr)
+        val spinner: Spinner
 
         return view
     }

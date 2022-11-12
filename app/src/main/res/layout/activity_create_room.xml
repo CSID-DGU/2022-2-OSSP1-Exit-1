@@ -35,7 +35,45 @@
     <FrameLayout
         android:id="@+id/frame_createroom"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"></FrameLayout>
+        android:layout_height="504dp"
+        android:layout_margin="20dp">
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_strokerec_blu"
+            android:fontFamily="@font/pretendard"
+            android:layout_marginEnd="10dp"
+            android:text="이전으로"
+            android:textColor="@color/blue_main"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btn_past"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rec_blu"
+            android:fontFamily="@font/pretendard"
+            android:layout_marginStart="10dp"
+            android:text="다음으로"
+            android:textColor="@color/realwhite"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
     <!--    //네비게이션 바 없었나-->
 </LinearLayout>

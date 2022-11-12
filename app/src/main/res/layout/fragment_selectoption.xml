@@ -90,37 +90,4 @@
         app:layout_constraintTop_toBottomOf="@+id/difficulty" />
 
 
-    <Button
-        android:id="@+id/button_past"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/button_rec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="다음으로"
-        android:textColor="@color/realwhite"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button_next"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/button_strokerec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="이전으로"
-        android:textColor="@color/blue_main"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent" />/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

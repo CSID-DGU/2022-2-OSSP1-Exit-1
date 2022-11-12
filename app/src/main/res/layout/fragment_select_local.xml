@@ -7,39 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".FragmentSelectLocal">
 
-    <Button
-        android:id="@+id/button_past3"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/button_rec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="다음으로"
-        android:textColor="@color/realwhite"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button_next3"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/button_strokerec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="이전으로"
-        android:textColor="@color/blue_main"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -69,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Spinner
-        android:id="@+id/spinner_thema"
+        android:id="@+id/spinner_local1"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -92,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/thema" />
 
     <Spinner
-        android:id="@+id/spinner_difficulty"
+        android:id="@+id/spinner_local2"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -115,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/difficulty" />
 
     <Spinner
-        android:id="@+id/spinner_local5"
+        android:id="@+id/spinner_local3"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
