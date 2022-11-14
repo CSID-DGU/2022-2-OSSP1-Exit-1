@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import com.example.testapplication.databinding.ActivityDatecbBinding
 import com.example.testapplication.databinding.ActivityTimeBinding
 
 class TimeActivity : AppCompatActivity() {
     private lateinit var btn_next: Button
-
+    private lateinit var btn_past: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityTimeBinding.inflate(layoutInflater)
@@ -37,10 +36,17 @@ class TimeActivity : AppCompatActivity() {
                 else Log.d("체크박스", "6시~8시 해제")
             }
         }
-        btn_next=findViewById(R.id.btn_timenext)
+        btn_next=findViewById(R.id.btn_next)
+        btn_past=findViewById(R.id.btn_back)
 
         btn_next.setOnClickListener {
             val intent = Intent(this, Recommend_list::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btn_past.setOnClickListener {
+            val intent = Intent(this, DateActivity::class.java)
             startActivity(intent)
             finish()
         }
