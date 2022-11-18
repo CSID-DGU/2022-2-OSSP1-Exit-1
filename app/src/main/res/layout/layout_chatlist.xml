@@ -1,39 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/iv_chatlist_img"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
     <TextView
         android:id="@+id/tv_chatlist_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="28dp"
         android:text="방 제목"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_chatlist_img"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_marginTop="10dp"
         android:id="@+id/tv_chatlist_hashtag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="12dp"
         android:text="#숄라숄라"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_chatlist_img"
         app:layout_constraintTop_toBottomOf="@+id/tv_chatlist_title" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginVertical="20dp"
         android:background="#808080"
-        app:layout_constraintTop_toBottomOf="@+id/tv_chatlist_hashtag"
-        android:layout_marginVertical="20dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_chatlist_hashtag" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

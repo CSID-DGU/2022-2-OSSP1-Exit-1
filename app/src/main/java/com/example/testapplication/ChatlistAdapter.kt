@@ -34,6 +34,7 @@ class ChatlistAdapter(context : Context): RecyclerView.Adapter<ChatlistAdapter.C
         private val binding: LayoutChatlistBinding
     ): RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ChatlistData) {
+            binding.ivChatlistImg.setImageDrawable(binding.root.context.getDrawable(data.chatlist_img))
             binding.tvChatlistTitle.setText(data.chatlist_title)
             binding.tvChatlistHashtag.setText(data.chatlist_hashtag)
 
