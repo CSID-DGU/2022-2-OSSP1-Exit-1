@@ -3,31 +3,31 @@ package com.example.testapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.testapplication.databinding.ActivityCreateRoomLocalBinding
 
 
 class CreateRoomLocalActivity : AppCompatActivity() {
-    private var mBinding: ActivityCreateRoomLocalBinding? = null
-    private val binding get()=mBinding!!
-
+    private lateinit var mBinding: ActivityCreateRoomLocalBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityCreateRoomLocalBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        setContentView(R.layout.activity_create_room_option)
+        setContentView(mBinding.root)
+        //setContentView(R.layout.activity_create_room_local)
 
         //페이지 이동
-        binding.btnNext.setOnClickListener{
-            val intent= Intent(this, CreateRoomLocalActivity::class.java)
-            startActivity(intent)
+//        binding.btnNext.setOnClickListener{
+//            val intent= Intent(this, CreateRoomLocalActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+        mBinding.btnPrev.setOnClickListener{
+            val intent1= Intent(this, CreateRoomOptionActivity::class.java)
+            startActivity(intent1)
             finish()
         }
-        binding.btnPrev.setOnClickListener{
-            val intent= Intent(this, CreateRoomLocalActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+
 //        var fragN : Int = 0
 //        setFrag(0)
 //

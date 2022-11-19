@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CreateRoomLocalActivity">
+    tools:context=".CreateRoomLocalActivity"
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -29,11 +30,9 @@
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:fontFamily="@font/pretendard_bold"
-            android:text="방 만들기"
+            android:text="@string/CreateRoom"
             android:textColor="@color/text_main"
-            android:textSize="20dp"></TextView>
-
-
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView
@@ -43,7 +42,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/pretendard_bold"
-        android:text="방탈출 옵션 선택"
+        android:text="@string/SelectOption_title"
         android:textColor="@color/text_main"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +55,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/pretendard"
-        android:text="장르"
+        android:text="@string/thema"
         android:textColor="@color/text_main"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +79,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/pretendard"
-        android:text="난이도"
+        android:text="@string/difficulty"
         android:textColor="@color/text_main"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +103,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/pretendard"
-        android:text="공포도"
+        android:text="@string/scary"
         android:textColor="@color/text_main"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,49 +120,42 @@
         app:layout_constraintStart_toEndOf="@+id/scary"
         app:layout_constraintTop_toBottomOf="@+id/difficulty" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="175sp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20sp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="608dp">
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/button_strokerec_blu"
+        android:fontFamily="@font/pretendard"
+        android:text="@string/prev"
+        android:textColor="@color/blue_main"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scary"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <Button
+        android:id="@+id/btn_prev"
+        android:layout_width="175sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/button_rec_blu"
+        android:fontFamily="@font/pretendard"
+        android:text="@string/next"
+        android:textColor="@color/realwhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scary"
+        app:layout_constraintVertical_bias="0.506" />
 
 
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="175sp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="76dp"
-            android:background="@drawable/button_strokerec_blu"
-            android:fontFamily="@font/pretendard"
-            android:text="이전으로"
-            android:textColor="@color/blue_main"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.151"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btn_prev"
-            android:layout_width="175sp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="72dp"
-            android:background="@drawable/button_rec_blu"
-            android:fontFamily="@font/pretendard"
-            android:text="다음으로"
-            android:textColor="@color/realwhite"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.832"
-            app:layout_constraintStart_toStartOf="parent" />
-    </LinearLayout>
     <!--    //네비게이션 바 없었나-->
 </androidx.constraintlayout.widget.ConstraintLayout>
