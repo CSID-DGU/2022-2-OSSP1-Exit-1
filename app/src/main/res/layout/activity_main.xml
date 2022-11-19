@@ -25,4 +25,14 @@
         app:itemIconTint="@drawable/menu_selector_color"
         app:itemTextColor="@drawable/menu_selector_color"/>
 
+    <Button
+        android:id="@+id/btn_test_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="방생성 화면이동 임시"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_container"></Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

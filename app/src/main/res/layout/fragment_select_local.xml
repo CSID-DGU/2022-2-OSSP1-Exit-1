@@ -17,7 +17,7 @@
         android:fontFamily="@font/pretendard_bold"
         android:text="모임 지역 선택"
         android:textColor="@color/text_main"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toEndOf="@+id/thema"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -65,32 +65,9 @@
         android:layout_marginTop="20dp"
 
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
         app:layout_constraintStart_toEndOf="@+id/difficulty"
         app:layout_constraintTop_toBottomOf="@+id/thema" />
-
-    <TextView
-        android:id="@+id/scary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/pretendard"
-        android:text="동"
-        android:textColor="@color/text_main"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/difficulty" />
-
-    <Spinner
-        android:id="@+id/spinner_local3"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.626"
-        app:layout_constraintStart_toEndOf="@+id/scary"
-        app:layout_constraintTop_toBottomOf="@+id/difficulty" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
