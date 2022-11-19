@@ -1,10 +1,16 @@
 package com.example.testapplication
 
+import android.R
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.view.View;
+import android.widget.AdapterView;
+import androidx.appcompat.app.AppCompatActivity
 import com.example.testapplication.databinding.ActivityCreateRoomOptionBinding
-import android.widget.Button
+
 
 class CreateRoomOptionActivity : AppCompatActivity() {
     private lateinit var BindingOption: ActivityCreateRoomOptionBinding
@@ -13,7 +19,18 @@ class CreateRoomOptionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         BindingOption = ActivityCreateRoomOptionBinding.inflate(layoutInflater)
         setContentView(BindingOption.root)
-        //setContentView(R.layout.activity_create_room_option)
+
+        //스피너 어댑터
+        //var sData = resources.getStringArray(R.array.testarray)
+        var sData = listOf("선택하세요","test1","test2","test3")
+        var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1,sData)
+        val spinDifficulty =BindingOption.spinnerDifficulty
+        spinDifficulty.adapter=adapter
+        val spinThema =BindingOption.spinnerThema
+        spinThema.adapter=adapter
+        val spinScary =BindingOption.spinnerLocal5
+        spinScary.adapter=adapter
+
 
         //페이지 이동
         BindingOption.btnNext.setOnClickListener{
@@ -43,6 +60,7 @@ class CreateRoomOptionActivity : AppCompatActivity() {
 //            }
 //        }
     }
+
 
 //    private fun setFrag(fragNum : Int) {
 //        val ft = supportFragmentManager.beginTransaction()

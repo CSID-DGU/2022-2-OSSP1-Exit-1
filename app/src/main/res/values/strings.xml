@@ -12,4 +12,5 @@
     <string name="SelectLocal_title">방탈출 지역 선택</string>
     <string name="selectcity">시 / 도</string>
     <string name="selectdistrict">시 / 군 / 구</string>
+    <string name="Chat">채팅방1(이름 받아올 자리)</string>
 </resources>
