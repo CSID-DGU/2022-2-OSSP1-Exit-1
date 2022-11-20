@@ -1,5 +1,6 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,6 +24,17 @@ class MatchingFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnSearch.setOnClickListener {
+
+        }
+        binding.btnCreate.setOnClickListener {
+            activity?.let{
+                val intent = Intent (it, CreateRoomLocalActivity::class.java)
+                it.startActivity(intent)
+            }
+
+        }
     }
 
     override fun onDestroyView() {

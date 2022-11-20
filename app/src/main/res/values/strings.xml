@@ -1,16 +1,34 @@
 <resources>
     <string name="app_name">TestApplication</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+<!--기본-->
     <string name="next">다음으로</string>
     <string name="prev">이전으로</string>
+<!--menu title-->
+    <string name="CreateRoom">방 만들기</string>
+    <string name="Matching">매칭</string>
+    <string name="MyPage">내 프로필</string>
+
+<!--matching-->
+<!--    intro-->
+    <string name="intro1">새로운 만남</string>
+    <string name="intro2">즐거운 탈출</string>
+    <string name="intro3">FUN한 매칭</string>
+    <string name="btn_search">찾아보기</string>
+    <string name="btn_create">방만들기</string>
+    <!--    option-->
     <string name="scary">공포도</string>
     <string name="difficulty">난이도</string>
     <string name="thema">장르</string>
     <string name="SelectOption_title">방탈출 옵션 선택</string>
-    <string name="CreateRoom">방 만들기</string>
+<!--    local-->
     <string name="SelectLocal_title">방탈출 지역 선택</string>
     <string name="selectcity">시 / 도</string>
     <string name="selectdistrict">시 / 군 / 구</string>
+
+<!--chat-->
     <string name="Chat">채팅방1(이름 받아올 자리)</string>
+
+<!--mypage-->
+    <string name="UserName">LeeJeongsu</string>
 </resources>

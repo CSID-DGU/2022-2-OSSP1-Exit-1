@@ -23,12 +23,6 @@ class MainActivity : AppCompatActivity() {
         binding1 = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding1.root)
 
-        binding1.btnTestCreate.setOnClickListener{
-            val intent= Intent(this, CreateRoomLocalActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
         if (frame == null) {
             supportFragmentManager.beginTransaction()
                 .add(frame.id, RoomaddFragment())

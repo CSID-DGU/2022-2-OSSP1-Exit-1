@@ -36,6 +36,11 @@ class CreateRoomLocalActivity : AppCompatActivity() {
             startActivity(intent1)
             finish()
         }
+        mBinding.btnBack.setOnClickListener{
+            val intent2= Intent(this, MainActivity::class.java)
+            startActivity(intent2)
+            finish()
+        }
 
 //        var fragN : Int = 0
 //        setFrag(0)
