@@ -55,6 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="204dp"
         android:layout_marginBottom="1dp"
+        app:tabSelectedTextColor="@color/blue_main"
+        app:tabIndicatorColor="@color/blue_main"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
