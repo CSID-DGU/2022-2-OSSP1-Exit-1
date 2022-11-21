@@ -12,6 +12,19 @@ class ChatFragment: Fragment() {
     private val binding : FragmentChatBinding
         get() = requireNotNull(_binding)
 
+    private val mockRepoList = listOf<ChatlistData> (
+        ChatlistData(
+            chatlist_img = R.drawable.room1,
+            chatlist_title ="즐기는자가 1류다,,,",
+            chatlist_hashtag = "#방탈출 #홍대 #초보자_환영 #나도잡혔어"
+        ),
+        ChatlistData(
+            chatlist_img = R.drawable.gongpo,
+            chatlist_title ="공포 3단계 가보자고~",
+            chatlist_hashtag = "#방탈출 #강남 #눈물각 #앞장서줘"
+        ),
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,6 +36,9 @@ class ChatFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val adapter = ChatlistAdapter(requireContext())
+        binding.rvCategory.adapter = adapter
+        adapter.setRepoList(mockRepoList)
     }
 
     override fun onDestroyView() {
