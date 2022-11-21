@@ -10,7 +10,6 @@ import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import com.example.testapplication.databinding.FragmentMatchingBinding
 
-@Suppress("DEPRECATION")
 class MatchingFragment: Fragment(), View.OnClickListener  {
     private lateinit var btn_mat1: Button
     private var _binding: FragmentMatchingBinding? = null

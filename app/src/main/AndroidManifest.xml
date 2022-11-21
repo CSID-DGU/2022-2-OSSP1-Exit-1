@@ -34,13 +34,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity2"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Recommend_list"
             android:exported="false">
             <meta-data
