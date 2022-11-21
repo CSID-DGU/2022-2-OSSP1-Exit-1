@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/items"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="80dp">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/room_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="20dp"
         android:paddingTop="15dp"
         android:text="타이틀"
         android:textColor="@color/black"
@@ -42,8 +40,10 @@
         app:layout_constraintTop_toBottomOf="@+id/room_description" />
 
     <View
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black" />
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/room_hashtag" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
