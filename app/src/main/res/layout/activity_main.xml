@@ -20,8 +20,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv_main"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="80dp"
         android:background="#ECEFF1"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/item_menu"
         app:itemIconTint="@drawable/menu_selector_color"
