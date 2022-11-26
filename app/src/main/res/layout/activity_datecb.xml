@@ -67,9 +67,23 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="10dp"
-            android:hint="2022/10/05"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/black" />
+
+        <ImageButton
+            android:id="@+id/ib_startdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_calender" />
 
         <TextView
             android:id="@+id/tv_enddate_title"
@@ -87,9 +101,24 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="80dp"
-            android:hint="2022/10/05"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="105dp"
+            android:background="@color/black" />
+
+        <ImageButton
+            android:id="@+id/ib_enddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_calender" />
 
 
     </FrameLayout>
