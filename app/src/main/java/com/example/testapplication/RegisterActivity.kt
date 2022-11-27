@@ -26,7 +26,6 @@ class RegisterActivity : AppCompatActivity() {
         val Email = binding.email
         val Password = binding.pwd
         val Password_check = binding.pwdCheck
-        val Nickname = binding.nickname
 
         var isDuplicated = true //중복확인, 초기값 true
         //var check = false

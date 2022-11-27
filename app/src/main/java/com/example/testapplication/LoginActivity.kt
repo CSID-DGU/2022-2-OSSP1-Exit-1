@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         val ID = binding.loginID
         val Password = binding.loginPassword
 
-        binding.signBtn.setOnClickListener {
+        binding.signupBtn.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
