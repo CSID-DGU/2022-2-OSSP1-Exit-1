@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
         <activity
@@ -22,17 +22,8 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TestApplication">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-        android:name=".MatchingEnd"
-        android:exported="false"/>
+            android:name=".MatchingEnd"
+            android:exported="false" />
         <activity
             android:name=".TimeActivity"
             android:exported="false">
@@ -61,9 +52,9 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <!--<activity
+        <activity
             android:name=".MainActivity"
-            android:exported="false" />-->
+            android:exported="false" />
         <activity
             android:name=".KotlinPractice"
             android:exported="false" />

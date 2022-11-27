@@ -39,10 +39,10 @@ class LoginActivity : AppCompatActivity() {
                         response: Response<UserSigninModel>
                     ) {
                         if (response.body()?.result.toString().equals("success")) {
+                            Log.d("loginsuccess", "${response.body()}")
                             Toast.makeText(applicationContext, "로그인 성공!", Toast.LENGTH_SHORT).show()
                             val intent = Intent(applicationContext, MainActivity::class.java)
                             startActivity(intent)
-                            finish()
                         } else {
                             Toast.makeText(
                                 applicationContext,
