@@ -131,8 +131,8 @@
 
     <Button
         android:id="@+id/sign_btn"
-        android:layout_width="49dp"
-        android:layout_height="45dp"
+        android:layout_width="102dp"
+        android:layout_height="54dp"
         android:background="#00ff0000"
         android:text="회원가입"
         android:textColor="#000000"
