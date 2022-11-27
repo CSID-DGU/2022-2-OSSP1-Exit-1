@@ -9,7 +9,7 @@ import com.example.testapplication.databinding.ActivityTimeBinding
 
 class TimeActivity : AppCompatActivity() {
     private lateinit var btn_next: Button
-    private lateinit var btn_past: Button
+    private lateinit var btn_back: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityTimeBinding.inflate(layoutInflater)
@@ -37,7 +37,7 @@ class TimeActivity : AppCompatActivity() {
             }
         }
         btn_next=findViewById(R.id.btn_next)
-        btn_past=findViewById(R.id.btn_back)
+        btn_back=findViewById(R.id.btn_back)
 
         btn_next.setOnClickListener {
             val intent = Intent(this, Recommend_list::class.java)
@@ -45,10 +45,21 @@ class TimeActivity : AppCompatActivity() {
             finish()
         }
 
-        btn_past.setOnClickListener {
+        btn_back.setOnClickListener {
             val intent = Intent(this, DateActivity::class.java)
             startActivity(intent)
             finish()
         }
+        binding.btnBacktop.setOnClickListener {
+            val intent = Intent(this, DateActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        binding.btnClose.setOnClickListener {
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 }

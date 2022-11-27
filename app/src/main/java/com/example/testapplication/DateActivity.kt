@@ -13,7 +13,7 @@ import java.util.*
 
 class DateActivity : AppCompatActivity() {
     private lateinit var btn_next: Button
-    private lateinit var btn_past: Button
+    private lateinit var btn_back: Button
     var startDateString = ""
     var endDateString = ""
 
@@ -85,20 +85,33 @@ class DateActivity : AppCompatActivity() {
 
 
         btn_next=findViewById(R.id.btn_next)
-        btn_past=findViewById(R.id.btn_back)
+        btn_back=findViewById(R.id.btn_back)
 
-        //이전으로 클릭
+        //다음으로 클릭
         btn_next.setOnClickListener {
             val intent = Intent(this, TimeActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        //다음으로 클릭
-        btn_past.setOnClickListener {
+        //이전으로(하단) 클릭
+        btn_back.setOnClickListener {
             val intent = Intent(this, Matching_intro::class.java)
             startActivity(intent)
             finish()
         }
+        //이전으로(상단) 클릭
+        binding.btnBackTop.setOnClickListener{
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
+        }
+        //x표시 클릭(첫 화면으로 이동)
+        binding.btnClose.setOnClickListener{
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 }

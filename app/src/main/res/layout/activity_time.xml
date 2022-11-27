@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="4dp">
 
         <Button
-            android:id="@+id/btn_back1"
+            android:id="@+id/btn_backtop"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center"
@@ -30,9 +30,21 @@
             android:fontFamily="@font/pretendard_bold"
             android:text="매칭"
             android:textColor="@color/text_main"
-            android:textSize="20dp">
+            android:textSize="20dp" />
 
-        </TextView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@drawable/ic_close"
+            android:backgroundTint="@color/black" />
+
     </LinearLayout>
 
     <TextView
