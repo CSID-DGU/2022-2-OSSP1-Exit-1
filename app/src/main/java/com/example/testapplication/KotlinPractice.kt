@@ -21,6 +21,6 @@ class KotlinPractice : AppCompatActivity(){
 
         S_btn = findViewById(R.id.submit_btn)
         R_btn = findViewById(R.id.register_btn)
-        A_btn=findViewById(R.id.Auth_button)
+        //A_btn=findViewById(R.id.Auth_button)
     }
 }
