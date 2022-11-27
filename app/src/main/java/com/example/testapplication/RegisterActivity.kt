@@ -53,9 +53,6 @@ class RegisterActivity : AppCompatActivity() {
             else if (TextUtils.isEmpty(Password.text.toString()))
                 Toast.makeText(this, "비밀번호 확인을 입력해주세요", Toast.LENGTH_SHORT).show()
 
-            //닉네임이 비어있을 때
-            /*else if (TextUtils.isEmpty(Nickname.text.toString()))
-                Toast.makeText(this, "닉네임 확인을 입력해주세요", Toast.LENGTH_SHORT).show()*/
             else {
                 if (!isDuplicated) {
                     Log.d("signupbutton", "asdf")
@@ -63,10 +60,10 @@ class RegisterActivity : AppCompatActivity() {
                         Email.text.toString(),
                         Password.text.toString(),
                         Name.text.toString()
-                    ).enqueue(object : Callback<UserPostModel> {
+                    ).enqueue(object : Callback<UserSignupPostModel> {
                         override fun onResponse(
-                            call: Call<UserPostModel>,
-                            response: retrofit2.Response<UserPostModel>
+                            call: Call<UserSignupPostModel>,
+                            response: retrofit2.Response<UserSignupPostModel>
                         ) {
                             Log.d("signupsuccess", response.body()?.result.toString())
                             //Toast.makeText(this, "회원가입 성공", Toast.LENGTH_SHORT).show()
@@ -74,7 +71,7 @@ class RegisterActivity : AppCompatActivity() {
                             finish()
                         }
 
-                        override fun onFailure(call: Call<UserPostModel>, t: Throwable) {
+                        override fun onFailure(call: Call<UserSignupPostModel>, t: Throwable) {
                             //Toast.makeText(this, "회원가입 실패", Toast.LENGTH_SHORT).show()
                             Log.d("signupfail", t.toString())
                         }
@@ -102,37 +99,6 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 })
             }
-
-            /*binding.AuthButton.setOnClickListener {
-
-        }*/
         }
-
-        /*private fun createAccount(email: String, password: String, data: HashMap<String, String>) {
-        if(email.isNotEmpty() && password.isNotEmpty()) {
-            auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(
-                            this, "계정 생성 완료.",
-                            Toast.LENGTH_SHORT
-                        ).show()
-
-                        db.collection("member")
-                            .add(data)
-                            .addOnCompleteListener {
-                                Toast.makeText(this, "data add success", Toast.LENGTH_SHORT).show()
-                            }
-
-                        finish() // 가입창 종료
-                    } else {
-                        Toast.makeText(
-                            this, "계정 생성 실패",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-        }
-    }*/
     }
 }

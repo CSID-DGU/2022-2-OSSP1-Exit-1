@@ -25,7 +25,14 @@ public interface APIS {
         @Field("id") id: String? = null,
         @Field("password") password: String? = null,
         @Field("name") name: String? = null
-    ): Call<UserPostModel>
+    ): Call<UserSignupPostModel>
+
+    @FormUrlEncoded
+    @POST("signin.php")
+    fun signin(
+        @Field("id") id: String? = null,
+        @Field("password") password: String? = null
+    ): Call<UserSigninModel>
 
     companion object {
         private const val BASE_URL =

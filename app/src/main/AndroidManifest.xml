@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -25,14 +26,13 @@
             android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/Theme.TestApplication">
-
-
-            android:name=".MatchingEnd"
-            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+        android:name=".MatchingEnd"
+        android:exported="false"/>
         <activity
             android:name=".TimeActivity"
             android:exported="false">
@@ -61,9 +61,9 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
+        <!--<activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false" />-->
         <activity
             android:name=".KotlinPractice"
             android:exported="false" />
