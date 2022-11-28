@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/banana_background">
+    android:background="@color/white">
 
 
     <TextView
@@ -12,38 +12,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
-        android:text="Sign - in"
-        android:textSize="35dp"
+        android:text="로그인"
+        android:textColor="@color/black2"
+        android:textSize="26dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/EmailText"
+        android:id="@+id/IDText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Email"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:text="ID"
+        android:textColor="@color/black2"
+        android:textSize="18dp"
+        android:textStyle=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in" />
 
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/login_ID"
         android:layout_width="346dp"
         android:layout_height="59dp"
         android:layout_marginTop="5dp"
         android:ems="10"
-        android:hint="이메일을 입력해주세요"
+        android:hint="아이디를 입력해주세요"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EmailText" />
+        app:layout_constraintTop_toBottomOf="@+id/IDText" />
 
     <TextView
         android:id="@+id/textView5"
@@ -72,52 +74,61 @@
 
     <Button
         android:id="@+id/find_pwd_btn"
-        android:layout_width="191dp"
-        android:layout_height="43dp"
+        android:layout_width="120dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="4dp"
         android:background="#00ff0000"
-        android:text="Forget password?"
-        android:textColor="#000000"
+        android:text="비밀번호를 찾으시나요?"
+        android:textColor="@color/blue0"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="279dp"
-        android:layout_height="59dp"
+        android:layout_width="349dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#FFFED567"
-        android:text="Login"
-        android:textColor="@color/realblack"
+        android:background="@color/blue0"
+        android:text="로그인"
+
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/find_pwd_btn" />
 
     <Button
-        android:id="@+id/sign_btn"
-        android:layout_width="102dp"
-        android:layout_height="54dp"
+        android:id="@+id/find_id_btn"
+        android:layout_width="74dp"
+        android:layout_height="45dp"
         android:background="#00ff0000"
-        android:text="Sign-up"
+        android:text="아이디 찾기"
         android:textColor="#000000"
         android:textSize="12dp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintHorizontal_bias="0.338"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_btn"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btn_main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="main으로 이동!"
+        android:id="@+id/sign_btn"
+        android:layout_width="102dp"
+        android:layout_height="54dp"
+        android:background="#00ff0000"
+        android:text="회원가입"
+        android:textColor="#000000"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toEndOf="@+id/find_id_btn"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
