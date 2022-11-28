@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="시작일:"
-            android:textColor="@color/black"
+            android:textColor="@color/black2"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/black"
+            android:textColor="@color/black2"
             android:textSize="20sp" />
 
         <View
@@ -75,14 +75,14 @@
             android:layout_height="1dp"
             android:layout_marginStart="80dp"
             android:layout_marginTop="35dp"
-            android:background="@color/black" />
+            android:background="@color/black2" />
 
         <ImageButton
             android:id="@+id/ib_startdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/realwhite"
             android:src="@drawable/ic_calender" />
 
         <TextView
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
             android:text="종료일:"
-            android:textColor="@color/black"
+            android:textColor="@color/realblack"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="80dp"
-            android:textColor="@color/black"
+            android:textColor="@color/black2"
             android:textSize="20sp" />
 
         <View
@@ -109,7 +109,7 @@
             android:layout_height="1dp"
             android:layout_marginStart="80dp"
             android:layout_marginTop="105dp"
-            android:background="@color/black" />
+            android:background="@color/black2" />
 
         <ImageButton
             android:id="@+id/ib_enddate"
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
             android:layout_marginTop="70dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/realwhite"
             android:src="@drawable/ic_calender" />
 
 

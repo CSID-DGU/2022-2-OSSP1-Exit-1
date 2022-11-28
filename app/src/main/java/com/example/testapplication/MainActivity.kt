@@ -39,10 +39,6 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(MatchingFragment())
                     true
                 }
-                R.id.nav_roommake -> {
-                    replaceFragment(RoomaddFragment())
-                    true
-                }
                 R.id.nav_chat -> {
                     replaceFragment(ChatFragment())
                     true

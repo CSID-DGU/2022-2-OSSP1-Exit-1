@@ -1,8 +1,11 @@
 package com.example.testapplication
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testapplication.databinding.LayoutChatlistBinding
 
@@ -19,11 +22,11 @@ class ChatlistAdapter(context : Context): RecyclerView.Adapter<ChatlistAdapter.C
     override fun onBindViewHolder(holder: ChatlistAdapter.ChatlistViewHolder, position: Int) {
         holder.bind(categorylist[position])
 
-        //holder.itemView.setOnClickListener {
-        //  Log.d("클릭","클릭")
-        //val intent = Intent(holder.itemView?.context, MatchingEnd::class.java)
-        //ContextCompat.startActivity(holder.itemView.context, intent,null)
-        //}
+        holder.itemView.setOnClickListener {
+            Log.d("클릭","클릭")
+            val intent = Intent(holder.itemView?.context, ChatActivity::class.java)
+            ContextCompat.startActivity(holder.itemView.context, intent,null)
+            }
     }
 
     override fun getItemCount(): Int {

@@ -24,7 +24,7 @@
     android:layout_marginTop="110dp"
     android:background="@color/blue0"
     android:text="로그인"
-    android:textColor="@color/white"
+    android:textColor="@color/realwhite"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -36,7 +36,7 @@
     android:layout_marginTop="10dp"
     android:background="@color/blue0"
     android:text="회원가입"
-    android:textColor="@color/white"
+    android:textColor="@color/realwhite"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/login_btn" />

@@ -9,9 +9,9 @@ class Matching_intro : AppCompatActivity() {
     private lateinit var btn_intro: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_matching_intro)
+        //setContentView(R.layout)
 
-        btn_intro=findViewById(R.id.btn_intro)
+        //btn_intro=findViewById(R.id.btn_intro)
 
         btn_intro.setOnClickListener{
             val intent= Intent(this, DateActivity::class.java)

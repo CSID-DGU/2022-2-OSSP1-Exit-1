@@ -12,16 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
-        <activity
-            android:name=".RecyclerviewActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
         <activity
             android:name=".ChatActivity"
             android:exported="false">
@@ -37,7 +29,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".FragmentSelectLocal"
             android:name=".IntroActivity"
             android:exported="false">
             <meta-data
@@ -85,12 +76,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".KotlinPractice"
-            android:exported="false" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

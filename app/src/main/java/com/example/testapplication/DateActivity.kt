@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import androidx.core.content.ContextCompat
 import com.example.testapplication.databinding.ActivityDatecbBinding
+import com.example.testapplication.databinding.FragmentMatchingBinding
 import java.util.*
 
 class DateActivity : AppCompatActivity() {
@@ -85,18 +87,17 @@ class DateActivity : AppCompatActivity() {
         btn_next=findViewById(R.id.btn_next)
         btn_past=findViewById(R.id.btn_back)
 
-        //이전으로 클릭
+        //다음으로 클릭
         btn_next.setOnClickListener {
             val intent = Intent(this, TimeActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        //다음으로 클릭
+        //이전으로 클릭
         btn_past.setOnClickListener {
-            val intent = Intent(this, Matching_intro::class.java)
-            startActivity(intent)
-            finish()
+            val intent = Intent(this, MatchingFragment::class.java)
+            ContextCompat.startActivity(this, intent,null)
         }
     }
 }

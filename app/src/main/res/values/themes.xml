@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Theme.TestApplication" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:statusBarColor">@color/blue_dark1</item>
         <item name="android:datePickerDialogTheme">@style/DialogDatePicker.Theme</item>
     </style>
     <style name="DialogDatePicker.Theme" parent="Theme.AppCompat.Light.Dialog">

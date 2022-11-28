@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/realwhite">
 
 
     <TextView
@@ -92,7 +92,7 @@
         android:layout_marginTop="50dp"
         android:background="@color/blue0"
         android:text="로그인"
-        android:textColor="@color/white"
+        android:textColor="@color/realwhite"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +105,7 @@
         android:layout_height="40dp"
         android:background="@color/blue0"
         android:text="회원가입"
-        android:textColor="@color/white"
+        android:textColor="@color/realwhite"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
