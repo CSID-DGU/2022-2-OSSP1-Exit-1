@@ -9,7 +9,7 @@ data class UserModel(
     var result: String? = null
 )
 
-data class UserPostModel(
+data class UserSignupPostModel(
     @Expose
     @SerializedName("id")
     var id: String? = null,
@@ -24,5 +24,19 @@ data class UserPostModel(
 
     @Expose
     @SerializedName("result")
-    var result:String?=null
+    var result: String? = null
+)
+
+data class UserSigninModel(
+    @Expose
+    @SerializedName("id")
+    var id: String? = null,
+
+    @Expose
+    @SerializedName("password")
+    var password: String? = null,
+
+    @Expose
+    @SerializedName("result")
+    var result: String? = null
 )

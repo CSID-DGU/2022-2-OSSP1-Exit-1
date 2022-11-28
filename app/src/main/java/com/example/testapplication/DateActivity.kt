@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.testapplication.databinding.ActivityDatecbBinding
-import java.text.SimpleDateFormat
 import java.util.*
 
 class DateActivity : AppCompatActivity() {

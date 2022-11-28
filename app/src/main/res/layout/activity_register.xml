@@ -28,8 +28,8 @@
         android:layout_width="239dp"
         android:layout_height="49dp"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="사용할 아이디를 입력해주세요"
         android:inputType="textEmailAddress"
@@ -89,8 +89,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="이름"
-        android:textSize="18dp"
         android:textColor="@color/black2"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -103,8 +103,6 @@
         android:ems="10"
         android:hint="이름을 입력해주세요"
         android:inputType="textPersonName"
-
-        app:layout_constraintEnd_toStartOf="@+id/nickname"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
@@ -113,15 +111,15 @@
         android:id="@+id/submit_btn"
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
         android:background="@color/blue0"
         android:text="중복 확인"
         android:textColor="@color/white"
         android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nickname" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"
@@ -148,30 +146,5 @@
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="닉네임"
-        android:textColor="@color/black2"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.254"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/nickname"
-        android:layout_width="175dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:hint="닉네임을 입력해주세요"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
