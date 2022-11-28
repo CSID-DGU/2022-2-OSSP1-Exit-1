@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
 
+    //네비게이션 바 색상 추가해야함
     <color name="realblack">#FF000000</color>
     <color name="realwhite">#FFFFFFFF</color>
     <color name="blue_main">#3041CF</color>
@@ -25,7 +19,10 @@
     <color name="gray_light">#b5b8ba</color>
     <color name="gray_dark">#494a4b</color>
     <color name="text_main">#131314</color>
+    <color name="text_white">#ffffff</color>
     <color name="text_gray">#b5b8ba</color>
+    <color name="textblock_lightgray">#b5b8ba</color>
+    <color name="textblock_blu">#3041CF</color>
     <color name="black2">#1B1F23</color>
     <color name="blue0">#3041CF</color>
     <color name="gray0">#263238</color>
