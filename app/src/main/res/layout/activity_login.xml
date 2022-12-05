@@ -98,6 +98,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
     <Button
+        android:enabled="false"
         android:id="@+id/find_pwd_btn"
         android:layout_width="120dp"
         android:layout_height="41dp"
@@ -111,6 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
     <Button
+        android:enabled="false"
         android:id="@+id/find_id_btn"
         android:layout_width="74dp"
         android:layout_height="45dp"
@@ -139,6 +141,13 @@
         app:layout_constraintTop_toBottomOf="@+id/login_btn"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/testbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="301dp"
+        tools:layout_editor_absoluteY="20dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

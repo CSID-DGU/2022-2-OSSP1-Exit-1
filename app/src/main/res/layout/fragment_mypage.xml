@@ -104,6 +104,7 @@
         app:layout_constraintTop_toTopOf="@+id/username" />
 
     <Button
+        android:enabled="false"
         android:id="@+id/editprofile"
         android:layout_width="match_parent"
         android:layout_height="40dp"
