@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchingOptionCheckActivity">
+
+    <TextView
+        android:id="@+id/tv_checktitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="확인해주세요,,"
+        android:textColor="@color/black2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_areatitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="지역: "
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_checktitle" />
+
+    <TextView
+        android:id="@+id/tv_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="강남"
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_areatitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_checktitle" />
+
+    <TextView
+        android:id="@+id/tv_datetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="기간: "
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_areatitle" />
+
+    <TextView
+        android:id="@+id/tv_datestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_datetitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_areatitle"
+        tools:text="시작일" />
+
+    <TextView
+        android:id="@+id/tv_wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="~"
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_datestart"
+        app:layout_constraintTop_toBottomOf="@+id/tv_areatitle" />
+
+    <TextView
+        android:id="@+id/tv_dateend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_wave"
+        app:layout_constraintTop_toBottomOf="@+id/tv_areatitle"
+        tools:text="종료일" />
+
+    <TextView
+        android:id="@+id/tv_genretitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="장르: "
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_datetitle" />
+
+    <TextView
+        android:id="@+id/tv_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="코믹"
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_genretitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_datetitle" />
+
+    <TextView
+        android:id="@+id/tv_leveltitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="난이도: "
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_genretitle" />
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="상"
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_leveltitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_genretitle" />
+
+    <TextView
+        android:id="@+id/tv_feartitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="공포도: "
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leveltitle" />
+
+    <TextView
+        android:id="@+id/tv_fear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="중"
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_feartitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_leveltitle" />
+
+    <TextView
+        android:id="@+id/tv_acttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="활동성: "
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_feartitle" />
+
+    <TextView
+        android:id="@+id/tv_act"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_acttitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_feartitle" />
+
+    <Button
+        android:id="@+id/btn_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:text="확인했습니다. V"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_act" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

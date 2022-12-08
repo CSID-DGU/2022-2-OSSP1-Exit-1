@@ -43,6 +43,7 @@ class DateActivity : AppCompatActivity() {
                     startDateString = "$year/$month/$dayOfMonth"
                     Log.d("시작일: ", startDateString)
                     binding.tvStartdate.text = startDateString
+
                 },
                 year,
                 month,
@@ -89,7 +90,9 @@ class DateActivity : AppCompatActivity() {
 
         //다음으로 클릭
         btn_next.setOnClickListener {
-            val intent = Intent(this, TimeActivity::class.java)
+            val intent = Intent(this, MatchingOptionCheckActivity::class.java)
+            intent.putExtra("startdate", startDateString)
+            intent.putExtra("enddate", endDateString)
             startActivity(intent)
             finish()
         }
