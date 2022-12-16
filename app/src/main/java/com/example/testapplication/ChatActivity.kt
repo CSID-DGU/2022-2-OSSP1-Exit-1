@@ -7,6 +7,7 @@ import com.example.testapplication.databinding.ActivityChatBinding
 import com.example.testapplication.databinding.ActivityCreateRoomLocalBinding
 
 class ChatActivity : AppCompatActivity() {
+
     private lateinit var Binding: ActivityChatBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
