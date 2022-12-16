@@ -53,57 +53,268 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <TextView
-        android:id="@+id/selectcity"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/selectLocal_1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/pretendard"
-        android:text="@string/selectcity"
-        android:textColor="@color/text_main"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectlocal_title" />
-
-    <Spinner
-        android:id="@+id/spinner_city"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/selectcity"
-        app:layout_constraintTop_toBottomOf="@+id/selectlocal_title" />
-
-    <TextView
-        android:id="@+id/selectdistrict"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/pretendard"
-        android:text="@string/selectdistrict"
-        android:textColor="@color/text_main"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectcity" />
-
-    <Spinner
-        android:id="@+id/spinner_district"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/selectdistrict"
-        app:layout_constraintTop_toBottomOf="@+id/selectcity" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectlocal_title">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지역1"
+                android:textSize="18sp"
+                android:fontFamily="@font/pretendard"
+                android:textColor="@color/text_main"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:text="* 입력 필수사항입니다"
+                android:textColor="@color/error"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteY="1dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:text="@string/selectcity"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spinner_city_1"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selectdistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:text="@string/selectdistrict"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight ="1" />
+
+            <Spinner
+                android:id="@+id/spinner_district_1"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectLocal_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectLocal_1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지역2"
+                android:textSize="18sp"
+                android:fontFamily="@font/pretendard"
+                android:textColor="@color/text_main"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/pretendard"-->
+<!--                android:text="* 입력 필수사항입니다"-->
+<!--                android:textColor="@color/error"-->
+<!--                android:textSize="14sp"-->
+<!--                tools:layout_editor_absoluteY="1dp" />-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:text="@string/selectcity"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spinner_city_2"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:text="@string/selectdistrict"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight ="1" />
+
+            <Spinner
+                android:id="@+id/spinner_district_2"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/selectLocal_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectLocal_2">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지역3"
+                android:textSize="18sp"
+                android:fontFamily="@font/pretendard"
+                android:textColor="@color/text_main"/>
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/pretendard"-->
+            <!--                android:text="* 입력 필수사항입니다"-->
+            <!--                android:textColor="@color/error"-->
+            <!--                android:textSize="14sp"-->
+            <!--                tools:layout_editor_absoluteY="1dp" />-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:text="@string/selectcity"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spinner_city_3"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:text="@string/selectdistrict"
+                android:textColor="@color/text_main"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight ="1" />
+
+            <Spinner
+                android:id="@+id/spinner_district_3"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="1.0" />
+        </LinearLayout>
+    </LinearLayout>
     <Button
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_prev"
         android:layout_width="175sp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
@@ -116,12 +327,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectdistrict"
         app:layout_constraintVertical_bias="1.0" />
 
 
     <Button
-        android:id="@+id/btn_prev"
+        android:id="@+id/btn_next"
         android:layout_width="175sp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
@@ -134,7 +344,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectdistrict"
         app:layout_constraintVertical_bias="1.0" />
 
     <!--    //네비게이션 바 없었나-->

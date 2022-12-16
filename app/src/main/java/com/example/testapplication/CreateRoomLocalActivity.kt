@@ -19,56 +19,39 @@ class CreateRoomLocalActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_create_room_local)
 //스피너 어댑터
         //var sData = resources.getStringArray(R.array.testarray)
-        var sData = listOf("선택하세요","test1","test2","test3")
-        var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1,sData)
-        val spinCity =mBinding.spinnerCity
-        spinCity.adapter=adapter
-        val spinDistrict =mBinding.spinnerDistrict
-        spinDistrict.adapter=adapter
+        var sData = listOf("선택하세요", "test1", "test2", "test3")
+        var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1, sData)
+        val spinCity1 = mBinding.spinnerCity1
+        spinCity1.adapter = adapter
+        val spinDistrict1 = mBinding.spinnerDistrict1
+        spinDistrict1.adapter = adapter
+
+        val spinCity2 = mBinding.spinnerCity2
+        spinCity2.adapter = adapter
+        val spinDistrict2 = mBinding.spinnerDistrict2
+        spinDistrict2.adapter = adapter
+
+        val spinCity3 = mBinding.spinnerCity3
+        spinCity3.adapter = adapter
+        val spinDistrict3 = mBinding.spinnerDistrict3
+        spinDistrict3.adapter = adapter
         //페이지 이동
 //        binding.btnNext.setOnClickListener{
 //            val intent= Intent(this, CreateRoomLocalActivity::class.java)
 //            startActivity(intent)
 //            finish()
 //        }
-        mBinding.btnPrev.setOnClickListener{
-            val intent1= Intent(this, CreateRoomOptionActivity::class.java)
+        mBinding.btnNext.setOnClickListener {
+            val intent1 = Intent(this, CreateRoomDateActivity::class.java)
             startActivity(intent1)
             finish()
         }
-        mBinding.btnBack.setOnClickListener{
-            val intent2= Intent(this, MainActivity::class.java)
+        mBinding.btnPrev.isEnabled = false
+        mBinding.btnBack.setOnClickListener {
+            val intent2 = Intent(this, MainActivity::class.java)
             startActivity(intent2)
             finish()
         }
 
-//        var fragN : Int = 0
-//        setFrag(0)
-//
-//        binding.btnNext.setOnClickListener{
-//            if(fragN<1) {
-//                fragN += 1
-//                setFrag(fragN)
-//            }
-//        }
-//        binding.btnPast.setOnClickListener{
-//            if(fragN>0) {
-//                fragN -= 1
-//                setFrag(fragN)
-//            }
-//        }
     }
-
-//    private fun setFrag(fragNum : Int) {
-//        val ft = supportFragmentManager.beginTransaction()
-//        when(fragNum)
-//        {
-//            0->{
-//                ft.replace(R.id.frame_createroom, FragmentSelectLocal()).commit()
-//            }
-//            1->{
-//                ft.replace(R.id.frame_createroom, FragmentSelectOption()).commit()
-//            }
-//        }
-//    }
 }

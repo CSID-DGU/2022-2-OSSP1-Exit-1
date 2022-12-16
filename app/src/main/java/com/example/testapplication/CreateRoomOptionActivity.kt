@@ -24,17 +24,44 @@ class CreateRoomOptionActivity : AppCompatActivity() {
         //var sData = resources.getStringArray(R.array.testarray)
         var sData = listOf("선택하세요","test1","test2","test3")
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1,sData)
-        val spinDifficulty =Binding.spinnerDifficulty
-        spinDifficulty.adapter=adapter
         val spinThema =Binding.spinnerThema
         spinThema.adapter=adapter
-        val spinScary =Binding.spinnerLocal5
-        spinScary.adapter=adapter
+//        val btnDifficultyHigh =Binding.difficultyHigh
+//        val btnDifficultyMiddle =Binding.difficultyMiddle
+//        val btnDifficultyLow =Binding.difficultyLow
+//        val btnScaryHigh =Binding.scaryHigh
+//        val btnScaryMiddle =Binding.scaryMiddle
+//        val btnScaryLow =Binding.scaryLow
+
+        Binding.difficultyHigh.setOnClickListener{
+            Binding.difficultyHigh.isSelected = Binding.difficultyHigh.isSelected != true
+        }
+        Binding.difficultyMiddle.setOnClickListener{
+            Binding.difficultyMiddle.isSelected = Binding.difficultyMiddle.isSelected != true
+        }
+        Binding.difficultyLow.setOnClickListener{
+            Binding.difficultyLow.isSelected = Binding.difficultyLow.isSelected!=true
+        }
+        Binding.scaryHigh.setOnClickListener{
+            Binding.scaryHigh.isSelected = Binding.scaryHigh.isSelected!=true
+        }
+        Binding.scaryMiddle.setOnClickListener{
+            Binding.scaryMiddle.isSelected = Binding.scaryMiddle.isSelected!=true
+        }
+        Binding.scaryLow.setOnClickListener{
+            Binding.scaryLow.isSelected = Binding.scaryLow.isSelected!=true
+        }
 
 
         //페이지 이동
         Binding.btnNext.setOnClickListener{
-            val intent2= Intent(this, CreateRoomLocalActivity::class.java)
+            val intent2= Intent(this, CreateRoomNameActivity::class.java)
+            startActivity(intent2)
+            finish()
+        }
+        //페이지 이동
+        Binding.btnPrev.setOnClickListener{
+            val intent2= Intent(this, CreateRoomDateActivity::class.java)
             startActivity(intent2)
             finish()
         }
