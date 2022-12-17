@@ -40,13 +40,13 @@ class ChatFragment: Fragment() {
         val adapter = ChatlistAdapter(requireContext())
         binding.rvCategory.adapter = adapter
         adapter.setRepoList(mockRepoList)
-        binding.button.setOnClickListener {
-            activity?.let{
-                val intent = Intent (it, ChatActivity::class.java)
-                it.startActivity(intent)
-            }
+       // binding.button.setOnClickListener {
+         //   activity?.let{
+           //     val intent = Intent (it, ChatActivity::class.java)
+             //   it.startActivity(intent)
+            //}
 
-        }
+       // }
     }
 
     override fun onDestroyView() {

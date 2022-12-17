@@ -1,5 +1,6 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -53,7 +54,7 @@ class MatchingFragment: Fragment(), View.OnClickListener  {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.btn_matching -> {
+            R.id.btn_create -> {
                 val intent = Intent(getActivity(), DateActivity::class.java)
                 startActivity(intent)
             }
