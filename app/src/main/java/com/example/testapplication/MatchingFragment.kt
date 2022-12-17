@@ -55,7 +55,7 @@ class MatchingFragment: Fragment(), View.OnClickListener  {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_create -> {
-                val intent = Intent(getActivity(), DateActivity::class.java)
+                val intent = Intent(getActivity(), RoomOptionCheck::class.java)
                 startActivity(intent)
             }
         }
