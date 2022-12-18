@@ -21,7 +21,7 @@ class ChatFragment: Fragment() {
         get() = requireNotNull(_binding)
 
     private val api = APIS.create()
-
+/*
     private val mockRepoList = listOf<ChatlistData> (
         ChatlistData(
             chatlist_img = R.drawable.room1,
@@ -34,7 +34,7 @@ class ChatFragment: Fragment() {
             chatlist_hashtag = "#방탈출 #강남 #눈물각 #앞장서줘"
         ),
     )
-
+*/
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

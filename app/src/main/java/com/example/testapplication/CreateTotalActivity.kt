@@ -24,10 +24,8 @@ class CreateTotalActivity : AppCompatActivity() {
         binding.tvArea2.text = region2
         val region3 = intent.getStringExtra("area3")
         binding.tvArea3.text = region3
-        val dateFrom = intent.getStringExtra("startdate")
-        binding.tvDateStart.text = dateFrom
-        val dateTo = intent.getStringExtra("enddate")
-        binding.tvDateEnd.text = dateTo
+        val date = intent.getStringExtra("date")
+        binding.tvDate.text = date
         val genre = intent.getStringExtra("genre")
         binding.tvGenre.text = genre
         val difficulty = intent.getStringExtra("diff")
@@ -39,21 +37,14 @@ class CreateTotalActivity : AppCompatActivity() {
         val roomIntro = intent.getStringExtra("roomintro")
         binding.tvDes.text = roomIntro
 
-        val dateFromArray = dateFrom.toString().split("/")
-        var dateFromString = ""
-        for(i in 0 until 3) {
-            dateFromString += dateFromArray[i]
-            dateFromString += "."
-        }
-        dateFromString = dateFromString.toString().substring(0, dateFromString.toString().length - 1)
 
-        val dateToArray = dateTo.toString().split("/")
-        var dateToString = ""
+        val dateArray = date.toString().split("/")
+        var dateString = ""
         for(i in 0 until 3) {
-            dateToString += dateToArray[i]
-            dateToString += "."
+            dateString += dateArray[i]
+            dateString += "."
         }
-        dateToString = dateToString.toString().substring(0, dateToString.toString().length - 1)
+        dateString = dateString.toString().substring(0, dateString.toString().length - 1)
 
         var difficultyNum = -1
         if(difficulty.toString() == "상")
@@ -82,12 +73,11 @@ class CreateTotalActivity : AppCompatActivity() {
         binding.btnCreate.setOnClickListener {
             api.createRoom(
                 createrUserId,
-                title.toString(),
+                roomtitle.toString(),
                 region1.toString(),
                 region2.toString(),
                 region3.toString(),
-                dateFromString,
-                dateToString,
+                dateString,
                 genre.toString(),
                 difficultyNum,
                 fearNum,

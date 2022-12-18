@@ -34,6 +34,12 @@ class MatchingTotalActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        binding.btnCreate.setOnClickListener {
+            val intent = Intent(this, Recommend_list::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 

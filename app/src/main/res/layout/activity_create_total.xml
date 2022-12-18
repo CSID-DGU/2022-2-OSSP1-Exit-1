@@ -132,28 +132,11 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/tv_dateStart"
+                android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:text="21.12.15"
-                android:textColor="@color/text_main"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="~"
-                android:textColor="@color/text_main"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/tv_dateEnd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="21.12.18"
                 android:textColor="@color/text_main"
                 android:textSize="20sp" />
 

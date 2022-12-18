@@ -42,8 +42,7 @@ public interface APIS {
         @Field("region1") region1: String? = null,
         @Field("region2") region2: String? = null,
         @Field("region3") region3: String? = null,
-        @Field("dateFrom") dateFrom: String? = null,
-        @Field("dateTo") dateTo: String? = null,
+        @Field("date") date: String? = null,
         @Field("genre") genre: String? = null,
         @Field("difficulty") difficulty: Int? = null,
         @Field("fear") fear: Int? = null,
@@ -56,15 +55,31 @@ public interface APIS {
         @Query("id") param1: String? = null
     ): Call<getRoomListModel>
 
+
+    @GET("api/users?page=2")
+    fun user(): Call<ResponseUserDTO>
+
     companion object {
         private const val BASE_URL =
-            "http://ec2-3-35-21-6.ap-northeast-2.compute.amazonaws.com/"
+            "http://ec2-3-34-134-247.ap-northeast-2.compute.amazonaws.com/"
 
         fun create(): APIS {
             val gson: Gson = GsonBuilder().setLenient().create()
 
             return Retrofit.Builder()
                 .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build()
+                .create(APIS::class.java)
+        }
+
+        private const val BASE_URL2 =
+            "https://reqres.in/"
+        fun create2(): APIS {
+            val gson: Gson = GsonBuilder().setLenient().create()
+
+            return Retrofit.Builder()
+                .baseUrl(BASE_URL2)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
                 .create(APIS::class.java)

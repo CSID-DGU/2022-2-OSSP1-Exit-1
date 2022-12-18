@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CreateRoomDateActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -48,7 +46,7 @@
             android:layout_marginStart="35dp"
             android:layout_marginTop="80dp"
             android:fontFamily="@font/pretendard_bold"
-            android:text="원하는 기간 선택"
+            android:text="원하는 만남 날짜 선택"
             android:textColor="@color/text_main"
             android:textSize="24sp" />
 
@@ -63,12 +61,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="시작일:"
+                android:text="날짜:"
                 android:textColor="@color/black2"
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/tv_startdate"
+                android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
@@ -90,41 +88,6 @@
                 android:layout_marginStart="190dp"
                 android:backgroundTint="@color/realwhite"
                 android:src="@drawable/ic_calender" />
-
-            <TextView
-                android:id="@+id/tv_enddate_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:text="종료일:"
-                android:textColor="@color/realblack"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:id="@+id/tv_enddate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/black2"
-                android:textSize="20sp" />
-
-            <View
-                android:layout_width="120dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="105dp"
-                android:background="@color/black2" />
-
-            <ImageButton
-                android:id="@+id/ib_enddate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="70dp"
-                android:backgroundTint="@color/realwhite"
-                android:src="@drawable/ic_calender" />
-
 
         </FrameLayout>
     </LinearLayout>

@@ -25,8 +25,7 @@ class CreateRoomOptionActivity : AppCompatActivity() {
         Binding = ActivityCreateRoomOptionBinding.inflate(layoutInflater)
         setContentView(Binding.root)
 
-        val startDateString = intent.getStringExtra("startdate")
-        val endDateString =intent.getStringExtra("enddate")
+        val DateString = intent.getStringExtra("date")
         val area1 = intent.getStringExtra("area1")
         val area2 = intent.getStringExtra("area2")
         val area3 = intent.getStringExtra("area3")
@@ -104,8 +103,7 @@ class CreateRoomOptionActivity : AppCompatActivity() {
         //페이지 이동
         Binding.btnNext.setOnClickListener{
             val intent = Intent(this, CreateRoomNameActivity::class.java)
-            intent.putExtra("startdate", startDateString)
-            intent.putExtra("enddate", endDateString)
+            intent.putExtra("date", DateString)
             intent.putExtra("area1", area1)
             intent.putExtra("area2", area2)
             intent.putExtra("area3", area3)
