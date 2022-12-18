@@ -13,10 +13,5 @@ class Matching_intro : AppCompatActivity() {
 
         btn_intro=findViewById(R.id.btn_intro)
 
-        btn_intro.setOnClickListener{
-            val intent= Intent(this, DateActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
     }
 }

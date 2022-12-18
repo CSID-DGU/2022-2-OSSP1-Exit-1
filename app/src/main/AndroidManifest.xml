@@ -20,13 +20,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".TimeActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Matching_intro"
             android:exported="false">
             <meta-data
@@ -34,21 +27,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity2"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Recommend_list"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".DateActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

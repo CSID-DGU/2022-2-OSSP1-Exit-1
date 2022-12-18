@@ -30,10 +30,6 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(CategoryFragment())
                     true
                 }
-                R.id.nav_matching -> {
-                    replaceFragment(MatchingFragment())
-                    true
-                }
                 R.id.nav_roommake -> {
                     replaceFragment(RoomaddFragment())
                     true
