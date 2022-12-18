@@ -1,5 +1,6 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
@@ -26,7 +27,11 @@ class RegisterActivity : AppCompatActivity() {
 
         var isDuplicated = true //중복확인, 초기값 true
         //var check = false
-
+        binding.btnBack.setOnClickListener {
+            val intent2 = Intent(this, LoginActivity::class.java)
+            startActivity(intent2)
+            finish()
+        }
         binding.registerBtn.setOnClickListener {
 
             //이메일이 비어있을 때 2

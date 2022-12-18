@@ -37,8 +37,6 @@
             android:text="@string/CreateRoom"
             android:textColor="@color/text_main"
             android:textSize="20sp" />
-
-
     </LinearLayout>
 
     <TextView
