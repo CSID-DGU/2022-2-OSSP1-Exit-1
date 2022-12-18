@@ -73,8 +73,6 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
                 }
             }
-
-
         }
     }
 }

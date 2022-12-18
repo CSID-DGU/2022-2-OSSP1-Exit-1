@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/realwhite"
     tools:context=".CreateRoomLocalActivity"
     tools:ignore="MissingDefaultResource">
 
@@ -205,11 +206,11 @@
         app:layout_constraintBottom_toBottomOf="parent">
         <Button
             android:id="@+id/btn_prev"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_strokerec_blu"
             android:textColor="@color/textblock_blu"
-
+            android:enabled="false"
             android:text="이전으로" />
 
         <View
@@ -219,7 +220,7 @@
 
         <Button
             android:id="@+id/btn_next"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_rec_blu"
             android:textColor="@color/text_white"

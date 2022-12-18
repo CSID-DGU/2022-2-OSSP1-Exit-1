@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/realwhite"
     tools:context=".CreateRoomDateActivity">
 
     <LinearLayout
@@ -20,7 +21,7 @@
             tools:layout_editor_absoluteY="4dp">
 
             <Button
-                android:id="@+id/btn_back1"
+                android:id="@+id/btn_back"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
@@ -46,7 +47,7 @@
             android:layout_marginStart="35dp"
             android:layout_marginTop="80dp"
             android:fontFamily="@font/pretendard_bold"
-            android:text="원하는 만남 날짜 선택"
+            android:text="@string/SelectDate_title"
             android:textColor="@color/text_main"
             android:textSize="24sp" />
 
@@ -55,15 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="35dp">
-
-            <TextView
-                android:id="@+id/tv_startdate_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="날짜:"
-                android:textColor="@color/black2"
-                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/tv_date"
@@ -101,7 +93,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
         <Button
             android:id="@+id/btn_prev"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_strokerec_blu"
             android:textColor="@color/textblock_blu"
@@ -115,7 +107,7 @@
 
         <Button
             android:id="@+id/btn_next"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_rec_blu"
             android:textColor="@color/text_white"

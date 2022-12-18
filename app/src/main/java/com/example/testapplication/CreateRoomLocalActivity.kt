@@ -87,7 +87,7 @@ class CreateRoomLocalActivity : AppCompatActivity() {
         }
         mBinding.btnPrev.isEnabled = false
         mBinding.btnBack.setOnClickListener {
-            val intent2 = Intent(this, MainActivity::class.java)
+            val intent2 = Intent(this, MatchingFragment::class.java)
             startActivity(intent2)
             finish()
         }

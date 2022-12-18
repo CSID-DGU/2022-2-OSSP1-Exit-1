@@ -70,17 +70,17 @@ class CreateRoomDateActivity : AppCompatActivity() {
 
         //이전으로(하단) 클릭
         binding.btnPrev.setOnClickListener {
-            val intent = Intent(this, MatchingFragment::class.java)
+            val intent = Intent(this, CreateRoomLocalActivity::class.java)
             startActivity(intent)
+            finish()
+        }
+
+        binding.btnBack.setOnClickListener {
+            val intent2 = Intent(this, MatchingFragment::class.java)
+            startActivity(intent2)
             finish()
         }
         /*
-        //이전으로(상단) 클릭
-        binding.btnBackTop.setOnClickListener {
-            val intent = Intent(this, Matching_intro::class.java)
-            startActivity(intent)
-            finish()
-        }
         //x표시 클릭(첫 화면으로 이동)
         binding.btnClose.setOnClickListener {
             val intent = Intent(this, Matching_intro::class.java)
