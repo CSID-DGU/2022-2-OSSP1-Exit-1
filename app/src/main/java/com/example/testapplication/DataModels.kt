@@ -158,3 +158,19 @@ data class getAllRoomInfoModel(
         var activity: Int? = null
     )
 }
+
+data class getRoomRecommendationModel(
+    @Expose
+    @SerializedName("roomRecommendationList")
+    var roomRecommendationList: List<recommendationRoomInfo>
+) {
+    data class recommendationRoomInfo(
+        @Expose
+        @SerializedName("title")
+        var title: String? = null,
+
+        @Expose
+        @SerializedName("roomIntro")
+        var roomIntro: String? = null
+    )
+}

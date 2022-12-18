@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class Recommend_list : AppCompatActivity() {
+    private val api = APIS.create()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

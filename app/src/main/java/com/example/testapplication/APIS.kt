@@ -59,6 +59,13 @@ public interface APIS {
     fun getAllRoomInfo(
     ): Call<getAllRoomInfoModel>
 
+    @GET("getRoomRecommendation.php")
+    fun getRoomRecommendation(
+        @Query("roomID1") param1: String? = null,
+        @Query("roomID2") param2: String? = null,
+        @Query("roomID3") param3: String? = null
+    ): Call<getRoomRecommendationModel>
+
     companion object {
         private const val BASE_URL =
             "http://ec2-3-34-134-247.ap-northeast-2.compute.amazonaws.com/"
