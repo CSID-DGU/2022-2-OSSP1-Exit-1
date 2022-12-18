@@ -19,5 +19,6 @@ class ChatActivity : AppCompatActivity() {
             startActivity(intent2)
             finish()
         }
+
     }
 }

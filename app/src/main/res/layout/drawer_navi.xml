@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_drawer_layout"
-    tools:openDrawer="start"
+    tools:openDrawer="end"
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -17,14 +17,13 @@
     <include
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        layout="@layout/activity_main"/>
+        layout="@layout/activity_chat"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:orientation="vertical"
         android:background="@color/realwhite"
-        android:layout_gravity = "left"
-        app:itemTextColor="#fff"
+        android:layout_gravity = "right"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -32,82 +31,198 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--            <include-->
-            <!--                android:id="@+id/main_header_include_logged_in"-->
-            <!--                android:visibility="invisible"-->
-            <!--                app:layout_constraintTop_toTopOf="parent"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                layout="@layout/main_drawer_header_logged_in"/>-->
-
-            <!--            <include-->
-            <!--                android:id="@+id/main_header_include_logged_out"-->
-            <!--                android:visibility="visible"-->
-            <!--                app:layout_constraintTop_toTopOf="parent"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                layout="@layout/main_drawer_header_logged_out"/>-->
-
-
             <LinearLayout
-                android:id="@+id/linearLayout4"
+                android:id="@+id/roomdata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/textbox_strokebottom"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="10sp"
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <!--                대화상대 목록이랑 구분되도록-->
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="21dp"
-                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/pretendard"
-                    android:text="대화상대"
+                    android:text="room title"
                     android:textColor="@color/text_main"
                     android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/main_navigation_btn1"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="21dp"
-                    android:layout_marginTop="20dp"
-                    android:clickable="true"
-                    android:enabled="false"
-                    android:text="user1"
+                    android:fontFamily="@font/pretendard"
+                    android:text="@string/roomIntroEX"
                     android:textColor="@color/text_main"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
-                <Button
-                    android:id="@+id/main_navigation_btn2"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="21dp"
-                    android:layout_marginTop="20dp"
-                    android:clickable="true"
-                    android:enabled="false"
-                    android:text="user2"
+                    android:fontFamily="@font/pretendard"
+                    android:text="date"
                     android:textColor="@color/text_main"
-                    android:textSize="18sp" />
-
-                <Button
-                    android:id="@+id/main_navigation_btn3"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="21dp"
-                    android:layout_marginTop="20dp"
-                    android:clickable="true"
-                    android:enabled="false"
-                    android:text="user3"
+                    android:fontFamily="@font/pretendard"
+                    android:text="local"
                     android:textColor="@color/text_main"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
 
+                            android:text="난이도"
+                            android:textColor="@color/text_main"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상"
+                            android:textColor="@color/text_main"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공포도"
+                            android:textColor="@color/text_main"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상"
+                            android:textColor="@color/text_main"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="활동성"
+                            android:textColor="@color/text_main"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상"
+                            android:textColor="@color/text_main"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/Userlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:paddingTop="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"
+                app:layout_constraintTop_toBottomOf="@+id/roomdata">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:text="대화 상대"
+                    android:textColor="@color/text_main"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/gongpo" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard"
+                            android:text="User1"
+                            android:textColor="@color/text_main"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard"
+                            android:text="\@User1ID"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_rec_topstroke_gray"
+                    android:text="방 나가기"
+                    android:textColor="@color/error"
+                    android:textSize="14sp">
+
+                </Button>
+            </FrameLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>
