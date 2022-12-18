@@ -6,7 +6,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/drawerLayout"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".TestActivity">
+tools:context=".ChatActivity">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -64,41 +64,42 @@ tools:context=".TestActivity">
             android:id="@+id/chat_inputBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="35dp"
-            android:paddingRight="35dp"
-            android:layout_marginBottom="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="20dp">
 
-            <EditText
-                android:id="@+id/chat_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_stroke_gray"
-                android:ems="10"
-                android:hint="내용을 입력하세요"
-                android:inputType="textLongMessage"
-                android:minHeight="48dp" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittext_circle_gray">
+                <EditText
+                    android:id="@+id/chat_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00ff0000"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:minHeight="48dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/massage_send"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_send"/>
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <Button
-                android:id="@+id/chat_submit_button"
-                android:layout_width="78dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_circ_blu"
-                android:text="전송"
-                android:textColor="@color/text_white"
-                android:textColorLink="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 <com.google.android.material.navigation.NavigationView
@@ -107,6 +108,7 @@ tools:context=".TestActivity">
     android:layout_height="match_parent"
     app:headerLayout="@layout/layout_navigation_header"
     app:menu="@menu/chat_side_menu"
+    android:background="@color/realwhite"
     android:layout_gravity="end"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

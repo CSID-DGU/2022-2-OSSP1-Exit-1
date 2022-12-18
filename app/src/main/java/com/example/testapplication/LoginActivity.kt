@@ -65,6 +65,10 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
+        binding.test.setOnClickListener(){
+            var intent2 = Intent(applicationContext,MainActivity::class.java)
+            startActivity(intent2)
+        }
 
         }
     }

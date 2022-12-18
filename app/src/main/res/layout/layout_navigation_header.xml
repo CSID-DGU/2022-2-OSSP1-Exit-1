@@ -3,55 +3,98 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
     android:background="@color/realwhite">
 
 
-
+    <Button
+        android:id="@+id/exit_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/textbox_strokebottom"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="방 나가기"
+        android:textColor="@color/error"
+        android:textSize="14sp"/>
     <LinearLayout
         android:id="@+id/roomdata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/textbox_strokebottom"
+        android:layout_margin="10dp"
         android:paddingBottom="10sp"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/exit_room">
 
         <!--                대화상대 목록이랑 구분되도록-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
             android:fontFamily="@font/pretendard"
             android:text="room title"
             android:textColor="@color/text_main"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
             android:fontFamily="@font/pretendard"
             android:text="@string/roomIntroEX"
             android:textColor="@color/text_main"
             android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard"
-            android:text="date"
-            android:textColor="@color/text_main"
-            android:textSize="20sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard"
-            android:text="local"
-            android:textColor="@color/text_main"
-            android:textSize="20sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_calender"
+                android:tint="@color/gray_light"
+                android:adjustViewBounds="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/pretendard"
+                android:text="date"
+                android:textColor="@color/gray_light"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_location"
+                android:tint="@color/gray_light"
+                android:adjustViewBounds="true"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/pretendard"
+                android:text="local"
+                android:textColor="@color/gray_light"
+
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -64,13 +107,15 @@
                     android:text="난이도"
                     android:textColor="@color/text_main"
                     android:layout_gravity="center"
-                    android:textSize="16sp"/>
+                    android:textSize="14sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
                     android:text="상"
                     android:textColor="@color/text_main"
-                    android:layout_gravity="center"
+                    android:textStyle="bold"
                     android:textSize="16sp"/>
             </LinearLayout>
             <LinearLayout
@@ -84,13 +129,14 @@
                     android:text="공포도"
                     android:textColor="@color/text_main"
                     android:layout_gravity="center"
-                    android:textSize="16sp"/>
+                    android:textSize="14sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="상"
                     android:textColor="@color/text_main"
                     android:layout_gravity="center"
+                    android:textStyle="bold"
                     android:textSize="16sp"/>
             </LinearLayout>
 
@@ -106,18 +152,18 @@
                     android:text="활동성"
                     android:textColor="@color/text_main"
                     android:layout_gravity="center"
-                    android:textSize="16sp"/>
+                    android:textSize="14sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="상"
                     android:textColor="@color/text_main"
                     android:layout_gravity="center"
+                    android:textStyle="bold"
                     android:textSize="16sp"/>
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

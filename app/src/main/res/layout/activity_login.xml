@@ -97,20 +97,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
+<!--    <Button-->
+<!--        android:enabled="false"-->
+<!--        android:id="@+id/find_pwd_btn"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="41dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:background="#00ff0000"-->
+<!--        android:text="비밀번호를 찾으시나요?"-->
+<!--        android:textColor="@color/blue0"-->
+<!--        android:textSize="12dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.893"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/login_password" />-->
+<!--    -->
     <Button
-        android:enabled="false"
-        android:id="@+id/find_pwd_btn"
-        android:layout_width="120dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="4dp"
-        android:background="#00ff0000"
-        android:text="비밀번호를 찾으시나요?"
-        android:textColor="@color/blue0"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password" />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:enabled="false"
         android:id="@+id/find_id_btn"
