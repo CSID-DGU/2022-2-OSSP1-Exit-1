@@ -1,21 +1,23 @@
 package com.example.testapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.RelativeLayout
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 
 class TestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.drawer_navi)
 
-        //버튼을 눌러 메뉴를 오픈할 수도 있고, 왼쪽에서 오른쪽으로 스왑해 오픈할 수 있습니다.
-        //DrawerLayout의 id에 직접 openDrawer()메소드를 사용할 수 있습니다.
-        open_menu_btn.setOnClickListener {
-            main_drawer_layout.openDrawer((GravityCompat.START))
+        setContentView(R.layout.activity_test)
+
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
+        findViewById<View>(R.id.imageMenu).setOnClickListener { // start에 지정된 Drawer 열기
+            drawerLayout.openDrawer(GravityCompat.END)
         }
-
+        val navigationView = findViewById<NavigationView>(R.id.side_menu)
+        navigationView.itemIconTintList = null
     }
 }
