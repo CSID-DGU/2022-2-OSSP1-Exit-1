@@ -139,15 +139,19 @@ data class getAllRoomInfoModel(
 
         @Expose
         @SerializedName("date")
-        var dateTo: String? = null,
+        var date: String? = null,
 
         @Expose
         @SerializedName("genre")
-        var genre: Int? = null,
+        var genre: String? = null,
 
         @Expose
         @SerializedName("difficulty")
         var difficulty: Int? = null,
+
+        @Expose
+        @SerializedName("fear")
+        var fear: Int? = null,
 
         @Expose
         @SerializedName("activity")
