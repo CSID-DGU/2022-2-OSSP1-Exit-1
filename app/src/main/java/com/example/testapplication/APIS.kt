@@ -34,6 +34,23 @@ public interface APIS {
         @Field("password") password: String? = null
     ): Call<UserSigninModel>
 
+    @FormUrlEncoded
+    @POST("createRoom.php")
+    fun createRoom(
+        @Field("createrUserId") createrUserId: String? = null,
+        @Field("title") title: String? = null,
+        @Field("region1") region1: String? = null,
+        @Field("region2") region2: String? = null,
+        @Field("region3") region3: String? = null,
+        @Field("dateFrom") dateFrom: String? = null,
+        @Field("dateTo") dateTo: String? = null,
+        @Field("genre") genre: String? = null,
+        @Field("difficulty") difficulty: Int? = null,
+        @Field("fear") fear: Int? = null,
+        @Field("activity") activity: Int? = null,
+        @Field("roomIntro") roomIntro: String? = null,
+    ): Call<createRoomPostModel>
+
     companion object {
         private const val BASE_URL =
             "http://ec2-3-35-21-6.ap-northeast-2.compute.amazonaws.com"
