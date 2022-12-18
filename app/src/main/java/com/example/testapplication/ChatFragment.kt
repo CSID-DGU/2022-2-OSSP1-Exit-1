@@ -1,10 +1,14 @@
 package com.example.testapplication
 
+import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.content.SharedPreferences
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.testapplication.databinding.FragmentChatBinding
 
@@ -12,6 +16,8 @@ class ChatFragment: Fragment() {
     private var _binding : FragmentChatBinding? = null
     private val binding : FragmentChatBinding
         get() = requireNotNull(_binding)
+
+    private val api = APIS.create()
 
     private val mockRepoList = listOf<ChatlistData> (
         ChatlistData(
@@ -32,6 +38,7 @@ class ChatFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentChatBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -40,6 +47,11 @@ class ChatFragment: Fragment() {
         val adapter = ChatlistAdapter(requireContext())
         binding.rvCategory.adapter = adapter
         adapter.setRepoList(mockRepoList)
+
+        val preferences = requireActivity().getSharedPreferences("userInfo", MODE_PRIVATE)
+        val userId = preferences?.getString("userId", "")
+        Log.d("asdfasdf", userId.toString());
+
         //binding..setOnClickListener {
           //  activity?.let{
             //    val intent = Intent (it, ChatActivity::class.java)

@@ -16,14 +16,12 @@ class LoginActivity : AppCompatActivity() {
 
     private val api = APIS.create()
 
-    //private var preferences: SharedPreferences? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val preferences = getSharedPreferences("UserInfo", MODE_PRIVATE);
+        val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
 
         val ID = binding.loginID
         val Password = binding.loginPassword
@@ -47,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
                             val editor = preferences!!.edit()
                             editor.putString("userId", ID.text.toString())
                             editor.putString("userPw", Password.text.toString())
+                            Log.d("LoginId", preferences.getString("userId", "").toString())
                             editor.apply()
 
                             Log.d("loginsuccess", "${response.body()}")
