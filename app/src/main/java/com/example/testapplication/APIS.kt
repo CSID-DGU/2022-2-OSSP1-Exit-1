@@ -55,9 +55,9 @@ public interface APIS {
         @Query("id") param1: String? = null
     ): Call<getRoomListModel>
 
-
-    @GET("api/users?page=2")
-    fun user(): Call<ResponseUserDTO>
+    @GET("getAllRoomInfo.php")
+    fun getAllRoomInfo(
+    ): Call<getAllRoomInfoModel>
 
     companion object {
         private const val BASE_URL =
@@ -68,18 +68,6 @@ public interface APIS {
 
             return Retrofit.Builder()
                 .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build()
-                .create(APIS::class.java)
-        }
-
-        private const val BASE_URL2 =
-            "https://reqres.in/"
-        fun create2(): APIS {
-            val gson: Gson = GsonBuilder().setLenient().create()
-
-            return Retrofit.Builder()
-                .baseUrl(BASE_URL2)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
                 .create(APIS::class.java)
