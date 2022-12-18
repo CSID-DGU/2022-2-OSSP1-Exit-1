@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/room_exit"
+        android:title="방 나가기"/>
+    <item
+        android:id="@+id/room_edit"
+        android:title="수정하기"/>
+
+</menu>
