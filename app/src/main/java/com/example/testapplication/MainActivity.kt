@@ -1,8 +1,11 @@
 package com.example.testapplication
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainerView
 import com.example.testapplication.databinding.ActivityMainBinding
@@ -25,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         if (frame == null) {
             supportFragmentManager.beginTransaction()
-                .add(frame.id, RoomaddFragment())
+                .add(frame.id, ChatFragment())
                 .commit()
         }
 

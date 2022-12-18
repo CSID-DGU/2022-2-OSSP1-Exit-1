@@ -94,3 +94,25 @@ data class createRoomPostModel(
     @SerializedName("result")
     var result: String? = null
 )
+
+
+
+data class getRoomListModel(
+//    @Expose
+//    @SerializedName("id")
+//    var id: String? = null,
+
+    @Expose
+    @SerializedName("roomList")
+    var roomList: List<roomData>
+) {
+    data class roomData(
+        @Expose
+        @SerializedName("roomID")
+        var roomID: String? = null,
+
+        @Expose
+        @SerializedName("title")
+        var title: String? = null,
+    )
+}
