@@ -8,7 +8,6 @@ import android.util.Log
 import android.widget.Button
 import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.testapplication.databinding.ActivityCreateRoomDateBinding
-import com.example.testapplication.databinding.ActivityDatecbBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -107,7 +106,7 @@ class CreateRoomDateActivity : AppCompatActivity() {
 
         //이전으로(하단) 클릭
         binding.btnPrev.setOnClickListener {
-            val intent = Intent(this, Matching_intro::class.java)
+            val intent = Intent(this, MatchingFragment::class.java)
             startActivity(intent)
             finish()
         }

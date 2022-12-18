@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateRoomDateActivity">
+    tools:context=".MatchingDateActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -34,7 +34,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/pretendard_bold"
-                android:text="방만들기"
+                android:text="찾아보기"
                 android:textColor="@color/text_main"
                 android:textSize="20dp">
 

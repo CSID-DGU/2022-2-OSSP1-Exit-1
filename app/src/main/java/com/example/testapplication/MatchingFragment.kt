@@ -54,7 +54,7 @@ class MatchingFragment: Fragment(), View.OnClickListener  {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_search -> {
-                val intent = Intent(getActivity(), DateActivity::class.java)
+                val intent = Intent(getActivity(), MatchingLocalActivity::class.java)
                 startActivity(intent)
             }
             R.id.btn_create -> {

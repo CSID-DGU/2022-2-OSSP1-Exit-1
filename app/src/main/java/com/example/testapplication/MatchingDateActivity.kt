@@ -6,21 +6,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import androidx.core.content.ContextCompat
-import com.example.testapplication.databinding.ActivityDatecbBinding
-import com.example.testapplication.databinding.FragmentMatchingBinding
+import com.example.testapplication.databinding.ActivityMatchingDateBinding
 import java.util.*
 
-class DateActivity : AppCompatActivity() {
+class MatchingDateActivity : AppCompatActivity() {
     private lateinit var btn_next: Button
-    private lateinit var btn_past: Button
+    private lateinit var btn_back: Button
     var startDateString = ""
     var endDateString = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityDatecbBinding.inflate(layoutInflater)
+        val binding = ActivityMatchingDateBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val area1 = intent.getStringExtra("area1")
+        val area2 = intent.getStringExtra("area2")
+        val area3 = intent.getStringExtra("area3")
 
         //시작일
         binding.ibStartdate.setOnClickListener {
@@ -43,6 +45,7 @@ class DateActivity : AppCompatActivity() {
                     startDateString = "$year/$month/$dayOfMonth"
                     Log.d("시작일: ", startDateString)
                     binding.tvStartdate.text = startDateString
+
                 },
                 year,
                 month,
@@ -70,7 +73,7 @@ class DateActivity : AppCompatActivity() {
                     calendar.set(year, monthOfYear, dayOfMonth)
                     //종료일 String 값
                     endDateString = "$year/$month/$dayOfMonth"
-                    Log.d("종료일: " , endDateString)
+                    Log.d("종료일: ", endDateString)
                     binding.tvEnddate.text = endDateString
                 },
                 year,
@@ -81,23 +84,40 @@ class DateActivity : AppCompatActivity() {
             enddate.show()
         }
 
-
-
-
-        btn_next=findViewById(R.id.btn_next)
-        btn_past=findViewById(R.id.btn_back)
-
         //다음으로 클릭
-        btn_next.setOnClickListener {
-            val intent = Intent(this, TimeActivity::class.java)
+        binding.btnNext.setOnClickListener {
+            val intent = Intent(this, MatchingOptionActivity::class.java)
+            intent.putExtra("startdate", startDateString)
+            intent.putExtra("enddate", endDateString)
+            intent.putExtra("area1", area1)
+            intent.putExtra("area2", area2)
+            intent.putExtra("area3", area3)
             startActivity(intent)
             finish()
         }
 
-        //이전으로 클릭
-        btn_past.setOnClickListener {
-            val intent = Intent(this, MatchingFragment::class.java)
-            ContextCompat.startActivity(this, intent,null)
+        //이전으로(하단) 클릭
+       /*
+        binding.btnPrev.setOnClickListener {
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
         }
+        */
+        /*
+        //이전으로(상단) 클릭
+        binding.btnBackTop.setOnClickListener {
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
+        }
+        //x표시 클릭(첫 화면으로 이동)
+        binding.btnClose.setOnClickListener {
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+         */
     }
 }

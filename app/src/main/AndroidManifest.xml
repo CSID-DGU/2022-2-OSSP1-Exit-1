@@ -14,6 +14,38 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
 
+
+        <activity
+            android:name=".MatchingLocalActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".MatchingDateActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MatchingOptionActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MatchingTotalActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+
         <activity
             android:name=".CreateRoomDateActivity"
             android:exported="false" >
@@ -57,31 +89,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MatchingEnd"
-            android:exported="false" />
-        <activity
-            android:name=".TimeActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Matching_intro"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".Recommend_list"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".DateActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
