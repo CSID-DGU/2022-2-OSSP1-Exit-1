@@ -75,4 +75,8 @@ data class createRoomPostModel(
     @Expose
     @SerializedName("roomIntro")
     var roomIntro: String? = null,
+
+    @Expose
+    @SerializedName("result")
+    var result: String? = null
 )

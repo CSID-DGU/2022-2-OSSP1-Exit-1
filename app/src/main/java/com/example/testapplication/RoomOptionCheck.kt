@@ -2,7 +2,11 @@ package com.example.testapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import com.example.testapplication.databinding.ActivityRoomOptionCheckBinding
+import retrofit2.Call
+import retrofit2.Response
 
 class RoomOptionCheck : AppCompatActivity() {
     private lateinit var binding: ActivityRoomOptionCheckBinding
@@ -14,8 +18,11 @@ class RoomOptionCheck : AppCompatActivity() {
         binding = ActivityRoomOptionCheckBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val createrUserId = "test5"
         val title = binding.tvRoom
         val region1 = binding.tvArea
+        val region2 = "혜화"
+        val region3 = "성수"
         val dateFrom = binding.tvDatestart
         val dateTo = binding.tvDateend
         val genre = binding.tvGenre
@@ -25,6 +32,7 @@ class RoomOptionCheck : AppCompatActivity() {
         val roomIntro = binding.tvRoomdes
 
         val dateFromArray = dateFrom.text.toString().split("/")
+        Log.d("dateFrom", region1.text.toString())
         var dateFromString = ""
         for(i in 0 until 3) {
             dateFromString += dateFromArray[i]
@@ -64,5 +72,41 @@ class RoomOptionCheck : AppCompatActivity() {
         else if (activity.text.toString() == "하")
             activityNum = 0
 
+        binding.btnCheck.setOnClickListener {
+            api.createRoom(
+                createrUserId,
+                title.text.toString(),
+                region1.text.toString(),
+                region2,
+                region3,
+                dateFromString,
+                dateToString,
+                genre.text.toString(),
+                difficultyNum,
+                fearNum,
+                activityNum,
+                roomIntro.text.toString()
+            ).enqueue(object : retrofit2.Callback<createRoomPostModel> {
+                override fun onResponse(
+                    call: Call<createRoomPostModel>,
+                    response: Response<createRoomPostModel>
+                ) {
+                    Log.d("createRoom", "asdfasdf")
+                    if(response.body()?.result.toString() == "createRoomSuccess") {
+                        Log.d("createRoom", "create room success")
+                        Toast.makeText(applicationContext, response.body()?.result.toString(), Toast.LENGTH_SHORT).show()
+                    } else {
+                        Log.d("aassddff", "aassddff")
+                        Toast.makeText(applicationContext, response.body()?.result.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<createRoomPostModel>, t: Throwable) {
+                    Log.d("createRoomFail", "createRoomFail")
+                    Log.d("createRoomFail", t.toString())
+                }
+
+            })
+        }
     }
 }
