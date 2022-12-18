@@ -50,11 +50,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-        binding1.testDm.setOnClickListener(){
-            val intent = Intent(this, TestActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
     }
 
     fun replaceFragment(fragment: Fragment) {
