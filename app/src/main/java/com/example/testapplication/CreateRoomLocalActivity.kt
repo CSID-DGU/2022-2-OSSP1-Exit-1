@@ -2,15 +2,21 @@ package com.example.testapplication
 
 import android.R
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.example.testapplication.databinding.ActivityCreateRoomLocalBinding
 
 
 class CreateRoomLocalActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityCreateRoomLocalBinding
+
+    var area1 = ""
+    var area2 = ""
+    var area3 = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +30,47 @@ class CreateRoomLocalActivity : AppCompatActivity() {
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1, sData)
         val spinCity1 = mBinding.spinnerCity1
         spinCity1.adapter = adapter
+        spinCity1.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
 
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                //position은 선택한 아이템의 위치를 넘겨주는 인자입니다.
+                //mBinding.text = sData.get(position)
+                area1 = sData.get(position)
+                Log.d("지역1",  sData.get(position))
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
         val spinCity2 = mBinding.spinnerCity2
         spinCity2.adapter = adapter
+        spinCity2.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                //position은 선택한 아이템의 위치를 넘겨주는 인자입니다.
+                //mBinding.text = sData.get(position)
+                area2 = sData.get(position)
+                Log.d("지역2",  sData.get(position))
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
 
         val spinCity3 = mBinding.spinnerCity3
         spinCity3.adapter = adapter
+        spinCity3.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                //position은 선택한 아이템의 위치를 넘겨주는 인자입니다.
+                //mBinding.text = sData.get(position)
+                area3 = sData.get(position)
+                Log.d("지역3",  sData.get(position))
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
         //페이지 이동
 //        binding.btnNext.setOnClickListener{
 //            val intent= Intent(this, CreateRoomLocalActivity::class.java)
@@ -37,8 +78,11 @@ class CreateRoomLocalActivity : AppCompatActivity() {
 //            finish()
 //        }
         mBinding.btnNext.setOnClickListener {
-            val intent1 = Intent(this, CreateRoomDateActivity::class.java)
-            startActivity(intent1)
+            val intent = Intent(this, CreateRoomDateActivity::class.java)
+            intent.putExtra("area1", area1)
+            intent.putExtra("area2", area2)
+            intent.putExtra("area3", area3)
+            startActivity(intent)
             finish()
         }
         mBinding.btnPrev.isEnabled = false

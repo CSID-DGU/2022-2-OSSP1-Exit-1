@@ -3,6 +3,7 @@ package com.example.testapplication
 import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testapplication.databinding.ActivityCreateRoomNameBinding
 
@@ -14,11 +15,35 @@ class CreateRoomNameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Binding = ActivityCreateRoomNameBinding.inflate(layoutInflater)
         setContentView(Binding.root)
+        val startDateString = intent.getStringExtra("startdate")
+        val endDateString =intent.getStringExtra("enddate")
+        val area1 = intent.getStringExtra("area1")
+        val area2 = intent.getStringExtra("area2")
+        val area3 = intent.getStringExtra("area3")
+        val genre = intent.getStringExtra("genre")
+        val diff = intent.getStringExtra("diff")
+        val activity = intent.getStringExtra("activity")
+        val fear = intent.getStringExtra("fear")
+
+        val roomintro = Binding.roomIntroEdit.text
 
 
         Binding.btnNext.setOnClickListener {
-            val intent2 = Intent(this, CreateTotalActivity::class.java)
-            startActivity(intent2)
+            val intent = Intent(this, CreateTotalActivity::class.java)
+            intent.putExtra("startdate", startDateString)
+            intent.putExtra("enddate", endDateString)
+            intent.putExtra("area1", area1)
+            intent.putExtra("area2", area2)
+            intent.putExtra("area3", area3)
+            intent.putExtra("genre", genre)
+            intent.putExtra("diff", diff)
+            intent.putExtra("fear", fear)
+            intent.putExtra("activity", activity)
+            val roomtitle = Binding.roomTitleEdit.text.toString()
+            intent.putExtra("roomtitle", roomtitle)
+            val roomintro = Binding.roomIntroEdit.text.toString()
+            intent.putExtra("roomintro", roomintro)
+            startActivity(intent)
             finish()
         }
         //페이지 이동

@@ -3,6 +3,7 @@ package com.example.testapplication
 import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -14,11 +15,21 @@ import com.example.testapplication.databinding.ActivityCreateRoomOptionBinding
 
 class CreateRoomOptionActivity : AppCompatActivity() {
     private lateinit var Binding: ActivityCreateRoomOptionBinding
+    var genre = ""
+    var diff = ""
+    var fear= ""
+    var activity = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Binding = ActivityCreateRoomOptionBinding.inflate(layoutInflater)
         setContentView(Binding.root)
+
+        val startDateString = intent.getStringExtra("startdate")
+        val endDateString =intent.getStringExtra("enddate")
+        val area1 = intent.getStringExtra("area1")
+        val area2 = intent.getStringExtra("area2")
+        val area3 = intent.getStringExtra("area3")
 
         //스피너 어댑터
         //var sData = resources.getStringArray(R.array.testarray)
@@ -27,6 +38,24 @@ class CreateRoomOptionActivity : AppCompatActivity() {
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1,sData)
         val spinThema =Binding.spinnerThema
         spinThema.adapter=adapter
+        spinThema.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                //position은 선택한 아이템의 위치를 넘겨주는 인자입니다.
+                //mBinding.text = sData.get(position)
+                genre = sData.get(position)
+                Log.d("장르:", sData.get(position))
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
 //        val btnDifficultyHigh =Binding.difficultyHigh
 //        val btnDifficultyMiddle =Binding.difficultyMiddle
 //        val btnDifficultyLow =Binding.difficultyLow
@@ -36,37 +65,55 @@ class CreateRoomOptionActivity : AppCompatActivity() {
 
         Binding.difficultyHigh.setOnClickListener{
             Binding.difficultyHigh.isSelected = Binding.difficultyHigh.isSelected != true
+            diff = "상"
         }
         Binding.difficultyMiddle.setOnClickListener{
             Binding.difficultyMiddle.isSelected = Binding.difficultyMiddle.isSelected != true
+            diff = "중"
         }
         Binding.difficultyLow.setOnClickListener{
             Binding.difficultyLow.isSelected = Binding.difficultyLow.isSelected!=true
+            diff = "하"
         }
         Binding.fearHigh.setOnClickListener{
             Binding.fearHigh.isSelected = Binding.fearHigh.isSelected!=true
+            fear = "상"
         }
         Binding.fearMiddle.setOnClickListener{
             Binding.fearMiddle.isSelected = Binding.fearMiddle.isSelected!=true
+            fear = "중"
         }
         Binding.fearLow.setOnClickListener{
             Binding.fearLow.isSelected = Binding.fearLow.isSelected!=true
+            fear = "하"
         }
         Binding.activityHigh.setOnClickListener{
             Binding.activityHigh.isSelected = Binding.activityHigh.isSelected!=true
+            activity = "상"
         }
         Binding.activityMiddle.setOnClickListener{
             Binding.activityMiddle.isSelected = Binding.activityMiddle.isSelected!=true
+            activity = "중"
         }
         Binding.activityLow.setOnClickListener{
             Binding.activityLow.isSelected = Binding.activityLow.isSelected!=true
+            activity = "하"
         }
 
 
         //페이지 이동
         Binding.btnNext.setOnClickListener{
-            val intent2= Intent(this, CreateRoomNameActivity::class.java)
-            startActivity(intent2)
+            val intent = Intent(this, CreateRoomNameActivity::class.java)
+            intent.putExtra("startdate", startDateString)
+            intent.putExtra("enddate", endDateString)
+            intent.putExtra("area1", area1)
+            intent.putExtra("area2", area2)
+            intent.putExtra("area3", area3)
+            intent.putExtra("genre", genre)
+            intent.putExtra("diff", diff)
+            intent.putExtra("fear", fear)
+            intent.putExtra("activity", activity)
+            startActivity(intent)
             finish()
         }
         //페이지 이동

@@ -6,15 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import androidx.core.content.ContextCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.testapplication.databinding.ActivityCreateRoomDateBinding
 import com.example.testapplication.databinding.ActivityDatecbBinding
-import com.example.testapplication.databinding.FragmentMatchingBinding
+import java.text.SimpleDateFormat
 import java.util.*
 
 class CreateRoomDateActivity : AppCompatActivity() {
     private lateinit var btn_next: Button
-    private lateinit var btn_past: Button
+    private lateinit var btn_back: Button
     var startDateString = ""
     var endDateString = ""
 
@@ -22,6 +22,10 @@ class CreateRoomDateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityCreateRoomDateBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val area1 = intent.getStringExtra("area1")
+        val area2 = intent.getStringExtra("area2")
+        val area3 = intent.getStringExtra("area3")
 
         //시작일
         binding.ibStartdate.setOnClickListener {
@@ -44,6 +48,7 @@ class CreateRoomDateActivity : AppCompatActivity() {
                     startDateString = "$year/$month/$dayOfMonth"
                     Log.d("시작일: ", startDateString)
                     binding.tvStartdate.text = startDateString
+
                 },
                 year,
                 month,
@@ -71,7 +76,7 @@ class CreateRoomDateActivity : AppCompatActivity() {
                     calendar.set(year, monthOfYear, dayOfMonth)
                     //종료일 String 값
                     endDateString = "$year/$month/$dayOfMonth"
-                    Log.d("종료일: " , endDateString)
+                    Log.d("종료일: ", endDateString)
                     binding.tvEnddate.text = endDateString
                 },
                 year,
@@ -83,17 +88,43 @@ class CreateRoomDateActivity : AppCompatActivity() {
         }
 
 
+
+
+        btn_next = findViewById(R.id.btn_next)
+        btn_back = findViewById(R.id.btn_prev)
+
         //다음으로 클릭
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, CreateRoomOptionActivity::class.java)
+            intent.putExtra("startdate", startDateString)
+            intent.putExtra("enddate", endDateString)
+            intent.putExtra("area1", area1)
+            intent.putExtra("area2", area2)
+            intent.putExtra("area3", area3)
             startActivity(intent)
             finish()
         }
 
-        //이전으로 클릭
+        //이전으로(하단) 클릭
         binding.btnPrev.setOnClickListener {
-            val intent = Intent(this, CreateRoomLocalActivity::class.java)
-            ContextCompat.startActivity(this, intent,null)
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
         }
+        /*
+        //이전으로(상단) 클릭
+        binding.btnBackTop.setOnClickListener {
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
+        }
+        //x표시 클릭(첫 화면으로 이동)
+        binding.btnClose.setOnClickListener {
+            val intent = Intent(this, Matching_intro::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+         */
     }
 }
