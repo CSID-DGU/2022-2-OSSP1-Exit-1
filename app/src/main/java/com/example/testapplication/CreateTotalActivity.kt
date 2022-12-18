@@ -2,7 +2,11 @@ package com.example.testapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import com.example.testapplication.databinding.ActivityCreateTotalBinding
+import retrofit2.Call
+import retrofit2.Response
 
 class CreateTotalActivity : AppCompatActivity() {
     private val api = APIS.create()
@@ -75,6 +79,42 @@ class CreateTotalActivity : AppCompatActivity() {
         else if (activity.toString() == "하")
             activityNum = 0
 
+        binding.btnCreate.setOnClickListener {
+            api.createRoom(
+                createrUserId,
+                title.toString(),
+                region1.toString(),
+                region2.toString(),
+                region3.toString(),
+                dateFromString,
+                dateToString,
+                genre.toString(),
+                difficultyNum,
+                fearNum,
+                activityNum,
+                roomIntro.toString()
+            ).enqueue(object : retrofit2.Callback<createRoomPostModel> {
+                override fun onResponse(
+                    call: Call<createRoomPostModel>,
+                    response: Response<createRoomPostModel>
+                ) {
+                    Log.d("createRoom", "asdfasdf")
+                    if(response.body()?.result.toString() == "createRoomSuccess") {
+                        Log.d("createRoom", "create room success")
+                        Toast.makeText(applicationContext, response.body()?.result.toString(), Toast.LENGTH_SHORT).show()
+                    } else {
+                        Log.d("aassddff", "aassddff")
+                        Toast.makeText(applicationContext, response.body()?.result.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<createRoomPostModel>, t: Throwable) {
+                    Log.d("createRoomFail", "createRoomFail")
+                    Log.d("createRoomFail", t.toString())
+                }
+
+            })
+        }
 
     }
 
