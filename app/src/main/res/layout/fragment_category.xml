@@ -20,7 +20,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/pretendard_bold"
             android:text="카테고리"
             android:textColor="@color/text_main"
             android:textSize="20sp">
