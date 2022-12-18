@@ -7,7 +7,7 @@
     tools:context=".CreateTotalActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="123dp"
@@ -30,7 +30,7 @@
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
 
         <LinearLayout
             android:id="@+id/textRoomTitle"
@@ -51,6 +51,7 @@
                 android:layout_weight="1" />
 
             <TextView
+                android:id="@+id/tv_roomtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
@@ -79,6 +80,7 @@
                 android:layout_weight="1" />
 
             <TextView
+                android:id="@+id/tv_area"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
@@ -107,6 +109,7 @@
                 android:layout_weight="1" />
 
             <TextView
+                android:id="@+id/tv_dategap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
@@ -136,6 +139,7 @@
                 android:layout_weight="1" />
 
             <TextView
+                android:id="@+id/tv_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"

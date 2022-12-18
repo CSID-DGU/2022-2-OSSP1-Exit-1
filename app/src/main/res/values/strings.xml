@@ -19,6 +19,7 @@
     <!--    option-->
     <string name="scary">공포도</string>
     <string name="difficulty">난이도</string>
+    <string name="activity">활동성</string>
     <string name="thema">장르</string>
     <string name="SelectOption_title">방탈출 옵션 선택</string>
     <!--    local-->

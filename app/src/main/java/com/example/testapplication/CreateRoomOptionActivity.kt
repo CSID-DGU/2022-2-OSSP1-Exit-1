@@ -22,7 +22,8 @@ class CreateRoomOptionActivity : AppCompatActivity() {
 
         //스피너 어댑터
         //var sData = resources.getStringArray(R.array.testarray)
-        var sData = listOf("선택하세요","test1","test2","test3")
+        var sData = listOf("선택하세요","판타지","19금","SF", "감성", "공포", "기타", "모험", "미션", "스토리",
+        "추리", "코믹")
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1,sData)
         val spinThema =Binding.spinnerThema
         spinThema.adapter=adapter
@@ -50,6 +51,15 @@ class CreateRoomOptionActivity : AppCompatActivity() {
         }
         Binding.fearLow.setOnClickListener{
             Binding.fearLow.isSelected = Binding.fearLow.isSelected!=true
+        }
+        Binding.activityHigh.setOnClickListener{
+            Binding.activityHigh.isSelected = Binding.activityHigh.isSelected!=true
+        }
+        Binding.activityMiddle.setOnClickListener{
+            Binding.activityMiddle.isSelected = Binding.activityMiddle.isSelected!=true
+        }
+        Binding.activityLow.setOnClickListener{
+            Binding.activityLow.isSelected = Binding.activityLow.isSelected!=true
         }
 
 

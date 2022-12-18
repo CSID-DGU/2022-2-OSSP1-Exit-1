@@ -17,13 +17,13 @@ class CreateRoomNameActivity : AppCompatActivity() {
 
 
         Binding.btnNext.setOnClickListener {
-            val intent2 = Intent(this, CreateRoomOptionActivity::class.java)
+            val intent2 = Intent(this, CreateTotalActivity::class.java)
             startActivity(intent2)
             finish()
         }
         //페이지 이동
         Binding.btnPrev.setOnClickListener {
-            val intent2 = Intent(this, CreateTotalActivity::class.java)
+            val intent2 = Intent(this, CreateRoomOptionActivity::class.java)
             startActivity(intent2)
             finish()
         }
