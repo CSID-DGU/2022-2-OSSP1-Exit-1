@@ -25,11 +25,11 @@ class ChatActivity : AppCompatActivity() {
         }
         val navigationView = findViewById<NavigationView>(R.id.side_menu)
         navigationView.itemIconTintList = null
+
         Binding.btnBack.setOnClickListener{
-            val intent2= Intent(this, MainActivity::class.java)
-            startActivity(intent2)
+            val intent= Intent(this, MainActivity::class.java)
+            startActivity(intent)
             finish()
         }
-
     }
 }
