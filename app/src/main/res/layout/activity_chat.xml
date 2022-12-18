@@ -108,8 +108,11 @@ tools:context=".ChatActivity">
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     app:headerLayout="@layout/layout_navigation_header"
-    app:menu="@menu/chat_side_menu"
     android:background="@color/realwhite"
-    android:layout_gravity="end"/>
-
+    android:layout_gravity="end"
+    />
+<!--
+app:menu="@menu/chat_side_menu" << 추가해서 메뉴로 활용가능.
+하려면 drawer를 custom 해야함
+-->
 </androidx.drawerlayout.widget.DrawerLayout>
