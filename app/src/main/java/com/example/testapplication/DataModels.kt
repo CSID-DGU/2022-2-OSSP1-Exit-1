@@ -95,13 +95,7 @@ data class createRoomPostModel(
     var result: String? = null
 )
 
-
-
 data class getRoomListModel(
-//    @Expose
-//    @SerializedName("id")
-//    var id: String? = null,
-
     @Expose
     @SerializedName("roomList")
     var roomList: List<roomData>
@@ -114,5 +108,49 @@ data class getRoomListModel(
         @Expose
         @SerializedName("title")
         var title: String? = null,
+    )
+}
+
+data class getAllRoomInfoModel(
+    @Expose
+    @SerializedName("roomInfoList")
+    var roomInfoList: List<allRoomInfo>
+) {
+    data class allRoomInfo(
+        @Expose
+        @SerializedName("roomID")
+        var roomID: Int? = null,
+
+        @Expose
+        @SerializedName("title")
+        var title: String? = null,
+
+        @Expose
+        @SerializedName("region1")
+        var region1: String? = null,
+
+        @Expose
+        @SerializedName("region2")
+        var region2: String? = null,
+
+        @Expose
+        @SerializedName("region3")
+        var region3: String? = null,
+
+        @Expose
+        @SerializedName("date")
+        var dateTo: String? = null,
+
+        @Expose
+        @SerializedName("genre")
+        var genre: Int? = null,
+
+        @Expose
+        @SerializedName("difficulty")
+        var difficulty: Int? = null,
+
+        @Expose
+        @SerializedName("activity")
+        var activity: Int? = null
     )
 }
