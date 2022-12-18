@@ -22,8 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="#ECEFF1"
-        app:itemIconTint="@drawable/menu_selector_color"
-        app:itemTextColor="@drawable/menu_selector_color"
+        app:itemIconTint="@drawable/option_selecteor_left"
+        app:itemTextColor="@drawable/option_selecteor_left"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/item_menu" />

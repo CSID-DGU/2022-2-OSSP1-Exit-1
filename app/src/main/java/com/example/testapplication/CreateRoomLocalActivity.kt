@@ -23,18 +23,12 @@ class CreateRoomLocalActivity : AppCompatActivity() {
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1, sData)
         val spinCity1 = mBinding.spinnerCity1
         spinCity1.adapter = adapter
-        val spinDistrict1 = mBinding.spinnerDistrict1
-        spinDistrict1.adapter = adapter
 
         val spinCity2 = mBinding.spinnerCity2
         spinCity2.adapter = adapter
-        val spinDistrict2 = mBinding.spinnerDistrict2
-        spinDistrict2.adapter = adapter
 
         val spinCity3 = mBinding.spinnerCity3
         spinCity3.adapter = adapter
-        val spinDistrict3 = mBinding.spinnerDistrict3
-        spinDistrict3.adapter = adapter
         //페이지 이동
 //        binding.btnNext.setOnClickListener{
 //            val intent= Intent(this, CreateRoomLocalActivity::class.java)

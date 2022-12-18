@@ -44,7 +44,7 @@
         android:id="@+id/selectlocal_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/pretendard_bold"
         android:text="@string/SelectLocal_title"
@@ -58,9 +58,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectlocal_title">
         <LinearLayout
@@ -92,50 +92,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="@string/selectcity"
-                android:textColor="@color/text_main"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
             <Spinner
                 android:id="@+id/spinner_city_1"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                app:layout_constraintHorizontal_bias="1.0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/selectdistrict"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="@string/selectdistrict"
-                android:textColor="@color/text_main"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight ="1" />
-
-            <Spinner
-                android:id="@+id/spinner_district_1"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintHorizontal_bias="1.0" />
         </LinearLayout>
@@ -146,9 +105,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectLocal_1">
         <LinearLayout
@@ -180,61 +139,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="@string/selectcity"
-                android:textColor="@color/text_main"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
 
             <Spinner
                 android:id="@+id/spinner_city_2"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintHorizontal_bias="1.0" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="@string/selectdistrict"
-                android:textColor="@color/text_main"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight ="1" />
-
-            <Spinner
-                android:id="@+id/spinner_district_2"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                app:layout_constraintHorizontal_bias="1.0" />
-        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/selectLocal_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectLocal_2">
         <LinearLayout
@@ -266,85 +187,44 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="@string/selectcity"
-                android:textColor="@color/text_main"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
             <Spinner
                 android:id="@+id/spinner_city_3"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintHorizontal_bias="1.0" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:text="@string/selectdistrict"
-                android:textColor="@color/text_main"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight ="1" />
-
-            <Spinner
-                android:id="@+id/spinner_district_3"
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                app:layout_constraintHorizontal_bias="1.0" />
-        </LinearLayout>
     </LinearLayout>
-    <Button
-        android:id="@+id/btn_prev"
-        android:layout_width="175sp"
+    <LinearLayout
+        android:id="@+id/createRoomBtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/button_strokerec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="@string/prev"
-        android:textColor="@color/blue_main"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_strokerec_blu"
+            android:textColor="@color/textblock_blu"
 
+            android:text="이전으로" />
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="175sp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/button_rec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="@string/next"
-        android:textColor="@color/realwhite"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rec_blu"
+            android:textColor="@color/text_white"
+            android:text="다음으로"/>
+
+    </LinearLayout>
     <!--    //네비게이션 바 없었나-->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -98,28 +98,25 @@
                 android:id="@+id/difficulty_High"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@drawable/button_option"
+                android:layout_weight="1"
+                android:background="@drawable/option_selecteor_left"
                 android:textColor="@color/text_main"
                 android:text="상" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+
             <Button
                 android:id="@+id/difficulty_Middle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@drawable/button_option"
+                android:layout_weight="1"
+                android:background="@drawable/option_selecteor_middle"
                 android:text="중" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+
             <Button
                 android:id="@+id/difficulty_Low"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@drawable/button_option"
+                android:layout_weight="1"
+                android:background="@drawable/option_selecteor_right"
                 android:text="하" />
         </LinearLayout>
     </LinearLayout>
@@ -145,30 +142,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
-                android:id="@+id/scary_High"
+                android:id="@+id/fear_High"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@drawable/button_option"
+                android:layout_weight="1"
+                android:background="@drawable/option_selecteor_left"
+                android:textColor="@color/text_main"
                 android:text="상" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
             <Button
-                android:id="@+id/scary_Middle"
+                android:id="@+id/fear_Middle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@drawable/button_option"
+                android:layout_weight="1"
+                android:background="@drawable/option_selecteor_middle"
                 android:text="중" />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
             <Button
-                android:id="@+id/scary_Low"
+                android:id="@+id/fear_Low"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@drawable/button_option"
+                android:layout_weight="1"
+                android:background="@drawable/option_selecteor_right"
                 android:text="하" />
         </LinearLayout>
     </LinearLayout>

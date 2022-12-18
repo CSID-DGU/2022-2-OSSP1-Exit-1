@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="35dp"
         android:fontFamily="@font/pretendard_bold"
         android:text="방만들기"
         android:textColor="@color/text_main"
@@ -50,7 +50,7 @@
         android:id="@+id/roomTitle_c1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="50dp"
 
         android:fontFamily="@font/pretendard"
@@ -67,16 +67,16 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:background="@drawable/edittext_stroke_gray"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintTop_toBottomOf="@+id/roomTitle_c1"/>
 
     <TextView
         android:id="@+id/roomIntro_c1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:fontFamily="@font/pretendard"
         android:text="한줄 소개"
         android:textColor="@color/text_main"
@@ -92,39 +92,40 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:background="@drawable/edittext_stroke_gray"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintTop_toBottomOf="@+id/roomIntro_c1"/>
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="175sp"
+    <LinearLayout
+        android:id="@+id/createRoomBtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/button_strokerec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="@string/prev"
-        android:textColor="@color/blue_main"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_strokerec_blu"
+            android:textColor="@color/textblock_blu"
 
-    <Button
-        android:id="@+id/btn_prev"
-        android:layout_width="175sp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/button_rec_blu"
-        android:fontFamily="@font/pretendard"
-        android:text="@string/next"
-        android:textColor="@color/realwhite"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:text="이전으로" />
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rec_blu"
+            android:textColor="@color/text_white"
+            android:text="다음으로"/>
+
+    </LinearLayout>
 
 
 

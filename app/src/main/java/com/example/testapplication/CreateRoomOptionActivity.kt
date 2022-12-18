@@ -42,14 +42,14 @@ class CreateRoomOptionActivity : AppCompatActivity() {
         Binding.difficultyLow.setOnClickListener{
             Binding.difficultyLow.isSelected = Binding.difficultyLow.isSelected!=true
         }
-        Binding.scaryHigh.setOnClickListener{
-            Binding.scaryHigh.isSelected = Binding.scaryHigh.isSelected!=true
+        Binding.fearHigh.setOnClickListener{
+            Binding.fearHigh.isSelected = Binding.fearHigh.isSelected!=true
         }
-        Binding.scaryMiddle.setOnClickListener{
-            Binding.scaryMiddle.isSelected = Binding.scaryMiddle.isSelected!=true
+        Binding.fearMiddle.setOnClickListener{
+            Binding.fearMiddle.isSelected = Binding.fearMiddle.isSelected!=true
         }
-        Binding.scaryLow.setOnClickListener{
-            Binding.scaryLow.isSelected = Binding.scaryLow.isSelected!=true
+        Binding.fearLow.setOnClickListener{
+            Binding.fearLow.isSelected = Binding.fearLow.isSelected!=true
         }
 
 
