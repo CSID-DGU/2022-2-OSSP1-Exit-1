@@ -21,9 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/pretendard_bold"
             android:text="채팅"
-            android:textColor="@color/text_main"
+            android:textColor="@color/black"
             android:textSize="20dp">
 
         </TextView>
