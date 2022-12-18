@@ -16,14 +16,19 @@ class CreateRoomNameActivity : AppCompatActivity() {
         setContentView(Binding.root)
 
 
-        Binding.btnNext.setOnClickListener {
+        Binding.btnPrev.setOnClickListener {
             val intent2 = Intent(this, CreateRoomOptionActivity::class.java)
             startActivity(intent2)
             finish()
         }
         //페이지 이동
-        Binding.btnPrev.setOnClickListener {
+        Binding.btnNext.setOnClickListener {
             val intent2 = Intent(this, CreateTotalActivity::class.java)
+            startActivity(intent2)
+            finish()
+        }
+        Binding.btnBack.setOnClickListener{
+            val intent2= Intent(this, MainActivity::class.java)
             startActivity(intent2)
             finish()
         }

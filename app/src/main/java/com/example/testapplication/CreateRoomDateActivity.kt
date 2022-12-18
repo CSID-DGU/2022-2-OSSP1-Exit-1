@@ -95,5 +95,10 @@ class CreateRoomDateActivity : AppCompatActivity() {
             val intent = Intent(this, CreateRoomLocalActivity::class.java)
             ContextCompat.startActivity(this, intent,null)
         }
+        binding.btnBack.setOnClickListener{
+            val intent2= Intent(this, MainActivity::class.java)
+            startActivity(intent2)
+            finish()
+        }
     }
 }

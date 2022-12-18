@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(frame.id, fragment).commit()
     }

@@ -12,12 +12,11 @@ import com.google.android.material.navigation.NavigationView
 
 class ChatActivity : AppCompatActivity() {
 
-    private lateinit var Binding: ActivityChatBinding
+    private lateinit var binding: ActivityChatBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Binding = ActivityChatBinding.inflate(layoutInflater)
-        setContentView(Binding.root)
-        setContentView(R.layout.activity_chat)
+        binding = ActivityChatBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         findViewById<View>(R.id.imageMenu).setOnClickListener { // start에 지정된 Drawer 열기
@@ -26,7 +25,7 @@ class ChatActivity : AppCompatActivity() {
         val navigationView = findViewById<NavigationView>(R.id.side_menu)
         navigationView.itemIconTintList = null
 
-        Binding.btnBack.setOnClickListener{
+        binding.btnBack.setOnClickListener{
             val intent= Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
