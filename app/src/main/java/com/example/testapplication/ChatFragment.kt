@@ -11,6 +11,9 @@ import android.content.SharedPreferences
 import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.testapplication.databinding.FragmentChatBinding
+import retrofit2.Call
+import retrofit2.Response
+import javax.security.auth.callback.Callback
 
 class ChatFragment: Fragment() {
     private var _binding : FragmentChatBinding? = null
@@ -46,12 +49,35 @@ class ChatFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val adapter = ChatlistAdapter(requireContext())
         binding.rvCategory.adapter = adapter
-        adapter.setRepoList(mockRepoList)
 
         val preferences = requireActivity().getSharedPreferences("userInfo", MODE_PRIVATE)
         val userId = preferences?.getString("userId", "")
         Log.d("asdfasdf", userId.toString());
 
+        api.getRoomList(
+            userId.toString()
+        ).enqueue(object : retrofit2.Callback<getRoomListModel> {
+            override fun onResponse(
+                call: Call<getRoomListModel>,
+                response: Response<getRoomListModel>
+            ) {
+                Log.d("유저 정보", "${response.body()}")
+                if (response.isSuccessful) {
+                    response.body()?.let {
+                        adapter.setRepoList(it.roomList)
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<getRoomListModel>, t: Throwable) {
+                Log.d("getRoomList", "fail")
+            }
+
+        })
+
+
+
+        
         //binding..setOnClickListener {
           //  activity?.let{
             //    val intent = Intent (it, ChatActivity::class.java)

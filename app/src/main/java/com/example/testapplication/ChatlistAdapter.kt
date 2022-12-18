@@ -12,7 +12,7 @@ import com.example.testapplication.databinding.LayoutChatlistBinding
 class ChatlistAdapter(context : Context): RecyclerView.Adapter<ChatlistAdapter.ChatlistViewHolder>() {
 
     private val inflater by lazy { LayoutInflater.from(context)}
-    private var categorylist: List<ChatlistData> = emptyList()
+    private var categorylist: List<getRoomListModel.roomData> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatlistAdapter.ChatlistViewHolder {
         val binding = LayoutChatlistBinding.inflate(inflater, parent,false)
@@ -36,15 +36,14 @@ class ChatlistAdapter(context : Context): RecyclerView.Adapter<ChatlistAdapter.C
     class ChatlistViewHolder(
         private val binding: LayoutChatlistBinding
     ): RecyclerView.ViewHolder(binding.root) {
-        fun bind(data: ChatlistData) {
-            binding.ivChatlistImg.setImageDrawable(binding.root.context.getDrawable(data.chatlist_img))
-            binding.tvChatlistTitle.setText(data.chatlist_title)
-            binding.tvChatlistHashtag.setText(data.chatlist_hashtag)
+        fun bind(data: getRoomListModel.roomData) {
+            //binding.ivChatlistImg.setImageDrawable(binding.root.context.getDrawable(data.chatlist_img))
+            binding.tvChatlistTitle.setText(data.title)
 
         }
     }
 
-    fun setRepoList(repoList: List<ChatlistData>){
+    fun setRepoList(repoList: List<getRoomListModel.roomData>){
         this.categorylist = repoList.toList()
         notifyDataSetChanged()
     }
