@@ -36,7 +36,7 @@ public interface APIS {
 
     companion object {
         private const val BASE_URL =
-            "http://ec2-43-200-191-232.ap-northeast-2.compute.amazonaws.com/"
+            "http://ec2-3-35-21-6.ap-northeast-2.compute.amazonaws.com"
 
         fun create(): APIS {
             val gson: Gson = GsonBuilder().setLenient().create()

@@ -27,10 +27,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
-        binding.testbtn.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+
         binding.loginBtn.setOnClickListener {
             if (ID.text.isNotEmpty() && Password.text.isNotEmpty()) {
                 api.signin(
