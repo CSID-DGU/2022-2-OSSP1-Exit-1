@@ -4,20 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/tv_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="123dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
     <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="123dp"
-        android:fontFamily="@font/pretendard"
-        android:text="내용을 확인해주세요"
-        android:textColor="@color/text_main"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="아래 내용을 기반으로"
+        android:textColor="@color/blue_main"
+        android:textSize="24sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/pretendard_bold"
+        android:text="꼭 맞는 모임을 찾아드릴께요!"
+        android:textColor="@color/blue_main"
+        android:textSize="24sp" />
+
+</LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -37,8 +56,7 @@
         <LinearLayout
             android:id="@+id/textRoomLocal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -256,29 +274,24 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/btn_back"
-            android:layout_width="180sp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_strokerec_blu"
-            android:text="이전으로"
-
-            android:textColor="@color/textblock_blu" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <Button
             android:id="@+id/btn_create"
-            android:layout_width="180sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_rec_blu"
-            android:text="찾아보기"
+            android:text="좋아요!"
             android:textColor="@color/text_white" />
-
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#00ff0000"
+            android:text="정보를 수정할래요"
+            android:fontFamily="@font/pretendard"
+            android:textColor="@color/textblock_blu" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

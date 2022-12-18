@@ -80,7 +80,6 @@
             android:layout_gravity="center"
             android:background="#00ff0000"
             android:ems="10"
-            android:hint="사용할 아이디를 입력해주세요"
             android:textColorHint="@color/gray_light"
             android:inputType="textEmailAddress"/>
     </FrameLayout>
@@ -109,10 +108,18 @@
             android:layout_gravity="center"
             android:background="#00ff0000"
             android:ems="10"
-            android:hint="비밀번호 입력"
             android:textColorHint="@color/gray_light"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textPassword"/>
     </FrameLayout>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="비밀번호 확인"
+        android:textColor="@color/text_main"
+        android:fontFamily="@font/pretendard"
+        android:textSize="18dp"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -128,67 +135,69 @@
             android:layout_gravity="center"
             android:background="#00ff0000"
             android:ems="10"
-            android:hint="비밀번호 확인"
             android:textColorHint="@color/gray_light"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textPassword"/>
     </FrameLayout>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp">
-    <TextView
-        android:id="@+id/editTextTextPersonName"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이름"
-        android:textColor="@color/text_main"
-        android:fontFamily="@font/pretendard"
-        android:textSize="18dp"/>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-    <Button
-        android:id="@+id/submit_btn"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:background="@drawable/button_rec_blu"
-        android:text="중복 확인"
-        android:textColor="@color/realwhite"
-        android:fontFamily="@font/pretendard"
-        android:textSize="12dp"
-        android:textStyle="bold"/>
-    </LinearLayout>
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름"
+            android:textColor="@color/text_main"
+            android:fontFamily="@font/pretendard"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/button_rec_blu"
+            android:text="중복 확인"
+            android:textColor="@color/realwhite"
+            android:fontFamily="@font/pretendard"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:background="@drawable/edittext_stroke_gray">
-
-        <EditText
-            android:id="@+id/Name"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:background="#00ff0000"
-            android:ems="10"
-            android:hint="이름을 입력해주세요"
-            android:textColorHint="@color/gray_light"
-            android:inputType="textEmailAddress"/>
-    </FrameLayout>
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@drawable/edittext_stroke_gray">
 
+            <EditText
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#00ff0000"
+                android:ems="10"
+                android:textColorHint="@color/gray_light"
+                android:inputType="textEmailAddress"/>
+        </FrameLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/button_rec_blu"
         android:text="회원가입"
+        android:textSize="16dp"
         android:textColor="@color/realwhite"
         android:fontFamily="@font/pretendard"
-        android:textStyle="bold"/>
-    </LinearLayout>
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

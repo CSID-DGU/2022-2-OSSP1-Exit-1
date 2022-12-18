@@ -1,5 +1,6 @@
 package com.example.testapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -105,7 +106,11 @@ class CreateTotalActivity : AppCompatActivity() {
 
             })
         }
-
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, CreateRoomOptionActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 

@@ -11,11 +11,11 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="123dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/pretendard"
-        android:text="내용을 확인해주세요"
-        android:textColor="@color/text_main"
-        android:textSize="20sp"
+        android:text="해당 정보로 모임을 생성합니다"
+        android:textColor="@color/blue_main"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -287,29 +287,25 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/btn_back"
-            android:layout_width="180sp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_strokerec_blu"
-            android:text="이전으로"
-
-            android:textColor="@color/textblock_blu" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <Button
             android:id="@+id/btn_create"
-            android:layout_width="180sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_rec_blu"
-            android:text="생성하기"
+            android:text="좋아요!"
             android:textColor="@color/text_white" />
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#00ff0000"
+            android:text="정보를 수정할래요"
+            android:fontFamily="@font/pretendard"
+            android:textColor="@color/textblock_blu" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,10 @@ class MatchingFragment: Fragment(), View.OnClickListener  {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnSearch.setOnClickListener {
-
+            activity?.let{
+                val intent1 = Intent (it, MatchingLocalActivity::class.java)
+                it.startActivity(intent1)
+            }
         }
         binding.btnCreate.setOnClickListener {
             activity?.let{

@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/realwhite">
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/pretendard_bold"
         android:text="@string/MyPage"
         android:textColor="@color/text_main"
@@ -67,6 +69,16 @@
 
         </LinearLayout>
     </LinearLayout>
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="로그아웃"
+        android:textSize="16sp"
+        android:textColor="@color/error"
+        android:background="@drawable/edittext_stroke_gray"
+        app:layout_constraintTop_toBottomOf="@id/namecard"/>
 <!--    <com.google.android.material.tabs.TabLayout-->
 <!--        android:id="@+id/tabLayout"-->
 <!--        android:layout_width="0dp"-->
@@ -108,7 +120,7 @@
         android:id="@+id/mypage_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/namecard"
+        app:layout_constraintTop_toBottomOf="@+id/logout"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical">
 

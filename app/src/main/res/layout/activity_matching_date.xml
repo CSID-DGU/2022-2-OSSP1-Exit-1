@@ -129,7 +129,7 @@
         </FrameLayout>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/createRoomBtn"
+        android:id="@+id/createOptionBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -138,7 +138,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
         <Button
             android:id="@+id/btn_prev"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_strokerec_blu"
             android:textColor="@color/textblock_blu"
@@ -152,7 +152,7 @@
 
         <Button
             android:id="@+id/btn_next"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_rec_blu"
             android:textColor="@color/text_white"

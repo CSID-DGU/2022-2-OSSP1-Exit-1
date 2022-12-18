@@ -6,6 +6,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:id="@+id/drawerLayout"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:background="@color/realwhite"
 tools:context=".ChatActivity">
 
 <androidx.constraintlayout.widget.ConstraintLayout

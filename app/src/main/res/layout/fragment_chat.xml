@@ -3,38 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/realwhite">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="372dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:background="@color/realwhite"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_marginBottom="10dp"
             android:id="@+id/tv_chatlist_toptitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:layout_gravity="center"
             android:fontFamily="@font/pretendard_bold"
             android:text="채팅"
             android:textColor="@color/text_main"
-            android:textSize="20dp">
+            android:textSize="20sp">
 
         </TextView>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#808080"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="0dp" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_category"
