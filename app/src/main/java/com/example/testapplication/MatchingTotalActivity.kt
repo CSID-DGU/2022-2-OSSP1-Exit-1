@@ -30,14 +30,13 @@ class MatchingTotalActivity : AppCompatActivity() {
         binding.tvFear.text = fear
 
         binding.btnBack.setOnClickListener {
+
+
             val intent = Intent(this, MatchingOptionActivity::class.java)
             startActivity(intent)
             finish()
         }
     }
-
-
-
 
 
 }

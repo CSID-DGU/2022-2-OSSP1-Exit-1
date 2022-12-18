@@ -56,9 +56,13 @@ public interface APIS {
         @Query("id") param1: String? = null
     ): Call<getRoomListModel>
 
+    @GET("getAllRoomInfo.php")
+    fun getAllRoomInfo(
+    ): Call<getAllRoomInfoModel>
+
     companion object {
         private const val BASE_URL =
-            "http://ec2-3-35-21-6.ap-northeast-2.compute.amazonaws.com/"
+            "http://ec2-3-34-122-68.ap-northeast-2.compute.amazonaws.com/"
 
         fun create(): APIS {
             val gson: Gson = GsonBuilder().setLenient().create()
