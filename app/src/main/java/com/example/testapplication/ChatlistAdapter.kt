@@ -25,6 +25,7 @@ class ChatlistAdapter(context : Context): RecyclerView.Adapter<ChatlistAdapter.C
         holder.itemView.setOnClickListener {
             Log.d("클릭","클릭")
             val intent = Intent(holder.itemView?.context, ChatActivity::class.java)
+            intent.putExtra("roomID",categorylist[position].roomID)
             ContextCompat.startActivity(holder.itemView.context, intent,null)
             }
     }

@@ -33,7 +33,9 @@ class ChatActivity : AppCompatActivity() {
         multiAdapter = chatAdapter(this)
         Binding.chatRecyclerView.adapter = multiAdapter
 
-        api.getAllChat(24).enqueue(object : retrofit2.Callback<getAllChat>{
+        val roomId = intent.getStringExtra("roomID")
+
+        api.getAllChat(roomId?.toInt()).enqueue(object : retrofit2.Callback<getAllChat>{
             override fun onResponse(call: Call<getAllChat>, response: Response<getAllChat>) {
                Log.d("res", response.body().toString())
                 var chatArray = response.body().toString().replace("getAllChat(result=", "")
@@ -67,17 +69,13 @@ class ChatActivity : AppCompatActivity() {
 
         })
 
-        Binding.btnBack.setOnClickListener {
-            val intent2 = Intent(this, MainActivity::class.java)
-
-            }
         Binding.massageSend.setOnClickListener {
             val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
             Log.d("datetime", Binding.chatInput.text.toString())
             api.sendChat(
                 preferences.getString("userId", ""),
                 Binding.chatInput.text.toString(),
-                24,
+                roomId?.toInt(),
                 LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).toString()
             ).enqueue(object : retrofit2.Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -93,12 +91,11 @@ class ChatActivity : AppCompatActivity() {
                 }
 
             })
-
-            Binding.btnBack.setOnClickListener {
-                val intent2 = Intent(this, MainActivity::class.java)
-                startActivity(intent2)
-                finish()
             }
+        Binding.btnBack.setOnClickListener {
+            val intent2 = Intent(this, MainActivity::class.java)
+            startActivity(intent2)
+            finish()
         }
     }
 }
