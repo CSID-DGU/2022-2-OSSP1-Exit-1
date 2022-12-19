@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CreateRoomLocalActivity"
+
+    android:background="@color/realwhite"
     tools:ignore="MissingDefaultResource">
 
     <LinearLayout
@@ -40,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="35dp"
         android:fontFamily="@font/pretendard_bold"
         android:text="@string/SelectOption_title"
         android:textColor="@color/text_main"
@@ -52,8 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintTop_toBottomOf="@+id/textView7">
         <TextView
             android:layout_width="wrap_content"
@@ -78,9 +80,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:orientation="vertical"
-        android:layout_marginEnd="30dp"
         app:layout_constraintTop_toBottomOf="@+id/thema">
 
         <TextView
@@ -93,7 +95,8 @@
             android:textSize="18sp"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <Button
                 android:id="@+id/difficulty_High"
                 android:layout_width="wrap_content"
@@ -126,8 +129,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/scary">
         <TextView
@@ -140,7 +143,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <Button
                 android:id="@+id/activity_High"
                 android:layout_width="wrap_content"
@@ -170,8 +174,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/difficulty">
         <TextView
@@ -184,7 +188,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <Button
                 android:id="@+id/fear_High"
                 android:layout_width="wrap_content"
@@ -215,13 +220,13 @@
         android:id="@+id/createOptionBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent">
         <Button
             android:id="@+id/btn_prev"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_strokerec_blu"
             android:textColor="@color/textblock_blu"
@@ -235,7 +240,7 @@
 
         <Button
             android:id="@+id/btn_next"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_rec_blu"
             android:textColor="@color/text_white"

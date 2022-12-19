@@ -26,7 +26,7 @@ class MatchingLocalActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_create_room_local)
 //스피너 어댑터
         //var sData = resources.getStringArray(R.array.testarray)
-        var sData = listOf("선택하세요", "강남", "건대", "노량진","대구", "대전", "부천", "부평", "분당", "상수",
+        var sData = listOf("상관없음", "강남", "건대", "노량진","대구", "대전", "부천", "부평", "분당", "상수",
             "서면", "서울대입구", "성수", "수원", "수유", "신림", "신촌", "인천", "잠실", "혜화", "홍대")
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1, sData)
         val spinCity1 = mBinding.spinnerCity1

@@ -34,7 +34,7 @@ class MatchingOptionActivity : AppCompatActivity() {
 
         //스피너 어댑터
         //var sData = resources.getStringArray(R.array.testarray)
-        var sData = listOf("선택하세요","판타지","19금","SF", "감성", "공포", "기타", "모험", "미션", "스토리",
+        var sData = listOf("상관없음","판타지","19금","SF", "감성", "공포", "기타", "모험", "미션", "스토리",
             "추리", "코믹")
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1,sData)
         val spinThema =Binding.spinnerThema
@@ -64,41 +64,109 @@ class MatchingOptionActivity : AppCompatActivity() {
 //        val btnScaryMiddle =Binding.scaryMiddle
 //        val btnScaryLow =Binding.scaryLow
 
+        //난이도 선택 버튼
         Binding.difficultyHigh.setOnClickListener{
+            if(diff!="상") {
+                if (diff == "중")
+                    Binding.difficultyMiddle.isSelected = Binding.difficultyMiddle.isSelected != true
+                if (diff == "하")
+                    Binding.difficultyLow.isSelected = Binding.difficultyLow.isSelected != true
+                diff = "상"
+            }
+            else diff = ""
             Binding.difficultyHigh.isSelected = Binding.difficultyHigh.isSelected != true
-            diff = "상"
         }
         Binding.difficultyMiddle.setOnClickListener{
+            if(diff!="중") {
+                if (diff == "상")
+                    Binding.difficultyHigh.isSelected = Binding.difficultyHigh.isSelected != true
+                if (diff == "하")
+                    Binding.difficultyLow.isSelected = Binding.difficultyLow.isSelected != true
+                diff = "중"
+            }
+            else diff = ""
             Binding.difficultyMiddle.isSelected = Binding.difficultyMiddle.isSelected != true
-            diff = "중"
         }
         Binding.difficultyLow.setOnClickListener{
-            Binding.difficultyLow.isSelected = Binding.difficultyLow.isSelected!=true
-            diff = "하"
+            if(diff!="하") {
+                if (diff == "상")
+                    Binding.difficultyHigh.isSelected = Binding.difficultyHigh.isSelected != true
+                if (diff == "중")
+                    Binding.difficultyMiddle.isSelected = Binding.difficultyMiddle.isSelected != true
+                diff = "하"
+            }
+            else diff = ""
+            Binding.difficultyLow.isSelected = Binding.difficultyLow.isSelected != true
         }
+
+        //공포도 선택
         Binding.fearHigh.setOnClickListener{
-            Binding.fearHigh.isSelected = Binding.fearHigh.isSelected!=true
-            fear = "상"
+            if(fear!="상") {
+                if (fear == "중")
+                    Binding.fearMiddle.isSelected = Binding.fearMiddle.isSelected != true
+                if (fear == "하")
+                    Binding.fearLow.isSelected = Binding.fearLow.isSelected != true
+                fear = "상"
+            }
+            else fear = ""
+            Binding.fearHigh.isSelected = Binding.fearHigh.isSelected != true
         }
         Binding.fearMiddle.setOnClickListener{
-            Binding.fearMiddle.isSelected = Binding.fearMiddle.isSelected!=true
-            fear = "중"
+            if(fear!="중") {
+                if (fear == "상")
+                    Binding.fearHigh.isSelected = Binding.fearHigh.isSelected != true
+                if (fear == "하")
+                    Binding.fearLow.isSelected = Binding.fearLow.isSelected != true
+                fear = "중"
+            }
+            else fear = ""
+            Binding.fearMiddle.isSelected = Binding.fearMiddle.isSelected != true
         }
         Binding.fearLow.setOnClickListener{
-            Binding.fearLow.isSelected = Binding.fearLow.isSelected!=true
-            fear = "하"
+            if(fear!="하") {
+                if (fear == "상")
+                    Binding.fearHigh.isSelected = Binding.fearHigh.isSelected != true
+                if (fear == "중")
+                    Binding.fearMiddle.isSelected = Binding.fearMiddle.isSelected != true
+                fear = "하"
+            }
+            else fear = ""
+            Binding.fearLow.isSelected = Binding.fearLow.isSelected != true
         }
+
+        //활동성 선택
         Binding.activityHigh.setOnClickListener{
+            if(activity!="상") {
+                if (activity == "하")
+                    Binding.activityLow.isSelected = Binding.activityLow.isSelected != true
+                if (activity == "중")
+                    Binding.activityMiddle.isSelected = Binding.activityMiddle.isSelected != true
+                activity = "상"
+            }
+            else activity = ""
             Binding.activityHigh.isSelected = Binding.activityHigh.isSelected!=true
-            activity = "상"
         }
         Binding.activityMiddle.setOnClickListener{
+            if(activity!="중") {
+                if (activity == "상")
+                    Binding.activityHigh.isSelected = Binding.activityHigh.isSelected != true
+                if (activity == "하")
+                    Binding.activityLow.isSelected = Binding.activityLow.isSelected != true
+                activity = "상"
+            }
+            else activity = ""
             Binding.activityMiddle.isSelected = Binding.activityMiddle.isSelected!=true
-            activity = "중"
         }
         Binding.activityLow.setOnClickListener{
+            if(activity!="하") {
+                if (activity == "상")
+                    Binding.activityHigh.isSelected = Binding.activityHigh.isSelected != true
+                if (activity == "중")
+                    Binding.activityMiddle.isSelected = Binding.activityMiddle.isSelected != true
+                activity = "하"
+            }
+            else activity = ""
             Binding.activityLow.isSelected = Binding.activityLow.isSelected!=true
-            activity = "하"
         }
 
 

@@ -1,107 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/CHATTING"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/drawerLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
     android:background="@color/realwhite"
-    android:orientation="vertical">
+tools:context=".ChatActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="center"
-            android:background="@drawable/arrow"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/pretendard_bold"
-            android:text="@string/Chat"
-            android:textColor="@color/text_main"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_menu"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chat_recyclerView"
-        android:layout_width="367dp"
-        android:layout_height="598dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/chat_inputBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <LinearLayout
-        android:id="@+id/chat_inputBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/realwhite"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/realwhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/chat_input"
-            android:layout_width="280dp"
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow"
+                app:tint="@color/realblack" />
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="chatRoomTitle"
+                android:fontFamily="@font/pretendard"
+                android:textColor="@color/text_main"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imageMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/menu"
+                app:tint="@color/realblack" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/chat_inputBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_stroke_gray"
-            android:ems="10"
-            android:hint="내용을 입력하세요"
-            android:inputType="textLongMessage"
-            android:minHeight="48dp" />
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="20dp">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittext_circle_gray">
+                <EditText
+                    android:id="@+id/chat_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00ff0000"
+                    android:layout_marginStart="15dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:minHeight="48dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/massage_send"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_send"/>
 
-        <Button
-            android:id="@+id/chat_submit_button"
-            android:layout_width="78dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_circ_blu"
-            android:text="전송"
-            android:textColor="@color/text_white"
-            android:textColorLink="#FFFFFF"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/side_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:headerLayout="@layout/layout_navigation_header"
+    android:background="@color/realwhite"
+    android:layout_gravity="end"
+    />
+<!--
+app:menu="@menu/chat_side_menu" << 추가해서 메뉴로 활용가능.
+하려면 drawer를 custom 해야함
+-->
+</androidx.drawerlayout.widget.DrawerLayout>

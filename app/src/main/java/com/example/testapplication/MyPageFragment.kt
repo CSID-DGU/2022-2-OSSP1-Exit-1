@@ -1,14 +1,19 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
+import com.example.testapplication.databinding.FragmentMatchingBinding
 import com.example.testapplication.databinding.FragmentMypageBinding
 
 class MyPageFragment: Fragment() {
-    private lateinit var Binding: FragmentMypageBinding
+    private var binding: FragmentMypageBinding? = null
+    private val _binding: FragmentMypageBinding
+        get() = requireNotNull(binding)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -17,7 +22,18 @@ class MyPageFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        binding = FragmentMypageBinding.inflate(inflater, container, false)
+        return _binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        return inflater.inflate(R.layout.fragment_mypage, container, false)
+        binding?.logout?.setOnClickListener {
+            activity?.let{
+                val intent = Intent (it, LoginActivity::class.java)
+                it.startActivity(intent)
+            }
+
+        }
     }
 }

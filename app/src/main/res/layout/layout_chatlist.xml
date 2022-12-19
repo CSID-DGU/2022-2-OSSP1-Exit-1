@@ -5,38 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:paddingBottom="10dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:orientation="vertical"
+    android:background="@drawable/stroke_bottom_gray">
     <TextView
         android:id="@+id/tv_chatlist_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="40dp"
         android:text="방 제목"
-        android:textColor="@color/black2"
+        android:textColor="@color/text_main"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/pretendard"/>
 
     <TextView
         android:id="@+id/tv_lastchat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:text="#숄라숄라"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_chatlist_title" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginVertical="20dp"
-        android:background="#808080"
-        app:layout_constraintTop_toBottomOf="@+id/tv_lastchat" />
+        android:textSize="14sp"
+        android:fontFamily="@font/pretendard"/>
+</LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

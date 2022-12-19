@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                 .add(frame.id, ChatFragment())
                 .commit()
         }
+        replaceFragment(MatchingFragment())
 
         bottomNagivationView.setOnNavigationItemSelectedListener {item ->
             when(item.itemId) {

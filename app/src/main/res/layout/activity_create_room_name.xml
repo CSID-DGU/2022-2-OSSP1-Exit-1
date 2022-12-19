@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/realwhite"
     tools:context=".CreateRoomNameActivity">
 
     <LinearLayout
@@ -51,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
 
         android:fontFamily="@font/pretendard"
         android:text="방 제목"
@@ -62,13 +63,15 @@
     <EditText
         android:id="@+id/roomTitle_edit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:padding="5dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edittext_stroke_gray"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:background="@drawable/edittext_stroke_gray"
         app:layout_constraintTop_toBottomOf="@+id/roomTitle_c1"/>
 
     <TextView
@@ -77,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/pretendard"
         android:text="한줄 소개"
         android:textColor="@color/text_main"
@@ -87,13 +91,17 @@
     <EditText
         android:id="@+id/roomIntro_edit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         android:padding="5dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edittext_stroke_gray"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:textSize="14sp"
+        android:background="@drawable/edittext_stroke_gray"
+        android:maxLength="200"
         app:layout_constraintTop_toBottomOf="@+id/roomIntro_c1"/>
     <LinearLayout
         android:id="@+id/createRoomBtn"
@@ -105,7 +113,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
         <Button
             android:id="@+id/btn_prev"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_strokerec_blu"
             android:textColor="@color/textblock_blu"
@@ -119,7 +127,7 @@
 
         <Button
             android:id="@+id/btn_next"
-            android:layout_width="160sp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_rec_blu"
             android:textColor="@color/text_white"
