@@ -34,7 +34,7 @@ class MatchingOptionActivity : AppCompatActivity() {
 
         //스피너 어댑터
         //var sData = resources.getStringArray(R.array.testarray)
-        var sData = listOf("선택하세요","판타지","19금","SF", "감성", "공포", "기타", "모험", "미션", "스토리",
+        var sData = listOf("상관없음","판타지","19금","SF", "감성", "공포", "기타", "모험", "미션", "스토리",
             "추리", "코믹")
         var adapter = ArrayAdapter<String>(this, R.layout.simple_list_item_1,sData)
         val spinThema =Binding.spinnerThema

@@ -55,15 +55,33 @@
 <!--        android:textSize="26dp"-->
 <!--        android:textStyle="bold"/>-->
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="아이디"
-        android:textColor="@color/text_main"
-        android:fontFamily="@font/pretendard"
-        android:textSize="18dp"/>
-
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디"
+            android:textColor="@color/text_main"
+            android:fontFamily="@font/pretendard"
+            android:textSize="18dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/button_rec_blu"
+            android:text="중복 확인"
+            android:textColor="@color/realwhite"
+            android:fontFamily="@font/pretendard"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -138,33 +156,16 @@
             android:textColorHint="@color/gray_light"
             android:inputType="textPassword"/>
     </FrameLayout>
-    <LinearLayout
+    <TextView
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
-        <TextView
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이름"
-            android:textColor="@color/text_main"
-            android:fontFamily="@font/pretendard"
-            android:textSize="18dp"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-        <Button
-            android:id="@+id/submit_btn"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:background="@drawable/button_rec_blu"
-            android:text="중복 확인"
-            android:textColor="@color/realwhite"
-            android:fontFamily="@font/pretendard"
-            android:textSize="16dp"
-            android:textStyle="bold"/>
-        </LinearLayout>
+        android:layout_marginTop="40dp"
+        android:text="이름"
+        android:textColor="@color/text_main"
+        android:fontFamily="@font/pretendard"
+        android:textSize="18dp"/>
+
 
         <FrameLayout
             android:layout_width="match_parent"
