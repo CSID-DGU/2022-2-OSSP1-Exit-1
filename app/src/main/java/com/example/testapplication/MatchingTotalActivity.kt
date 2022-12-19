@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.annotation.RequiresApi
 import com.example.testapplication.databinding.ActivityMatchingTotalBinding
+import com.google.common.collect.Comparators
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
 import org.json.JSONArray
@@ -158,25 +159,53 @@ class MatchingTotalActivity : AppCompatActivity() {
                             j++
                         }
 
+                        for(c: Int in 0..jsonArray.length()-1) {
+                            Log.d("ddd,ddd", countarray[c][0].toString())
+                            Log.d("ddd,ddd", countarray[c][1].toString())
+
+                        }
+
+                        for(c: Int in 0..jsonArray.length() -1 ){
+                            var temp_id = countarray[c][0]
+                            var temp = countarray[c][1]
+                            var min = 10.0f
+                            var minidx = 0
+                            for (d: Int in c .. jsonArray.length() - 1){
+                                if(countarray[d][1] < min ) {
+                                    min = countarray[d][1]
+                                    minidx = d
+                                }
+                            }
+                            Log.d("d", minidx.toString())
+                            countarray[c][1] = countarray[minidx][1]
+                            countarray[c][0] = countarray[minidx][0]
+                            countarray[minidx][1] = temp
+                            countarray[minidx][0] = temp_id
+
+                        }
+
+                        for(c: Int in 0..jsonArray.length()-1) {
+                            Log.d("ccc,ccc", countarray[c][0].toString())
+                            Log.d("ccc,ccc", countarray[c][1].toString())
+
+                        }
 
                         val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
                         //countarray.sort()
                         //Arrays.sort(countarray, Comparator.comparingInt())
                         api.postRecommendationList(
                             preferences.getString("userId", ""),
-                            countarray[0][0].toInt(),
-                            countarray[1][0].toInt(),
-                            countarray[2][0].toInt()
+                            countarray[jsonArray.length() - 1][0].toInt(),
+                            countarray[jsonArray.length() - 2][0].toInt(),
+                            countarray[jsonArray.length() - 3][0].toInt()
                         ).enqueue(object : retrofit2.Callback<Void> {
                             override fun onResponse(call: Call<Void>, response: Response<Void>) {
 
                                 Log.d("roomPostSuccess", "asdfasdfasdf")
                             }
-
                             override fun onFailure(call: Call<Void>, t: Throwable) {
                                 Log.d("roomPostFail", "asdfasdfasdfa")
                             }
-
                         })
 
                     }
