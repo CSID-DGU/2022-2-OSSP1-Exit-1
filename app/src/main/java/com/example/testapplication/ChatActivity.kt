@@ -24,6 +24,7 @@ class ChatActivity : AppCompatActivity() {
 
     private val api = APIS.create()
     private lateinit var Binding: ActivityChatBinding
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,41 +33,69 @@ class ChatActivity : AppCompatActivity() {
         multiAdapter = chatAdapter(this)
         Binding.chatRecyclerView.adapter = multiAdapter
 
-        datas.apply {
-            add(chatData(name = "이다은", msg = "하이요", time = "22", multi_type1))
-            add(chatData(name = "이석민", msg = "jenny", time = "26", multi_type2))
-            add(chatData(name = "안하영", msg = "jhon", time = "27", multi_type1))
-            multiAdapter.datas = datas
-            multiAdapter.notifyDataSetChanged()
+        api.getAllChat(24).enqueue(object : retrofit2.Callback<getAllChat>{
+            override fun onResponse(call: Call<getAllChat>, response: Response<getAllChat>) {
+               Log.d("res", response.body().toString())
+                var chatArray = response.body().toString().replace("getAllChat(result=", "")
+                chatArray = chatArray.replace(")", "")
+                var chatInfo = chatArray.split("/")
+                Log.d("chatInfo", chatInfo[0].toString())
 
-        }
+
+                datas.apply {
+                    for(i: Int in 0..chatInfo.size-2) {
+                        var chat = chatInfo[i].split(",")
+                        Log.d("chat", chat[0])
+                        Log.d("chat", chat[1])
+                        Log.d("chat", chat[2])
+                        add(chatData(name = chat[0], msg = chat[1], time = chat[2], multi_type1))
+                    }
+                    multiAdapter.datas = datas
+                    multiAdapter.notifyDataSetChanged()
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<getAllChat>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+
+        })
+
         Binding.btnBack.setOnClickListener {
             val intent2 = Intent(this, MainActivity::class.java)
-        val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
+            val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
 
-        Binding.chatSubmitButton.setOnClickListener {
-            Log.d("datetime", Binding.chatInput.text.toString())
-            api.sendChat(
-                preferences.getString("userId", ""),
-                Binding.chatInput.text.toString(),
-                24,
-                LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).toString()
-            ).enqueue(object : retrofit2.Callback<Void> {
-                override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                    Log.d("datetime", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).toString())
-                }
+            Binding.massageSend.setOnClickListener {
+                Log.d("datetime", Binding.chatInput.text.toString())
+                api.sendChat(
+                    preferences.getString("userId", ""),
+                    Binding.chatInput.text.toString(),
+                    24,
+                    LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).toString()
+                ).enqueue(object : retrofit2.Callback<Void> {
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                        Log.d(
+                            "datetime",
+                            LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+                                .toString()
+                        )
+                    }
 
-                override fun onFailure(call: Call<Void>, t: Throwable) {
-                    Log.d("chatFail", "chaasdf")
-                }
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                        Log.d("chatFail", "chaasdf")
+                    }
 
-            })
-        }
+                })
+            }
 
-        Binding.btnBack.setOnClickListener{
-            val intent2= Intent(this, MainActivity::class.java)
-            startActivity(intent2)
-            finish()
+            Binding.btnBack.setOnClickListener {
+                val intent2 = Intent(this, MainActivity::class.java)
+                startActivity(intent2)
+                finish()
+            }
         }
     }
 }

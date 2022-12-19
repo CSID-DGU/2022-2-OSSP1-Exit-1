@@ -90,7 +90,7 @@ public interface APIS {
 
     @GET("getAllChat.php")
     fun getAllChat(
-        @Query("id") id: String? = null
+        @Query("roomID") roomID: Int? = null
     ): Call<getAllChat>
 
     @FormUrlEncoded
