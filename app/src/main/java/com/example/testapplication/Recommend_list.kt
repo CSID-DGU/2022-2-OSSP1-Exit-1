@@ -25,20 +25,21 @@ class Recommend_list : AppCompatActivity() {
         val adapter = MyAdapter(recyclerViewItems)
         binding.recyclerView.adapter = adapter
 
+        val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
         api.getRoomRecommendation(
-            24,31,32
+            preferences.getString("userId", ""), 24, 31, 32
         ).enqueue(object : retrofit2.Callback<getRoomRecommendationModel> {
             override fun onResponse(
                 call: Call<getRoomRecommendationModel>,
                 response: Response<getRoomRecommendationModel>
             ) {
                 Log.d("정보", "${response.body()}")
-                if(response.isSuccessful){
+                if (response.isSuccessful) {
                     response.body()?.let {
                         adapter.setRepoList(it.roomInfoList)
                     }
-                    }
                 }
+            }
 
             override fun onFailure(call: Call<getRoomRecommendationModel>, t: Throwable) {
                 Log.d("getRoomList", "fail")
