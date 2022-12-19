@@ -24,7 +24,7 @@
             android:background="@drawable/chatbox_sent">
 
             <TextView
-                android:id="@+id/chat_msg"
+                android:id="@+id/my_chat_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -35,7 +35,7 @@
         </FrameLayout>
 
         <TextView
-            android:id="@+id/chat_time"
+            android:id="@+id/my_chat_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="time"

@@ -12,22 +12,28 @@ import com.google.android.material.navigation.NavigationView
 
 class ChatActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityChatBinding
+    lateinit var multiAdapter: chatAdapter
+    val datas = mutableListOf<chatData>()
+
+    private lateinit var Binding: ActivityChatBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityChatBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        Binding = ActivityChatBinding.inflate(layoutInflater)
+        setContentView(Binding.root)
+        multiAdapter = chatAdapter(this)
+        Binding.chatRecyclerView.adapter = multiAdapter
 
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
-        findViewById<View>(R.id.imageMenu).setOnClickListener { // start에 지정된 Drawer 열기
-            drawerLayout.openDrawer(GravityCompat.END)
+        datas.apply {
+            add(chatData(name = "이다은", msg = "하이요", time = "22", multi_type1))
+            add(chatData(name = "이석민", msg = "jenny", time = "26", multi_type2))
+            add(chatData(name = "안하영", msg = "jhon", time = "27", multi_type1))
+            multiAdapter.datas = datas
+            multiAdapter.notifyDataSetChanged()
+
         }
-        val navigationView = findViewById<NavigationView>(R.id.side_menu)
-        navigationView.itemIconTintList = null
-
-        binding.btnBack.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        Binding.btnBack.setOnClickListener {
+            val intent2 = Intent(this, MainActivity::class.java)
+            startActivity(intent2)
             finish()
         }
     }
