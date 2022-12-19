@@ -164,9 +164,9 @@ class MatchingTotalActivity : AppCompatActivity() {
                         //Arrays.sort(countarray, Comparator.comparingInt())
                         api.postRecommendationList(
                             preferences.getString("userId", ""),
-                            countarray[0][0],
-                            countarray[1][0],
-                            countarray[2][0]
+                            countarray[0][0].toInt(),
+                            countarray[1][0].toInt(),
+                            countarray[2][0].toInt()
                         ).enqueue(object : retrofit2.Callback<Void> {
                             override fun onResponse(call: Call<Void>, response: Response<Void>) {
 
