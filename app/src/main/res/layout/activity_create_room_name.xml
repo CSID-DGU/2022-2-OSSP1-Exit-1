@@ -70,6 +70,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
         android:layout_marginTop="5dp"
+        android:textSize="14sp"
         android:background="@drawable/edittext_stroke_gray"
         app:layout_constraintTop_toBottomOf="@+id/roomTitle_c1"/>
 
@@ -90,14 +91,17 @@
     <EditText
         android:id="@+id/roomIntro_edit"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="130dp"
         android:padding="5dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
         android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:textSize="14sp"
         android:background="@drawable/edittext_stroke_gray"
+        android:maxLength="200"
         app:layout_constraintTop_toBottomOf="@+id/roomIntro_c1"/>
     <LinearLayout
         android:id="@+id/createRoomBtn"

@@ -82,7 +82,6 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/invisable"
                     android:src="@drawable/ic_calender" />
-
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

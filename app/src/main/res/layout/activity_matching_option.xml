@@ -93,7 +93,8 @@
             android:textSize="18sp"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <Button
                 android:id="@+id/difficulty_High"
                 android:layout_width="wrap_content"
@@ -140,7 +141,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <Button
                 android:id="@+id/activity_High"
                 android:layout_width="wrap_content"
@@ -184,7 +186,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             <Button
                 android:id="@+id/fear_High"
                 android:layout_width="wrap_content"

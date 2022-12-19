@@ -15,6 +15,7 @@
         app:srcCompat="@drawable/button_rec_blu" />
 
     <LinearLayout
+        android:id="@+id/chat_recieve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -39,6 +40,7 @@
                 android:id="@+id/chat_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:text="message"
                 android:fontFamily="@font/pretendard"
                 android:textColor="@color/text_main" />
