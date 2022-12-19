@@ -9,11 +9,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testapplication.*
 import com.example.testapplication.databinding.ActivityItemrecyclerciewBinding
+import retrofit2.Call
+import retrofit2.Response
 
 
 class MyAdapter(private var roomList:  List<getRoomRecommendationModel.recommendationRoomInfo>
 ): RecyclerView.Adapter<MyAdapter.RecyclerViewViewHolder>() {
-
+    private val api = APIS.create()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_itemrecyclerciew, parent, false)
@@ -24,9 +26,26 @@ class MyAdapter(private var roomList:  List<getRoomRecommendationModel.recommend
         holder.bind(roomList[position])
 
         holder.itemView.setOnClickListener {
+            api.addUserToChatRoom(
+                roomList[position].id.toString(),
+                roomList[position].roomID
+            ).enqueue(object : retrofit2.Callback<Void> {
+                override fun onResponse(
+                    call: Call<Void>,
+                    response: Response<Void>
+                ) {
+                    Log.d("addUserSuccess", "addUserSuccess")
+                    val intent = Intent(holder.itemView?.context, MainActivity::class.java)
+                    ContextCompat.startActivity(holder.itemView.context, intent,null)
+                }
+
+                override fun onFailure(call: Call<Void>, t: Throwable) {
+                    Log.d("addUserFail", t.toString())
+                }
+
+            })
+            Log.d("ididid", roomList[position].id.toString())
             Log.d("클릭","클릭")
-            val intent = Intent(holder.itemView?.context, MainActivity::class.java)
-            ContextCompat.startActivity(holder.itemView.context, intent,null)
         }
     }
 

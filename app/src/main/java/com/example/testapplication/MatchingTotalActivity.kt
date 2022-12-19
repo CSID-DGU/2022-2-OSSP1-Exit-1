@@ -158,9 +158,26 @@ class MatchingTotalActivity : AppCompatActivity() {
                             j++
                         }
 
+
+                        val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
                         //countarray.sort()
                         //Arrays.sort(countarray, Comparator.comparingInt())
+                        api.postRecommendationList(
+                            preferences.getString("userId", ""),
+                            countarray[0][0],
+                            countarray[1][0],
+                            countarray[2][0]
+                        ).enqueue(object : retrofit2.Callback<Void> {
+                            override fun onResponse(call: Call<Void>, response: Response<Void>) {
 
+                                Log.d("roomPostSuccess", "asdfasdfasdf")
+                            }
+
+                            override fun onFailure(call: Call<Void>, t: Throwable) {
+                                Log.d("roomPostFail", "asdfasdfasdfa")
+                            }
+
+                        })
 
                     }
 
@@ -169,6 +186,8 @@ class MatchingTotalActivity : AppCompatActivity() {
                     }
 
                 })
+            val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
+
             val intent = Intent(this, Recommend_list::class.java)
             startActivity(intent)
             finish()

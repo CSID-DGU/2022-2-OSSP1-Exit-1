@@ -25,25 +25,57 @@ class Recommend_list : AppCompatActivity() {
         val adapter = MyAdapter(recyclerViewItems)
         binding.recyclerView.adapter = adapter
 
-        api.getRoomRecommendation(
-            24,31,32
-        ).enqueue(object : retrofit2.Callback<getRoomRecommendationModel> {
+        val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
+        api.getRecommendationList(
+            preferences.getString("userId", "")
+        ).enqueue(object : retrofit2.Callback<getRecommendationList> {
             override fun onResponse(
-                call: Call<getRoomRecommendationModel>,
-                response: Response<getRoomRecommendationModel>
+                call: Call<getRecommendationList>,
+                response: Response<getRecommendationList>
             ) {
-                Log.d("정보", "${response.body()}")
-                if(response.isSuccessful){
-                    response.body()?.let {
-                        adapter.setRepoList(it.roomInfoList)
-                    }
-                    }
-                }
+                Log.d("getList", response.body().toString())
 
-            override fun onFailure(call: Call<getRoomRecommendationModel>, t: Throwable) {
-                Log.d("getRoomList", "fail")
+
+                var resultString = response.body().toString().replace("getRecommendationList(result=", "")
+                resultString = resultString.replace(")", "")
+                var resultArray = resultString.split(",")
+                Log.d("getList", resultArray[0])
+                Log.d("getList", resultArray[1])
+                Log.d("getList", resultArray[2])
+
+
+
+                api.getRoomRecommendation(
+                    preferences.getString("userId", ""),
+                    Integer.parseInt(resultArray[0]),
+                    Integer.parseInt(resultArray[1]),
+                    Integer.parseInt(resultArray[2])
+                ).enqueue(object : retrofit2.Callback<getRoomRecommendationModel> {
+                    override fun onResponse(
+                        call: Call<getRoomRecommendationModel>,
+                        response: Response<getRoomRecommendationModel>
+                    ) {
+                        Log.d("정보", "${response.body()}")
+                        if (response.isSuccessful) {
+                            response.body()?.let {
+                                adapter.setRepoList(it.roomInfoList)
+                            }
+                        }
+                    }
+
+                    override fun onFailure(call: Call<getRoomRecommendationModel>, t: Throwable) {
+                        Log.d("getRoomList", "fail")
+                    }
+
+                })
+            }
+
+            override fun onFailure(call: Call<getRecommendationList>, t: Throwable) {
+                TODO("Not yet implemented")
             }
 
         })
+
+
     }
 }

@@ -16,7 +16,8 @@ class CreateTotalActivity : AppCompatActivity() {
         val binding = ActivityCreateTotalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val createrUserId = "test5"
+        val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
+        val createrUserId = preferences.getString("userId", "")
         val roomtitle = intent.getStringExtra("roomtitle")
         binding.tvRoomtitle.text = roomtitle
         val region1 = intent.getStringExtra("area1")
@@ -91,7 +92,7 @@ class CreateTotalActivity : AppCompatActivity() {
                 ) {
                     Log.d("createRoom", "asdfasdf")
                     if(response.body()?.result.toString() == "createRoomSuccess") {
-                        Log.d("createRoom", "create room success")
+                        Log.d("createRoom", createrUserId.toString())
                         Toast.makeText(applicationContext, response.body()?.result.toString(), Toast.LENGTH_SHORT).show()
 
                         val intent = Intent(applicationContext, MainActivity::class.java)

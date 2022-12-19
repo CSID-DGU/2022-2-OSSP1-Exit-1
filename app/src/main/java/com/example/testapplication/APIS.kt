@@ -61,10 +61,32 @@ public interface APIS {
 
     @GET("getRoomRecommendation.php")
     fun getRoomRecommendation(
+        @Query("id") id: String? = null,
         @Query("roomID1") param1: Int? = null,
         @Query("roomID2") param2: Int? = null,
         @Query("roomID3") param3: Int? = null
     ): Call<getRoomRecommendationModel>
+
+    @FormUrlEncoded
+    @POST("addUserToChatRoom.php")
+    fun addUserToChatRoom(
+        @Field("id") id: String? = null,
+        @Field("roomID") roomID: Int? = null
+    ): Call<Void>
+
+    @FormUrlEncoded
+    @POST("postRecommendationList.php")
+    fun postRecommendationList(
+        @Field("id") id: String? = null,
+        @Field("roomID1") roomID1: Int? = null,
+        @Field("roomID2") roomID2: Int? = null,
+        @Field("roomID3") roomID3: Int? = null
+    ): Call<Void>
+
+    @GET("getRecommendationList.php")
+    fun getRecommendationList(
+        @Query("id") id: String? = null
+    ): Call<getRecommendationList>
 
     companion object {
         private const val BASE_URL =
