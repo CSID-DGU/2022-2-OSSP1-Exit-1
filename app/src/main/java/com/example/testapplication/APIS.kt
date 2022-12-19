@@ -88,6 +88,11 @@ public interface APIS {
         @Query("id") id: String? = null
     ): Call<getRecommendationList>
 
+    @GET("getAllChat.php")
+    fun getAllChat(
+        @Query("id") id: String? = null
+    ): Call<getAllChat>
+
     companion object {
         private const val BASE_URL =
             "http://ec2-3-34-134-247.ap-northeast-2.compute.amazonaws.com/"

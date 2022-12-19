@@ -228,3 +228,9 @@ data class getRecommendationList(
 //    @SerializedName("roomID3")
 //    var roomNum3: Int? = null,
 )
+
+data class getAllChat(
+    @Expose
+    @SerializedName("result2")
+    var result: String? = null
+)

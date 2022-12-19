@@ -172,7 +172,6 @@ class MatchingTotalActivity : AppCompatActivity() {
                             override fun onFailure(call: Call<Void>, t: Throwable) {
                                 Log.d("roomPostFail", "asdfasdfasdfa")
                             }
-
                         })
 
                     }
