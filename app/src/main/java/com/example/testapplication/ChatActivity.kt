@@ -34,6 +34,7 @@ class ChatActivity : AppCompatActivity() {
         Binding.chatRecyclerView.adapter = multiAdapter
 
         val roomId = intent.getStringExtra("roomID")
+        val roomTitle = intent.getStringExtra("roomTitle")
 
         api.getAllChat(roomId?.toInt()).enqueue(object : retrofit2.Callback<getAllChat>{
             override fun onResponse(call: Call<getAllChat>, response: Response<getAllChat>) {
@@ -66,8 +67,9 @@ class ChatActivity : AppCompatActivity() {
             override fun onFailure(call: Call<getAllChat>, t: Throwable) {
                 TODO("Not yet implemented")
             }
-
         })
+
+        Binding.textTitle.text = roomTitle
 
         Binding.massageSend.setOnClickListener {
             val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
