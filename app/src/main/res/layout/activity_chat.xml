@@ -18,6 +18,7 @@ tools:context=".ChatActivity">
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/realwhite"
         app:layout_constraintStart_toStartOf="parent">
         <LinearLayout
             android:id="@+id/toolbar"
