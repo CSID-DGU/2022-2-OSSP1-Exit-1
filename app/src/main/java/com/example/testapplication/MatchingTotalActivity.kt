@@ -103,7 +103,7 @@ class MatchingTotalActivity : AppCompatActivity() {
                             JSONObject(sj).optJSONArray("roomInfoList")
 
                         val array = Array(jsonArray.length(), { Array(9, { "" }) })
-                        val countarray = Array(jsonArray.length(), { IntArray(2, { 0 }) })
+                        val countarray = Array(jsonArray.length(), {FloatArray(2, {0.0f})})
                         while (i < jsonArray.length()) {
                             val JsonObject = jsonArray.getJSONObject(i)
                             val roomID = JsonObject.getString("roomID").toString()
@@ -130,13 +130,16 @@ class MatchingTotalActivity : AppCompatActivity() {
 
                         var j = 0;
                         while (j < jsonArray.length()) {
-                            var count = 0
-                            if (array[j][1] == useroption[0])
-                                count++
-                            if (array[j][2] == useroption[1])
-                                count++
-                            if (array[j][3] == useroption[2])
-                                count++
+                            var count = 0.0f
+                            var recount = 0.0f
+
+                            for(a: Int in 0..2) {
+                                for (b: Int in 0..2) {
+                                    if (array[j][a + 1] == useroption[b])
+                                        recount++
+                                }
+                            }
+                            count += (recount / 3)
                             if (Integer.parseInt(array[j][4]) >= Integer.parseInt(useroption[3])
                                 && Integer.parseInt(array[j][4]) <= Integer.parseInt(useroption[4])
                             )
@@ -150,7 +153,8 @@ class MatchingTotalActivity : AppCompatActivity() {
                             if (array[j][8] == useroption[8].toString())
                                 count++
                             countarray[j][1] = count
-                            countarray[j][0] = Integer.parseInt(array[j][0])
+                            countarray[j][0] = array[j][0].toFloat()
+                            Log.d("count", j.toString() + " " + count.toString())
                             j++
                         }
 
