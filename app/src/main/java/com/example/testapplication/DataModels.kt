@@ -161,10 +161,15 @@ data class getAllRoomInfoModel(
 
 data class getRoomRecommendationModel(
     @Expose
-    @SerializedName("roomRecommendationList")
-    var roomRecommendationList: List<recommendationRoomInfo>
+    @SerializedName("roomInfoList")
+    var roomInfoList: List<recommendationRoomInfo>
 ) {
     data class recommendationRoomInfo(
+
+        @Expose
+        @SerializedName("roomID")
+        var roomID: Int? = null,
+
         @Expose
         @SerializedName("title")
         var title: String? = null,

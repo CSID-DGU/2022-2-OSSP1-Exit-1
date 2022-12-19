@@ -3,8 +3,13 @@ package com.example.testapplication
 import MyAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.testapplication.databinding.ActivityRecommendListBinding
+import com.example.testapplication.databinding.ActivityRegisterBinding
+import retrofit2.Call
+import retrofit2.Response
 
 
 class Recommend_list : AppCompatActivity() {
@@ -12,21 +17,33 @@ class Recommend_list : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recommend_list)
+        val binding = ActivityRecommendListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        //리스트에 사용될 ArrayList를 생성한다.
-        val recyclerViewItems: ArrayList<RoomData> = ArrayList()
-        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
-        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
-        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
-        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
-        recyclerViewItems.add(RoomData("이 구역 코난은 나야","매너있는 사람들을 모집합니다!", "#방탈출 #서울 #초보_환영"))
-
-        //recyclerView 연결
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        val recyclerViewItems: List<getRoomRecommendationModel.recommendationRoomInfo> = emptyList()
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = MyAdapter(recyclerViewItems)
-        recyclerView.adapter = adapter
+        binding.recyclerView.adapter = adapter
 
+        api.getRoomRecommendation(
+            24,31,32
+        ).enqueue(object : retrofit2.Callback<getRoomRecommendationModel> {
+            override fun onResponse(
+                call: Call<getRoomRecommendationModel>,
+                response: Response<getRoomRecommendationModel>
+            ) {
+                Log.d("정보", "${response.body()}")
+                if(response.isSuccessful){
+                    response.body()?.let {
+                        adapter.setRepoList(it.roomInfoList)
+                    }
+                    }
+                }
+
+            override fun onFailure(call: Call<getRoomRecommendationModel>, t: Throwable) {
+                Log.d("getRoomList", "fail")
+            }
+
+        })
     }
 }

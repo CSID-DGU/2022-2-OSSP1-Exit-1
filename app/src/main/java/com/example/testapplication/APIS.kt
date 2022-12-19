@@ -61,9 +61,9 @@ public interface APIS {
 
     @GET("getRoomRecommendation.php")
     fun getRoomRecommendation(
-        @Query("roomID1") param1: String? = null,
-        @Query("roomID2") param2: String? = null,
-        @Query("roomID3") param3: String? = null
+        @Query("roomID1") param1: Int? = null,
+        @Query("roomID2") param2: Int? = null,
+        @Query("roomID3") param3: Int? = null
     ): Call<getRoomRecommendationModel>
 
     companion object {

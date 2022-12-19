@@ -1,3 +1,4 @@
+import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
@@ -6,13 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testapplication.MatchingEnd
-import com.example.testapplication.R
-import com.example.testapplication.RoomData
+import com.example.testapplication.*
+import com.example.testapplication.databinding.ActivityItemrecyclerciewBinding
 
 
-class MyAdapter(
-    private var recyclerViewItems: ArrayList<RoomData>
+class MyAdapter(private var roomList:  List<getRoomRecommendationModel.recommendationRoomInfo>
 ): RecyclerView.Adapter<MyAdapter.RecyclerViewViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewViewHolder {
@@ -22,28 +21,36 @@ class MyAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerViewViewHolder, position: Int) {
-        holder.bind(recyclerViewItems[position])
+        holder.bind(roomList[position])
 
         holder.itemView.setOnClickListener {
             Log.d("클릭","클릭")
-            val intent = Intent(holder.itemView?.context, MatchingEnd::class.java)
+            val intent = Intent(holder.itemView?.context, MainActivity::class.java)
             ContextCompat.startActivity(holder.itemView.context, intent,null)
         }
     }
 
     override fun getItemCount(): Int {
-        return recyclerViewItems.size
+        return roomList.size
     }
 
-    inner class RecyclerViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+    class RecyclerViewViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
         private val title: TextView = itemView.findViewById(R.id.room_name)
-        private val description: TextView = itemView.findViewById(R.id.room_description)
+        private val Intro: TextView = itemView.findViewById(R.id.room_description)
+            fun bind(recyclerViewItem: getRoomRecommendationModel.recommendationRoomInfo) {
+                title.text = recyclerViewItem.title
+                Intro.text= recyclerViewItem.roomIntro
+            }
+         }
 
-        fun bind(recyclerViewItem: RoomData) {
-            title.text = recyclerViewItem.room_title
-            description.text = recyclerViewItem.room_des
-        }
+    fun setRepoList(repoList: List<getRoomRecommendationModel.recommendationRoomInfo>){
+        roomList = repoList.toList()
+        notifyDataSetChanged()
     }
+
 }
+
+
+
+
 
