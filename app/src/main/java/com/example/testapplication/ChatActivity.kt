@@ -40,15 +40,18 @@ class ChatActivity : AppCompatActivity() {
                 chatArray = chatArray.replace(")", "")
                 var chatInfo = chatArray.split("/")
                 Log.d("chatInfo", chatInfo[0].toString())
-
+                val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
+                val userId = preferences.getString("userId", "")
 
                 datas.apply {
                     for(i: Int in 0..chatInfo.size-2) {
                         var chat = chatInfo[i].split(",")
-                        Log.d("chat", chat[0])
-                        Log.d("chat", chat[1])
-                        Log.d("chat", chat[2])
-                        add(chatData(name = chat[0], msg = chat[1], time = chat[2], multi_type1))
+                        if(userId == chat[0]){
+                            add(chatData(name = chat[0], msg = chat[1], time = chat[2], multi_type2))
+                        }
+                        else{
+                            add(chatData(name = chat[0], msg = chat[1], time = chat[2], multi_type1))
+                            }
                     }
                     multiAdapter.datas = datas
                     multiAdapter.notifyDataSetChanged()
@@ -66,30 +69,30 @@ class ChatActivity : AppCompatActivity() {
 
         Binding.btnBack.setOnClickListener {
             val intent2 = Intent(this, MainActivity::class.java)
-            val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
 
-            Binding.massageSend.setOnClickListener {
-                Log.d("datetime", Binding.chatInput.text.toString())
-                api.sendChat(
-                    preferences.getString("userId", ""),
-                    Binding.chatInput.text.toString(),
-                    24,
-                    LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).toString()
-                ).enqueue(object : retrofit2.Callback<Void> {
-                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                        Log.d(
-                            "datetime",
-                            LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
-                                .toString()
-                        )
-                    }
-
-                    override fun onFailure(call: Call<Void>, t: Throwable) {
-                        Log.d("chatFail", "chaasdf")
-                    }
-
-                })
             }
+        Binding.massageSend.setOnClickListener {
+            val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
+            Log.d("datetime", Binding.chatInput.text.toString())
+            api.sendChat(
+                preferences.getString("userId", ""),
+                Binding.chatInput.text.toString(),
+                24,
+                LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).toString()
+            ).enqueue(object : retrofit2.Callback<Void> {
+                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    Log.d(
+                        "datetime",
+                        LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+                            .toString()
+                    )
+                }
+
+                override fun onFailure(call: Call<Void>, t: Throwable) {
+                    Log.d("chatFail", "chaasdf")
+                }
+
+            })
 
             Binding.btnBack.setOnClickListener {
                 val intent2 = Intent(this, MainActivity::class.java)
