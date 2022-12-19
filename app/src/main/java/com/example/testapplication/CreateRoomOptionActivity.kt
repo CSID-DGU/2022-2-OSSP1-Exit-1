@@ -63,6 +63,7 @@ class CreateRoomOptionActivity : AppCompatActivity() {
 //        val btnScaryLow =Binding.scaryLow
 
         Binding.difficultyHigh.setOnClickListener{
+            //if(diff=="중"||diff="하")
             Binding.difficultyHigh.isSelected = Binding.difficultyHigh.isSelected != true
             diff = "상"
         }

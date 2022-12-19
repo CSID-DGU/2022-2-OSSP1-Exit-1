@@ -43,6 +43,7 @@ tools:context=".ChatActivity">
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="chatRoomTitle"
+                android:fontFamily="@font/pretendard"
                 android:textColor="@color/text_main"
                 android:textSize="18sp"
                 android:textStyle="bold" />

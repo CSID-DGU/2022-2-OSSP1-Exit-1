@@ -14,8 +14,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bnv_main"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout="@layout/fragment_roomadd"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout="@layout/fragment_roomadd" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv_main"

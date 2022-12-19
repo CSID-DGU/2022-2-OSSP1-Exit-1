@@ -26,4 +26,5 @@
     <color name="black2">#1B1F23</color>
     <color name="blue0">#3041CF</color>
     <color name="gray0">#F6F6F6</color>
+    <color name = "invisable">#00ff0000</color>
 </resources>
