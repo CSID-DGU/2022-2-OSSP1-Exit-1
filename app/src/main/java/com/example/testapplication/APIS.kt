@@ -74,6 +74,20 @@ public interface APIS {
         @Field("roomID") roomID: Int? = null
     ): Call<Void>
 
+    @FormUrlEncoded
+    @POST("postRecommendationList.php")
+    fun postRecommendationList(
+        @Field("id") id: String? = null,
+        @Field("roomID1") roomID1: Int? = null,
+        @Field("roomID2") roomID2: Int? = null,
+        @Field("roomID3") roomID3: Int? = null
+    ): Call<Void>
+
+    @GET("getRecommendationList.php")
+    fun getRecommendationList(
+        @Query("id") id: String? = null
+    ): Call<getRecommendationList>
+
     companion object {
         private const val BASE_URL =
             "http://ec2-3-34-134-247.ap-northeast-2.compute.amazonaws.com/"

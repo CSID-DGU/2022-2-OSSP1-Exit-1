@@ -192,3 +192,39 @@ data class addUserToChatRoomModel(
     @SerializedName("roomID")
     var roomID: Int? = null
 )
+
+data class postRecommendationList(
+    @Expose
+    @SerializedName("id")
+    var id: String? = null,
+
+    @Expose
+    @SerializedName("roomID1")
+    var roomNum1: Int? = null,
+
+    @Expose
+    @SerializedName("roomID2")
+    var roomNum2: Int? = null,
+
+    @Expose
+    @SerializedName("roomID3")
+    var roomNum3: Int? = null
+)
+
+data class getRecommendationList(
+    @Expose
+    @SerializedName("result2")
+    var result: String? = null
+
+//    @Expose
+//    @SerializedName("roomID1")
+//    var roomNum1: Int? = null,
+//
+//    @Expose
+//    @SerializedName("roomID2")
+//    var roomNum2: Int? = null,
+//
+//    @Expose
+//    @SerializedName("roomID3")
+//    var roomNum3: Int? = null,
+)
