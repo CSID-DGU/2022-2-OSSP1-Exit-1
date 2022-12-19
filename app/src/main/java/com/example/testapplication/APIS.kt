@@ -66,6 +66,12 @@ public interface APIS {
         @Query("roomID3") param3: Int? = null
     ): Call<getRoomRecommendationModel>
 
+    @POST("addUserToChatRoom.php")
+    fun addToChatRoom(
+        @Field("id") id: String? = null,
+        @Field("roomID") roomID: Int? = null
+    ): Call<addUserToChatRoomModel>
+
     companion object {
         private const val BASE_URL =
             "http://ec2-3-34-134-247.ap-northeast-2.compute.amazonaws.com/"

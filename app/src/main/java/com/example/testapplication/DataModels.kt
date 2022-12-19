@@ -179,3 +179,13 @@ data class getRoomRecommendationModel(
         var roomIntro: String? = null
     )
 }
+
+data class addUserToChatRoomModel(
+    @Expose
+    @SerializedName("id")
+    var id: String? = null,
+
+    @Expose
+    @SerializedName("roomID")
+    var roomID: Int? = null
+)
