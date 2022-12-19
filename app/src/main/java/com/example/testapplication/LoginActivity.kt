@@ -22,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
-
         val ID = binding.loginID
         val Password = binding.loginPassword
 

@@ -25,8 +25,15 @@ class Recommend_list : AppCompatActivity() {
         val adapter = MyAdapter(recyclerViewItems)
         binding.recyclerView.adapter = adapter
 
+
+        Log.d("roomd1",  intent.getStringExtra("roomid1").toString())
+
         api.getRoomRecommendation(
-            24,31,32
+            //Integer.parseInt(intent.getStringExtra("roomid1").toString()),
+            //Integer.parseInt(intent.getStringExtra("roomid2").toString()),
+            //Integer.parseInt(intent.getStringExtra("roomid3").toString())
+
+        Integer.parseInt(intent.getStringExtra("roomId")), 26, 24
         ).enqueue(object : retrofit2.Callback<getRoomRecommendationModel> {
             override fun onResponse(
                 call: Call<getRoomRecommendationModel>,

@@ -18,6 +18,12 @@ import retrofit2.Response
 import java.util.*
 
 class MatchingTotalActivity : AppCompatActivity() {
+    var roomId1 = 0
+    var roomId2 = 0
+    var roomId3 = 0
+    var x = 0
+
+
     private val api = APIS.create()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -90,20 +96,17 @@ class MatchingTotalActivity : AppCompatActivity() {
                         call: Call<getAllRoomInfoModel>,
                         response: Response<getAllRoomInfoModel>
                     ) {
+                        Log.d("성공", "성공")
                         var i = 0
-                        val text =
-                            "{\"activity\":1,\"date\":\"2022.12.20\",\"difficulty\":1,\"fear\":0,\"genre\":\"판타지\",\"region1\":\"강남\",\"region2\":\"건대\",\"region3\":\"상수\",\"roomID\":24,\"title\":\"동국 탈출 넘버원\"}"
 
-                        Log.d("response11", response.body().toString())
                         var gson = GsonBuilder().create()
                         var sj = gson.toJson(response.body())
-                        Log.d("json", sj)
 
                         val jsonArray =
                             JSONObject(sj).optJSONArray("roomInfoList")
 
                         val array = Array(jsonArray.length(), { Array(9, { "" }) })
-                        val countarray = Array(jsonArray.length(), { IntArray(2, { 0 }) })
+                        val countarray = Array(jsonArray.length(), {FloatArray(2, {0.0f})})
                         while (i < jsonArray.length()) {
                             val JsonObject = jsonArray.getJSONObject(i)
                             val roomID = JsonObject.getString("roomID").toString()
@@ -127,16 +130,19 @@ class MatchingTotalActivity : AppCompatActivity() {
                             array[i][8] = activity
                             i++
                         }
-
                         var j = 0;
                         while (j < jsonArray.length()) {
-                            var count = 0
-                            if (array[j][1] == useroption[0])
-                                count++
-                            if (array[j][2] == useroption[1])
-                                count++
-                            if (array[j][3] == useroption[2])
-                                count++
+                            var count = 0.0f
+                            var recount = 0.0f
+
+                            for(a: Int in 0..2) {
+                                for (b: Int in 0..2) {
+                                    if (array[j][a + 1] == useroption[b])
+                                        recount++
+                                }
+                            }
+                            count += (recount / 3)
+
                             if (Integer.parseInt(array[j][4]) >= Integer.parseInt(useroption[3])
                                 && Integer.parseInt(array[j][4]) <= Integer.parseInt(useroption[4])
                             )
@@ -150,14 +156,11 @@ class MatchingTotalActivity : AppCompatActivity() {
                             if (array[j][8] == useroption[8].toString())
                                 count++
                             countarray[j][1] = count
-                            countarray[j][0] = Integer.parseInt(array[j][0])
+                            countarray[j][0] = array[j][0].toFloat()
+                            Log.d("count", j.toString() + " " + count.toString())
                             j++
                         }
-
-                        //countarray.sort()
-                        //Arrays.sort(countarray, Comparator.comparingInt())
-
-
+                        intent.putExtra("roomId", countarray[0][0].toInt())
                     }
 
                     override fun onFailure(call: Call<getAllRoomInfoModel>, t: Throwable) {
@@ -165,9 +168,14 @@ class MatchingTotalActivity : AppCompatActivity() {
                     }
 
                 })
+
             val intent = Intent(this, Recommend_list::class.java)
+            //intent.putExtra("roodid1", roomId1)
+            //intent.putExtra("roodid2", roomId2)
+            //intent.putExtra("roodid3", roomId3)
             startActivity(intent)
             finish()
+
         }
     }
 

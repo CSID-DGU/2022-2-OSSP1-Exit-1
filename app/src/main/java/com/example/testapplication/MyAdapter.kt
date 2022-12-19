@@ -22,9 +22,9 @@ class MyAdapter(private var roomList:  List<getRoomRecommendationModel.recommend
 
     override fun onBindViewHolder(holder: RecyclerViewViewHolder, position: Int) {
         holder.bind(roomList[position])
-
         holder.itemView.setOnClickListener {
             Log.d("클릭","클릭")
+            Log.d("roomID", roomList[position].roomID.toString())
             val intent = Intent(holder.itemView?.context, MainActivity::class.java)
             ContextCompat.startActivity(holder.itemView.context, intent,null)
         }
