@@ -62,18 +62,21 @@ Figma & GitHub & Notion<br>
     
 - 방장의 매칭 조건 선택 : 날짜, 지역, 장르, 난이도, 공포도, 활동성<br>
 - 추가 입력 자료 : 제목과 한 줄 소개<br>
-<br><img width="20%" src="https://user-images.githubusercontent.com/87844641/173780852-0018d0cc-8e83-4278-a073-6a3b1569cd77.png"/>
+<br><img width="20%" src="https://user-images.githubusercontent.com/77060011/208580039-00a8d3ab-e0d8-4ae3-baea-c3e1f87ac698.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580085-aece8dc8-5ca2-446c-9f1c-5d8dbfe1669e.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580132-786fa437-814c-483d-9ac6-d70ac6cff5e7.png"/> <br><br>
+<img width="20%" src="https://user-images.githubusercontent.com/77060011/208580268-d9585ffe-7158-4473-9337-f3bd53f499b4.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580294-f55dec8a-33d0-4161-af0a-bbf0ee87e515.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580307-7f75f4de-9488-4bbf-9b27-9c5f3246d6a8.png"/>
 
 
 <h3>(3) Matching - 찾아보기 </h3>
  
 - 매칭 조건 선택 : 기간, 지역, 장르, 난이도, 공포도, 활동성<br>
 - 존재하는 방 중 매칭 조건이 얼마나 충족되는지를 환산한 점수인 추천도 순으로 상위 3개 추천 <br>
-<img width="20%" src="https://user-images.githubusercontent.com/87844641/173843675-00376ab3-ad9e-4673-96ac-a3f6fe558f46.png"/><br>
+<br><img width="20%" src="https://user-images.githubusercontent.com/77060011/208580535-f7fe0d57-f777-4055-9ae3-8af90f9c10c7.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580566-c327fbc2-6c12-4f9a-a298-c32db4eb1f1a.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580578-2dbff903-ef18-4ad8-ae7b-e3983e91f196.png"/> <br><br>
+<img width="20%" src="https://user-images.githubusercontent.com/77060011/208580632-f576cc3d-ec83-4557-85b9-147e246a5b20.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580667-18f025e9-2ac8-4996-9ce8-4880f91e1cdb.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580679-a0800634-8cbf-4ba2-b94d-106a03606008.png"/>
     
 <h3>(4) Chatting </h3>    
 - 추천받은 방 중 원하는 방을 클릭하여 채팅 시작 >>> 구체적인 만남 정보 확정!<br>
-<img width="20%" src="https://user-images.githubusercontent.com/87844641/173847266-08adc6c6-de5e-43f1-bd4a-982012c0ef42.png"/><br>
+<img width="20%" src="https://user-images.githubusercontent.com/77060011/208580753-b4c4e07f-7542-4177-a311-33e426acf9fc.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580783-4b8f95dd-c9cf-4c5d-b2f4-b57cb6fad755.png"/><br>
+
 
 <h3>(5) Category </h3>    
 - DB의 방탈출 정보 출력<br>
