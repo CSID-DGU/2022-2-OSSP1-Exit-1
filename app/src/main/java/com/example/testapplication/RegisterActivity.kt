@@ -53,7 +53,6 @@ class RegisterActivity : AppCompatActivity() {
             //비밀번호가 비어있을 때
             else if (TextUtils.isEmpty(Password.text.toString()))
                 Toast.makeText(this, "비밀번호 확인을 입력해주세요", Toast.LENGTH_SHORT).show()
-
             else {
                 if (!isDuplicated) {
                     Log.d("signupbutton", "asdf")
@@ -82,6 +81,7 @@ class RegisterActivity : AppCompatActivity() {
                     Toast.makeText(this, "아이디 중복확인이 필요합니다.", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
 
             binding.submitBtn.setOnClickListener {
                 api.checkExist(Email.text.toString()).enqueue(object : Callback<UserModel> {
@@ -95,11 +95,15 @@ class RegisterActivity : AppCompatActivity() {
                         response: retrofit2.Response<UserModel>
                     ) {
                         Log.d("한글", response.body()?.result.toString())
-                        if (response.body()?.result.toString().equals("AVAILABLE"))
+                        if (response.body()?.result.toString().equals("AVAILABLE")){
+                            Toast.makeText(applicationContext, "생성 가능한 아이디입니다.", Toast.LENGTH_SHORT).show()
                             isDuplicated = false
+                        }
+                        else{
+                            Toast.makeText(applicationContext, "생성 불가능한 아이디입니다.", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 })
             }
-        }
     }
 }
