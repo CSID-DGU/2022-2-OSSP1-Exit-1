@@ -103,9 +103,9 @@ class ChatActivity : AppCompatActivity() {
             })
             }
         Binding.btnBack.setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.drawerLayout, ChatFragment())
-                .commit()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
 
            //val intent2 = Intent(this, ChatFragment::class.java)
             //startActivity(intent2)
