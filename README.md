@@ -52,7 +52,7 @@ Figma & GitHub & Notion<br>
 <h3>(1) Login & Sign In</h3>
 
 - 아이디와 비밀번호를 사용하여 로그인 >>> "로그인 성공"이라는 Toast Message <br>
-<img width="20%" src="https://user-images.githubusercontent.com/87844641/173760147-b5856c81-0647-45a6-9b13-dab5c4597f6d.png"/> <img width="20%" src="https://user-images.githubusercontent.com/87844641/173834290-7eb25c8a-6661-4605-b4ed-cc2d3fd51a26.png"/><br>
+<img width="20%" src="![image](https://user-images.githubusercontent.com/77060011/208579475-15a790fe-67ff-4cff-bd5d-8fac320542eb.png)"/> <img width="20%" src="https://user-images.githubusercontent.com/87844641/173834290-7eb25c8a-6661-4605-b4ed-cc2d3fd51a26.png"/><br>
 
 - 이름과 아이디, 비밀번호를 입력하여 회원가입<br>
 - 필수항목 미입력, 아이디 중복, 비밀번호 오타 확인<br>
