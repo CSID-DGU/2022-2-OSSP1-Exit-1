@@ -52,11 +52,11 @@ Figma & GitHub & Notion<br>
 <h3>(1) Login & Sign In</h3>
 
 - 아이디와 비밀번호를 사용하여 로그인 >>> "로그인 성공"이라는 Toast Message <br>
-<img width="20%" src="![image](https://user-images.githubusercontent.com/77060011/208579475-15a790fe-67ff-4cff-bd5d-8fac320542eb.png)"/> <img width="20%" src="https://user-images.githubusercontent.com/87844641/173834290-7eb25c8a-6661-4605-b4ed-cc2d3fd51a26.png"/><br>
+ <img width="20%" src="https://user-images.githubusercontent.com/77060011/208579736-9edb198d-4e38-4a4b-b349-414a97a364e2.png"/><br>
 
 - 이름과 아이디, 비밀번호를 입력하여 회원가입<br>
 - 필수항목 미입력, 아이디 중복, 비밀번호 오타 확인<br>
-<img width="20%" src="https://user-images.githubusercontent.com/87844641/173760479-a0da532b-d12f-4424-b720-34a21cf63740.png"/> <img width="20%" src="https://user-images.githubusercontent.com/87844641/173780458-e78af697-8741-429a-82f3-2f803e89718b.png"/><br>
+<img width="20%" src="https://user-images.githubusercontent.com/77060011/208579562-9a171924-26fb-42fc-bb7a-70399a886732.png"/><br>
 
 <h3>(2) Matching - 방 만들기</h3>
     
@@ -77,11 +77,11 @@ Figma & GitHub & Notion<br>
 
 <h3>(5) Category </h3>    
 - DB의 방탈출 정보 출력<br>
-<img width="20%" src="https://user-images.githubusercontent.com/87844641/173847266-08adc6c6-de5e-43f1-bd4a-982012c0ef42.png"/><br>
+<img width="20%" src="https://user-images.githubusercontent.com/77060011/208579845-afade96c-5333-4205-ad67-eab292ca8bb8.png"/><br>
 
 <h3>(6) My page </h3>    
 - 나의 프로필을 볼 수 있는 마이페이지 <br>
-<img width="20%" src="https://user-images.githubusercontent.com/87844641/173847266-08adc6c6-de5e-43f1-bd4a-982012c0ef42.png"/><br>
+<img width="20%" src="https://user-images.githubusercontent.com/77060011/208579870-ed51447b-aea6-426f-bb41-c5e38c943b42.png"/><br>
     
 ## 5. 시연영상 
 https://user-images.githubusercontent.com/87844641/173886505-0e7d574a-37ff-4041-a2b4-8168e83a9a99.mp4    
