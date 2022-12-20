@@ -87,7 +87,8 @@ Figma & GitHub & Notion<br>
 <img width="20%" src="https://user-images.githubusercontent.com/77060011/208579870-ed51447b-aea6-426f-bb41-c5e38c943b42.png"/><br>
     
 ## 5. 시연영상 
-https://user-images.githubusercontent.com/87844641/173886505-0e7d574a-37ff-4041-a2b4-8168e83a9a99.mp4    
+https://user-images.githubusercontent.com/77060011/208584889-7d1375f9-a237-4edd-bc3d-d79f80fcabfe.mp4
+
 
     
 ## 6. 노션 링크
