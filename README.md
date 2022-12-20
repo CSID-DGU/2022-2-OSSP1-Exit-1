@@ -75,7 +75,7 @@ Figma & GitHub & Notion<br>
     
 <h3>(4) Chatting </h3>    
 - 추천받은 방 중 원하는 방을 클릭하여 채팅 시작 >>> 구체적인 만남 정보 확정!<br>
-<img width="20%" src="https://user-images.githubusercontent.com/77060011/208580753-b4c4e07f-7542-4177-a311-33e426acf9fc.png"/>  <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580783-4b8f95dd-c9cf-4c5d-b2f4-b57cb6fad755.png"/><br>
+<br><img width="20%" src="https://user-images.githubusercontent.com/77060011/208580753-b4c4e07f-7542-4177-a311-33e426acf9fc.png"/> <img width="20%" src="https://user-images.githubusercontent.com/77060011/208580783-4b8f95dd-c9cf-4c5d-b2f4-b57cb6fad755.png"/>
 
 
 <h3>(5) Category </h3>    
