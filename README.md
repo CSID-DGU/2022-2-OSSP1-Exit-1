@@ -88,4 +88,4 @@ https://user-images.githubusercontent.com/87844641/173886505-0e7d574a-37ff-4041-
 
     
 ## 6. 노션 링크
-[Notion](https://versed-fir-a6f.notion.site/Exit-431f8c774e774eeb957a691e9e6bbb1a](https://versed-fir-a6f.notion.site/Exit-88c95acb91b146f3a5aeb860dd18aaa6)
+[Notion](https://versed-fir-a6f.notion.site/Exit-88c95acb91b146f3a5aeb860dd18aaa6)
