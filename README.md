@@ -38,8 +38,8 @@ Figma & GitHub & Notion<br>
 ## 4. 어플 소개
 <img width="10%" src="https://user-images.githubusercontent.com/89643634/208537081-4e2f5e6f-ee65-47cb-b740-97d62e90ff05.png"/>
 <h3>① Fun한 Matching<br>
-② 스트레스 Punching<br>
-③ 방탈출 쿠폰에 Punching</h3><br>
+② 스트레스를 날려버릴 한방의 Punch<br>
+③ 즐거운 표정을 로고로 디자인</h3><br>
 
 <h2> What's difference Between Delishare and Funching? </h2>
 
