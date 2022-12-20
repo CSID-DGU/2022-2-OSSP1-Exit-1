@@ -73,8 +73,6 @@ class MatchingTotalActivity : AppCompatActivity() {
             fear = "0"
 
         binding.btnBack.setOnClickListener {
-
-
             val intent = Intent(this, MatchingOptionActivity::class.java)
             startActivity(intent)
             finish()

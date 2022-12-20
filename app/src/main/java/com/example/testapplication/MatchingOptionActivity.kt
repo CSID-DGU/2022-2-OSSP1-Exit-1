@@ -187,7 +187,7 @@ class MatchingOptionActivity : AppCompatActivity() {
         }
         //페이지 이동
         Binding.btnPrev.setOnClickListener{
-            val intent2= Intent(this, CreateRoomDateActivity::class.java)
+            val intent2= Intent(this, MatchingDateActivity::class.java)
             startActivity(intent2)
             finish()
         }
@@ -196,11 +196,7 @@ class MatchingOptionActivity : AppCompatActivity() {
             startActivity(intent2)
             finish()
         }
-//        binding.btnPrev.setOnClickListener{
-//            val intent= Intent(this, CreateRoomOptionActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
+
 //        var fragN : Int = 0
 //        setFrag(0)
 //

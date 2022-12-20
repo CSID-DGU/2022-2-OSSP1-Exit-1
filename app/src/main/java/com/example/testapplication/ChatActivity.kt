@@ -9,6 +9,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import android.util.Log
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.example.testapplication.databinding.ActivityChatBinding
 import com.example.testapplication.databinding.ActivityCreateRoomLocalBinding
 import com.google.android.material.navigation.NavigationView
@@ -101,9 +103,13 @@ class ChatActivity : AppCompatActivity() {
             })
             }
         Binding.btnBack.setOnClickListener {
-            val intent2 = Intent(this, MainActivity::class.java)
-            startActivity(intent2)
-            finish()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.drawerLayout, ChatFragment())
+                .commit()
+
+           //val intent2 = Intent(this, ChatFragment::class.java)
+            //startActivity(intent2)
+            //finish()
         }
     }
 }

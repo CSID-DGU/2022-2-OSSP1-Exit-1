@@ -96,14 +96,12 @@ class MatchingDateActivity : AppCompatActivity() {
             finish()
         }
 
-        //이전으로(하단) 클릭
-       /*
+
         binding.btnPrev.setOnClickListener {
-            val intent = Intent(this, Matching_intro::class.java)
+            val intent = Intent(this, MatchingLocalActivity::class.java)
             startActivity(intent)
             finish()
         }
-        */
         /*
         //이전으로(상단) 클릭
         binding.btnBackTop.setOnClickListener {
