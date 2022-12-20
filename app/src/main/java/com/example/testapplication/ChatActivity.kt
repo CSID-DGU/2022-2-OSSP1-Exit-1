@@ -16,6 +16,7 @@ import retrofit2.Call
 import retrofit2.Response
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import kotlin.concurrent.timer
 
 class ChatActivity : AppCompatActivity() {
 
@@ -36,16 +37,17 @@ class ChatActivity : AppCompatActivity() {
         val roomId = intent.getStringExtra("roomID")
         val roomTitle = intent.getStringExtra("roomTitle")
 
+    kotlin.concurrent.timer(period = 100, initialDelay = 0) {
         api.getAllChat(roomId?.toInt()).enqueue(object : retrofit2.Callback<getAllChat>{
             override fun onResponse(call: Call<getAllChat>, response: Response<getAllChat>) {
-               Log.d("res", response.body().toString())
+                Log.d("res", response.body().toString())
                 var chatArray = response.body().toString().replace("getAllChat(result=", "")
                 chatArray = chatArray.replace(")", "")
                 var chatInfo = chatArray.split("/")
                 Log.d("chatInfo", chatInfo[0].toString())
                 val preferences = getSharedPreferences("userInfo", MODE_PRIVATE)
                 val userId = preferences.getString("userId", "")
-
+                datas.clear()
                 datas.apply {
                     for(i: Int in 0..chatInfo.size-2) {
                         var chat = chatInfo[i].split(",")
@@ -54,11 +56,11 @@ class ChatActivity : AppCompatActivity() {
                         }
                         else{
                             add(chatData(name = chat[0], msg = chat[1], time = chat[2], multi_type1))
-                            }
-                    }
-                    multiAdapter.datas = datas
-                    multiAdapter.notifyDataSetChanged()
+                        }
+                        multiAdapter.datas = datas
+                        multiAdapter.notifyDataSetChanged()
 
+                    }
                 }
 
 
@@ -68,6 +70,8 @@ class ChatActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
+
+    }
 
         Binding.textTitle.text = roomTitle
 
@@ -81,10 +85,12 @@ class ChatActivity : AppCompatActivity() {
                 LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME).toString()
             ).enqueue(object : retrofit2.Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    Binding.chatInput.setText("")
                     Log.d(
                         "datetime",
                         LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
                             .toString()
+
                     )
                 }
 
